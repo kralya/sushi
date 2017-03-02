@@ -3,16 +3,10 @@
 namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class DefaultController extends Controller
+class DefaultController extends BaseController
 {
-    public function getRepo($repo)
-    {
-        return $this->container->get('doctrine')->getRepository('AppBundle:'.$repo);
-    }
-    
     /**
      * @Route("/hello", name="homepage")
      */
