@@ -49,7 +49,17 @@ class Category
      */
     private $parentId;
 
+    /**
+     * @var Product[]|ArrayCollection $products
+     *
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Product", mappedBy="category", cascade={"remove"})
+     */
+    private $products;
 
+    public function __construct()
+    {
+        $this->products = new ArrayCollection();
+    }
 
     /**
      * Get id

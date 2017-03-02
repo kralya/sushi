@@ -85,14 +85,13 @@ class Product
     private $recommended;
 
     /**
-     * @var integer
+     * @var Category $category
      *
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Category", inversedBy="products")
      * @ORM\Column(name="category_id", type="integer", nullable=false)
      */
-    private $categoryId;
-
-
-
+    private $category;
+    
     /**
      * Get id
      *
@@ -320,26 +319,26 @@ class Product
     }
 
     /**
-     * Set categoryId
+     * Set category
      *
-     * @param integer $categoryId
+     * @param Category $category
      *
      * @return Product
      */
-    public function setCategoryId($categoryId)
+    public function setCategory(Category $category)
     {
-        $this->categoryId = $categoryId;
+        $this->category = $category;
 
         return $this;
     }
 
     /**
-     * Get categoryId
+     * Get category
      *
-     * @return integer
+     * @return Category
      */
-    public function getCategoryId()
+    public function getCategory()
     {
-        return $this->categoryId;
+        return $this->category;
     }
 }
