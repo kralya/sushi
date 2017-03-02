@@ -8,18 +8,21 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
+    public function getRepo($repo)
+    {
+        return $this->container->get('doctrine')->getRepository('AppBundle:'.$repo);
+    }
+    
     /**
      * @Route("/hello", name="homepage")
      */
     public function indexAction(Request $request)
     {
-        $x = new \AppBundle\Entity\Product();
-//        echo 'hello';
+        $category = $this->getRepo('Category')->findOneByUrl('sushi');
+        $products = $this->getRepo('Product')->findByCategory($category);
         
+        $params = ['products' => $products];
         
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
-        ]);
+        return $this->render('default/test.html.twig', $params);
     }
 }

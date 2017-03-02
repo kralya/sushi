@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <div id="welcome">
+                <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
+            </div>
+
+            <div id="status">
+                <p>
+                    {% for product in products %}
+                    <div>
+                        - {{ product.name}}
+                        - <i>{{ product.contains}}</i>
+                    </div>
+                    {% endfor %}
+                <br/>
+                    Total: {{products|length}}
+                </p>
+            </div>
+
+{% endblock %}
