@@ -1,0 +1,430 @@
+/*всплывающее окно начало*/
+.cover {
+height: 100%;
+width: 100%;
+position: absolute;
+z-index: 1;
+}
+
+.blur-in {
+-webkit-animation: blur 2s forwards;
+-moz-animation: blur 2s forwards;
+-o-animation: blur 2s forwards;
+animation: blur 2s forwards;
+}
+
+.blur-out {
+-webkit-animation: blur-out 2s forwards;
+-moz-animation: blur-out 2s forwards;
+-o-animation: blur-out 2s forwards;
+animation: blur-out 2s forwards;
+}
+
+@-webkit-keyframes blur {
+0% {
+-webkit-filter: blur(0px);
+-moz-filter: blur(0px);
+-o-filter: blur(0px);
+-ms-filter: blur(0px);
+filter: blur(0px);
+}
+
+100% {
+-webkit-filter: blur(4px);
+-moz-filter: blur(4px);
+-o-filter: blur(4px);
+-ms-filter: blur(4px);
+filter: blur(4px);
+}
+}
+
+@-moz-keyframes blur {
+0% {
+-webkit-filter: blur(0px);
+-moz-filter: blur(0px);
+-o-filter: blur(0px);
+-ms-filter: blur(0px);
+filter: blur(0px);
+}
+
+100% {
+-webkit-filter: blur(4px);
+-moz-filter: blur(4px);
+-o-filter: blur(4px);
+-ms-filter: blur(4px);
+filter: blur(4px);
+}
+}
+
+@-o-keyframes blur {
+0% {
+-webkit-filter: blur(0px);
+-moz-filter: blur(0px);
+-o-filter: blur(0px);
+-ms-filter: blur(0px);
+filter: blur(0px);
+}
+
+100% {
+-webkit-filter: blur(4px);
+-moz-filter: blur(4px);
+-o-filter: blur(4px);
+-ms-filter: blur(4px);
+filter: blur(4px);
+}
+}
+
+@keyframes blur {
+0% {
+-webkit-filter: blur(0px);
+-moz-filter: blur(0px);
+-o-filter: blur(0px);
+-ms-filter: blur(0px);
+filter: blur(0px);
+}
+
+100% {
+-webkit-filter: blur(4px);
+-moz-filter: blur(4px);
+-o-filter: blur(4px);
+-ms-filter: blur(4px);
+filter: blur(4px);
+}
+}
+
+@-webkit-keyframes blur-out {
+0% {
+-webkit-filter: blur(4px);
+-moz-filter: blur(4px);
+-o-filter: blur(4px);
+-ms-filter: blur(4px);
+filter: blur(4px);
+}
+
+100% {
+-webkit-filter: blur(0px);
+-moz-filter: blur(0px);
+-o-filter: blur(0px);
+-ms-filter: blur(0px);
+filter: blur(0px);
+}
+}
+
+@-moz-keyframes blur-out {
+0% {
+-webkit-filter: blur(4px);
+-moz-filter: blur(4px);
+-o-filter: blur(4px);
+-ms-filter: blur(4px);
+filter: blur(4px);
+}
+
+100% {
+-webkit-filter: blur(0px);
+-moz-filter: blur(0px);
+-o-filter: blur(0px);
+-ms-filter: blur(0px);
+filter: blur(0px);
+}
+}
+
+@-o-keyframes blur-out {
+0% {
+-webkit-filter: blur(4px);
+-moz-filter: blur(4px);
+-o-filter: blur(4px);
+-ms-filter: blur(4px);
+filter: blur(4px);
+}
+
+100% {
+-webkit-filter: blur(0px);
+-moz-filter: blur(0px);
+-o-filter: blur(0px);
+-ms-filter: blur(0px);
+filter: blur(0px);
+}
+}
+
+@keyframes blur-out {
+0% {
+-webkit-filter: blur(4px);
+-moz-filter: blur(4px);
+-o-filter: blur(4px);
+-ms-filter: blur(4px);
+filter: blur(4px);
+}
+
+100% {
+-webkit-filter: blur(0px);
+-moz-filter: blur(0px);
+-o-filter: blur(0px);
+-ms-filter: blur(0px);
+filter: blur(0px);
+}
+}
+
+/*.content {*/
+/*width: 650px;*/
+/*margin: 0 auto;*/
+/*padding-top: 100px;*/
+/*}*/
+
+
+.pop-up {
+position: fixed;
+margin: 5% auto;
+left: 0;
+right: 0;
+z-index: 2;
+}
+
+.box {
+background-color: whitesmoke;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10%;
+position: relative;
+-webkit-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+}
+
+.button {
+margin: 0 auto;
+background-color: #FF8566;
+margin-bottom: 33px;
+}
+
+.button:hover {
+background-color: #7CCF29;
+-webkit-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+}
+
+.close-button {
+    transition: all 0.5s ease;
+   /* position: absolute;*/
+    background-color: #EF2D3D;
+    padding: 2.5px 7px;
+    left: 0;
+    margin-left: -10px;
+    margin-top: -9px;
+    border-radius: 6%;
+   /* border: 2px solid #fff;*/
+    color: #fff;
+}
+/*Всплывающее окно конец*/
+
+.sec_menu .sec_menu {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    background: #fbfafe;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.20);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.20);
+}
+/*@media only screen and (max-width: 640px) {*/
+    /*.sec_menu .sec_menu li a {*/
+        /*color: #000;*/
+    /*}*/
+/*}*/
+.sec_menu .sec_menu li {
+    display: block;
+}
+
+/*карточка товара*/
+.tovar_cost .colich_tov input[type=text].txt_col_tov {
+     width: 55px;
+}
+
+.cart_popup#cart .zakaz_list li .colich_tov {
+    width: 175px;
+}
+.cart_popup#oform form .ln input[type=text].rt.delivery_time {
+    width: 270px;
+}
+.wrap .cart_popup#cart .bd {
+    width: 610px;
+}
+.bd #scrollbar1 {
+    width: 585px;
+}
+.tovar_box .tovar .down .tovar_cost input.addtocart {
+    float: none;
+}
+.tovar_cost .colich_tov {
+    margin: 0 6px 10px;
+}
+#modalBox {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.20);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.20);
+    background: #fff;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    display: none;
+    opacity: 0;
+    z-index: 9999;
+    padding: 20px 10px;
+    width: 450px;
+    margin-top: -150px;
+    margin-left: -250px;
+}
+#modalBox #modalClose {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    display: block;
+    z-index: 999;
+    background: white;
+    border: 1px solid lightgray;
+    padding: 2px 7px;
+    border-radius: 14px;
+}
+#overlay {
+    z-index: 30;
+    position: fixed;
+    background-color: #000;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+}
+.modalSelect {
+    font-family: 'roboto_condensedlight';
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    float: right;
+    margin: 18px 2px 0 0;
+    height: 35px;
+    line-height: 34px;
+    padding: 0 10px 0 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0;
+    background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, #ff464f;
+    background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, -webkit-gradient(linear, 0 0, 0 bottom, from(#ff464f), to(#e22439));
+    background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, -webkit-linear-gradient(#ff464f, #e22439);
+    background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, -moz-linear-gradient(#ff464f, #e22439);
+    background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, -ms-linear-gradient(#ff464f, #e22439);
+    background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, -o-linear-gradient(#ff464f, #e22439);
+    background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, linear-gradient(#ff464f, #e22439);
+    -pie-background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, linear-gradient(#ff464f, #e22439);
+    behavior: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/PIE.htc);
+    cursor: pointer;
+}
+.modalSelect:hover {
+    background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, #ff5d75;
+    background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, -webkit-gradient(linear, 0 0, 0 bottom, from(#ff5d75), to(#ff2b5d));
+    background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, -webkit-linear-gradient(#ff5d75, #ff2b5d);
+    background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, -moz-linear-gradient(#ff5d75, #ff2b5d);
+    background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, -ms-linear-gradient(#ff5d75, #ff2b5d);
+    background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, -o-linear-gradient(#ff5d75, #ff2b5d);
+    background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, linear-gradient(#ff5d75, #ff2b5d);
+    -pie-background: url(http://sushihouse.by/bitrix/templates/bd_sushi_shop_default/images/cart.png) no-repeat scroll 14px -76px, linear-gradient(#ff5d75, #ff2b5d);
+}
+.selectProduct {
+    width: 200px;
+    margin: 5px 10px 15px;
+    float: left;
+}
+.selectProduct img {
+    max-width: 90%;
+}
+.selectProductTitle {
+    font-size: 1.6em;
+    margin-bottom: 4px;
+}
+.head_center .head_center ul {
+    background: none;
+}
+.foot_lic {
+     color: #fff;
+     width: 250px;
+     float: left;
+     margin-left: 20px;
+     font-size: 10px;
+    line-height: 12px;
+ }
+body .footer {
+    height: auto;
+    padding-bottom: 10px;
+}
+/*.footer .social li a.ok {
+     background: url(images/ok.png) 0px 1px no-repeat;
+ }
+.footer .social li a.ok:hover {
+    background: url(images/ok_hov.png) top center no-repeat;
+}*/
+body .panda_popup#thank .panda {
+    height: 267px;
+}
+.rt_small {
+    width: 320px;
+    float: right;
+    clear: both;
+}
+#oform .rt_small .ln_small {
+    width: 33% !important;
+    float: left;
+}
+#oform .rt_small .ln_small * {
+    max-width: 60%;
+}
+body .podarki_open .free_panda {
+    height: 114px;
+}
+body .page {
+margin-top: 25px;
+padding: 10px 15px;
+}
+.page h1, .page h2, .page h3{
+    font-family: 'roboto_condensedregular';
+    margin-bottom: 7px;
+}
+.page h1{
+    font-size: 22px;
+}
+.page h1{
+    font-size: 18px;
+}
+.page h3{
+    font-size: 16px;
+}
+@media only screen and (max-width: 750px) {
+    .sec_menu .sec_menu li a {
+        color: #000;
+    }
+    #modalBox {
+        position: absolute;
+    }
+}
+.destrict_delivery
+{
+display: none !important;
+}
+
+
+.row.pop-up .box {
+    width: 600px;
+    font-size: 14px;
+    padding: 20px;
+    border: 1px solid lightgray;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    background: rgba(255, 255, 255, 0.9);
+}
