@@ -53,6 +53,9 @@ class IndexController extends BaseController
         return $this->render('default/news.html.twig', $params);
     }
     
+    /**
+     * @Route("/delivery", name="delivery")
+     */
     public function deliveryAction(Request $request)
     {
         return $this->render('default/delivery.html.twig', []);
