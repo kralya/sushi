@@ -18,7 +18,7 @@ class IndexController extends BaseController
         
         $params = ['products' => $products];
         
-        return $this->render('default/test.html.twig', $params);
+        return $this->render('default/index.html.twig', $params);
     }
 
     /**
