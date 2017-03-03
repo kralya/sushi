@@ -21,6 +21,8 @@ class BaseController extends Controller
         $params['info_seller1'] = 'OOO "Глобалпрогрупп" г.Минск, ул. Казинца, 123, оф.6 УНП 192610415';
         $params['info_seller2'] = 'Интернет-магазин www.sushihouse.by зарегистрирован в Торговом реестре Республики Беларусь №331264 от 18.05.2016';
         $params['phone'] = '668-11-12';
+        $params['mob_phone_1'] = '+375(29)668-11-11';
+        $params['mob_phone_1'] = '+375(33)668-11-11';
         
         $params['vk'] = 'https://vk.com/sushihouseby';
         $params['fb'] = 'https://www.facebook.com/sushihouseby';
