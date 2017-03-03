@@ -13,6 +13,7 @@ class IndexController extends BaseController
      */
     public function indexAction(Request $request)
     {
+        
         $category = $this->getRepo('Category')->findOneByUrl('sushi');
         $products = $this->getRepo('Product')->findByCategory($category);
         

@@ -1,18 +1,18 @@
 {% extends 'newbase.html.twig' %}
 
-
 {% block stylesheets %}
-    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/catalog.section.list/menu_maxi/style8e9c.css?14529551107305" type="text/css"  rel="stylesheet" />
-    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/slider/style2520.css?1452955110150" type="text/css"  rel="stylesheet" />
-    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/top_items/style2520.css?1452955110150" type="text/css"  rel="stylesheet" />
-    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/tabs/style2520.css?1452955110150" type="text/css"  rel="stylesheet" />
-    <link href="/local/templates/bd_sushi_shop_default/css/animate6947.css?145295511068816" type="text/css"  data-template-style="true"  rel="stylesheet" />
-    <link href="/local/templates/bd_sushi_shop_default/css/autocomplete7291.css?1484386548733" type="text/css"  data-template-style="true"  rel="stylesheet" />
-    <link href="/local/templates/bd_sushi_shop_default/css/owl.carousel1392.css?14843864501476" type="text/css"  data-template-style="true"  rel="stylesheet" />
-    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/menu/top_menu/style9c08.css?1452955110583" type="text/css"  data-template-style="true"  rel="stylesheet" />
-    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/social/style2520.css?1452955110150" type="text/css"  data-template-style="true"  rel="stylesheet" />
-    <link href="/local/templates/bd_sushi_shop_default/stylesde88.css?14851748899819" type="text/css"  data-template-style="true"  rel="stylesheet" />
-    <link href="/local/templates/bd_sushi_shop_default/template_styles5ff8.css?1485880895163247" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/slider/style.css?1452955110150" type="text/css"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/catalog.section.list/menu_maxi/style.css?14529551107305" type="text/css"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/top_items/style.css?1452955110150" type="text/css"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/tabs/style.css?1452955110150" type="text/css"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/css/animate.css?145295511068816" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/css/autocomplete.css?1484386548733" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/css/owl.carousel.css?14843864501476" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/menu/top_menu/style.css?1452955110583" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/social/style.css?1452955110150" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/styles.css?14851748899819" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/template_styles.css?1485880895163247" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    
 {% endblock %}
 
 {% block javascripts %}
@@ -35,80 +35,37 @@
 
 {% block body %}
 
-    {#         
-    PAGE ITSELF ! #}
+
+
+
+
+<script type="text/javascript" src="local/templates/bd_sushi_shop_default/js/chosen.jquery.min8f55.js?146037302025688"></script>
+<script type="text/javascript" src="local/templates/bd_sushi_shop_default/js/jquery.tinyscrollbar3d16.js?146037302012470"></script>
+<script type="text/javascript" src="local/templates/bd_sushi_shop_default/js/jquery.animateNumber.min002b.js?14603730201353"></script>
+<script type="text/javascript" src="local/templates/bd_sushi_shop_default/js/libphonenumber-utils67fb.js?1460373020237410"></script>
+<script type="text/javascript" src="local/templates/bd_sushi_shop_default/js/jquery.maskedinput.min72ec.js?146037302010317"></script>
+<script type="text/javascript" src="local/templates/bd_sushi_shop_default/js/jquery.autocomplete7992.js?148544009333017"></script>
+<script type="text/javascript" src="local/templates/bd_sushi_shop_default/js/studio8769a.js?148588231219911"></script>
+<script type="text/javascript" src="local/templates/bd_sushi_shop_default/js/basketce53.js?148637770442081"></script>
+<script type="text/javascript" src="local/templates/bd_sushi_shop_default/js/owl.carousel.mincebe.js?148438625723890"></script>
+<script type="text/javascript" src="iiko/autocomplete/jquery.mockjaxbf04.js?146037296219052"></script>
+<script type="text/javascript" src="iiko/autocomplete/streetse4b8.js?14843878782783"></script>
+<script type="text/javascript" src="local/templates/bd_sushi_shop_default/components/bitrix/news.list/slider/scriptdb64.js?1484396037550"></script>
+    
+    
+    
+    {# PAGE ITSELF ! #}
     <main class="content ">
-        <div class="slider owl-carousel owl-theme" style="opacity: 1; display: block;">
-            <div class="owl-wrapper-outer autoHeight" style="height: 346px;"><div class="owl-wrapper" style="width: 12264px; left: 0px; display: block; transition: all 800ms ease; transform: translate3d(-3504px, 0px, 0px);"><div class="owl-item" style="width: 876px;"><div class="slider_item_first" id="bx_3218110189_7982">
-                            <div class="slider_item_child" style="background:  url(upload/iblock/186/sushi_lunch_bg.jpg)  center;   background-size: cover;">
-
-                                <div class="slide_item_bd">
-
-                                    <a href="catalog/sets.html"><img src="upload/iblock/69f/lunch_sushi.png" alt="Ланч сеты по супер цене" title="Ланч сеты по супер цене"></a>
-                                </div>
-                            </div>
-                        </div></div><div class="owl-item" style="width: 876px;"><div class="slider_item_first" id="bx_3218110189_55028">
-                            <div class="slider_item_child" style="background:  url(upload/iblock/7ce/weekend_sushi.jpg)  center;   background-size: cover;">
-
-                                <div class="slide_item_bd">
-
-                                    <a href="akcii.html"><img src="upload/iblock/1e9/weekend_sushi.png" alt="Weekend скидка 20% на раздел сеты!" title="Weekend скидка 20% на раздел сеты!"></a>
-                                </div>
-                            </div>
-                        </div></div><div class="owl-item" style="width: 876px;"><div class="slider_item_first" id="bx_3218110189_34806">
-                            <div class="slider_item_child" style="background:  url(upload/iblock/ad6/sushi_50_bg.jpg)  center;   background-size: cover;">
-
-                                <div class="slide_item_bd">
-
-                                    <a href="akcii.html"><img src="upload/iblock/c16/sushi_50.png" alt="Скидка на блюдо дня 50%" title="Скидка на блюдо дня 50%"></a>
-                                </div>
-                            </div>
-                        </div></div><div class="owl-item" style="width: 876px;"><div class="slider_item_first" id="bx_3218110189_31961">
-                            <div class="slider_item_child" style="background:  url(upload/iblock/28d/frends_bg.jpg)  center;   background-size: cover;">
-
-                                <div class="slide_item_bd">
-
-                                    <a href="https://app.plazius.ru/m/5Vpkmt" target="_blank"><img src="upload/iblock/ae7/frends_sushi.png" alt="Приводи друзей - получай бонусы!" title="Приводи друзей - получай бонусы!"></a>
-                                </div>
-                            </div>
-                        </div></div><div class="owl-item" style="width: 876px;"><div class="slider_item_first" id="bx_3218110189_149">
-                            <div class="slider_item_child" style="background: #183a17 url(upload/iblock/9b1/maneki-neko_bg.jpg) repeat-x center;   background-size: cover;">
-
-                                <div class="slide_item_bd">
-
-                                    <a href="akcii.html"><img src="upload/iblock/e31/maneki-neko_new2.png" alt="Манеки Неко" title="Манеки Неко"></a>
-                                </div>
-                            </div>
-                        </div></div><div class="owl-item" style="width: 876px;"><div class="slider_item_first" id="bx_3218110189_20373">
-                            <div class="slider_item_child" style="background:  url(upload/iblock/6c7/24h_bg.jpg)  center;   background-size: cover;">
-
-                                <div class="slide_item_bd">
-
-                                    <img src="upload/iblock/0c4/24h.png" alt="Работаем круглосуточно" title="Работаем круглосуточно">
-                                </div>
-                            </div>
-                        </div></div><div class="owl-item" style="width: 876px;"><div class="slider_item_first" id="bx_3218110189_1889">
-                            <div class="slider_item_child" style="background:  url(upload/iblock/1c3/imeninnik_bg.jpg)  center;   background-size: cover;">
-
-                                <div class="slide_item_bd">
-
-                                    <img src="upload/iblock/489/imeninnik.png" alt="Скидка именинникам 20%" title="Скидка именинникам 20%">
-                                </div>
-                            </div>
-                        </div></div></div></div>				 		
-
-
-
-
-
-
-            <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div></div></div><div class="info_line">
+        
+        {% include 'default/slider.html.twig' %}
+        
+        <div class="info_line">
             <div class="wrap">
                 <div class="phone_box">
                     <div class="phone">
                     </div>
                     <div class="dostavka">
-                        <img alt="Телефоны: +375(29)668-11-11 и +375(33)668-11-11" src="images/phone.png"><br>
+                        <img alt="Телефоны: +375(29)668-11-11 и +375(33)668-11-11" src="/images/"phone.png"><br>
                         время работы:&nbsp;круглосуточно<br>			</div>
                 </div>
                 <div class="inf_box if_1">
@@ -142,7 +99,7 @@
                     <div class="title">Меню</div>
                     <span class="close"></span>
 
-                    <ul class="sec_menu">                    <li><a class="active">Популярное</a></li>
+                    <ul class="sec_menu">                    <li><a class='active'>Популярное</a></li>
 
                         <li id="bx_1847241719_1"><a href="catalog/sushi.html">Суши</a>
                             <ul class="sec_menu">
@@ -175,16 +132,48 @@
             <div class="for_poplavok">
                 <div class="wrap">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <div class="tovar_box">
-                        
-                        
-                        
-                        
-                        
-                        
-                        <div class="tovar" id="bx_651765591_30459" data-price="56.49" data-old-price="" data-id="30459" data-category-id="18" data-category-name="" data-half-enabled="no">
+                        <div
+                            class="tovar animate"
+                            id="bx_651765591_30459"
+                            data-price="56.49"
+                            data-old-price=""
+                            data-id="30459"
+                            data-category-id="18"
+                            data-category-name=""
+                            data-half-enabled="no"
+                            >
                             <div class="pic">
-                                <img src="upload/resize_cache/iblock/6b7/220_172_1/mocny_set.jpg" alt="Моцный сет" title="Моцный сет" width="220" height="172">
+                                <img
+                                    src="upload/resize_cache/iblock/6b7/220_172_1/mocny_set.jpg"
+                                    alt="Моцный сет"
+                                    title="Моцный сет"
+                                    width="220"
+                                    height="172"
+                                    />
                                 <div class="mask"></div>
                                 <div class="zoom"></div>
                             </div>
@@ -200,23 +189,27 @@
                                     <span class="gramm">1035 г | 32 шт.</span>        </div>
                                 <div class="tovar_cost">
                                     <div class="colich_tov">
-                                        <input type="button" value="-" class="minus_tov">
-                                        <input type="text" value="1" class="txt_col_tov" readonly="readonly">
-                                        <input type="button" value="+" class="plus_tov">
+                                        <input type="button" value="-" class="minus_tov"/>
+                                        <input type="text" value="1" class="txt_col_tov"/>
+                                        <input type="button" value="+" class="plus_tov"/>
                                     </div>
                                     <input type="button" class="addtocart" value="">
-                                    <img class="balloon" src="/local/templates/bd_sushi_shop_default/images/balloon.png" style="display:none;"></div>
+                                </div>
                             </div>
                             <div class="tovar_zoom">
                                 <div class="pic">
-                                    <img src="upload/resize_cache/iblock/6b7/467_361_1/mocny_set.jpg" alt="Моцный сет" title="Моцный сет">
+                                    <img
+                                        src="upload/resize_cache/iblock/6b7/467_361_1/mocny_set.jpg"
+                                        alt="Моцный сет"
+                                        title="Моцный сет"
+                                        />
                                     <div class="mask"></div>
                                     <div class="zoom"></div>
                                 </div>
                                 <div class="label" style="background-color: #FF0000">Хит сезона</div>
                                 <div class="about">
                                     <div class="title">Моцный сет</div>
-                                    <p><noindex>Манхэттен маки, Ямагути маки, Чили Изумитай маки, Хаус Маки<br>
+                                    <p><noindex>Манхэттен маки, Ямагути маки, Чили Изумитай маки, Хаус Маки<br />
                                         производитель: OOO “Глобалпрогрупп” </noindex></p>
                                 </div>
                                 <div class="down">
@@ -225,20 +218,854 @@
                                         <span class="gramm">1035 г | 32 шт.</span>            </div>
                                     <div class="tovar_cost">
                                         <div class="colich_tov">
-                                            <input type="button" value="-" class="minus_tov">
-                                            <input type="text" value="1" class="txt_col_tov" readonly="readonly">
-                                            <input type="button" value="+" class="plus_tov">
+                                            <input type="button" value="-" class="minus_tov" />
+                                            <input type="text" value="1" class="txt_col_tov" />
+                                            <input type="button" value="+" class="plus_tov" />
                                         </div>
                                         <input type="button" class="addtocart" value="">
                                         <div class="recomend">
                                             <p>Рекомендую</p>
                                             <a class="like  you_not_like_bitch" href="#"><span>64</span></a>
                                         </div>
-                                        <img class="balloon" src="/local/templates/bd_sushi_shop_default/images/balloon.png" style="display:none;"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
+                        </div><!-- .tovar -->
+                        <div
+                            class="tovar animate"
+                            id="bx_651765591_51172"
+                            data-price="33.55"
+                            data-old-price=""
+                            data-id="51172"
+                            data-category-id="18"
+                            data-category-name=""
+                            data-half-enabled="no"
+                            >
+                            <div class="pic">
+                                <img
+                                    src="upload/resize_cache/iblock/99a/220_172_1/ovara_set.jpg"
+                                    alt="Овара сет"
+                                    title="Овара сет"
+                                    width="220"
+                                    height="172"
+                                    />
+                                <div class="mask"></div>
+                                <div class="zoom"></div>
+                            </div>
+
+                            <div class="about">
+                                <div class="title"><span class="title">Овара сет</span></div>
+                                <p>Юкки маки, Кацуо-буши маки, Спайси Пиро маки, Сяке маки</p>
+                            </div>
+                            <div class="down">
+                                <div class="tovar_info">
+                                    <span class="price"><span>33.55</span> <i class="rouble rouble_padding">руб.</i></span>
+                                    <span class="gramm">712 г | 32 шт</span>        </div>
+                                <div class="tovar_cost">
+                                    <div class="colich_tov">
+                                        <input type="button" value="-" class="minus_tov"/>
+                                        <input type="text" value="1" class="txt_col_tov"/>
+                                        <input type="button" value="+" class="plus_tov"/>
+                                    </div>
+                                    <input type="button" class="addtocart" value="">
+                                </div>
+                            </div>
+                            <div class="tovar_zoom">
+                                <div class="pic">
+                                    <img
+                                        src="upload/resize_cache/iblock/99a/467_361_1/ovara_set.jpg"
+                                        alt="Овара сет"
+                                        title="Овара сет"
+                                        />
+                                    <div class="mask"></div>
+                                    <div class="zoom"></div>
+                                </div>
+                                <div class="about">
+                                    <div class="title">Овара сет</div>
+                                    <p><noindex>Юкки маки, Кацуо-буши маки, Спайси Пиро маки, Сяке маки<br />
+                                        производитель: ООО &quot;Глобалпрогрупп&quot;</noindex></p>
+                                </div>
+                                <div class="down">
+                                    <div class="tovar_info">
+                                        <span class="price"><span>33.55</span> <i class="rouble rouble_padding">руб.</i></span>
+                                        <span class="gramm">712 г | 32 шт</span>            </div>
+                                    <div class="tovar_cost">
+                                        <div class="colich_tov">
+                                            <input type="button" value="-" class="minus_tov" />
+                                            <input type="text" value="1" class="txt_col_tov" />
+                                            <input type="button" value="+" class="plus_tov" />
+                                        </div>
+                                        <input type="button" class="addtocart" value="">
+                                        <div class="recomend">
+                                            <p>Рекомендую</p>
+                                            <a class="like  you_not_like_bitch" href="#"><span>51</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .tovar -->
+                        <div
+                            class="tovar animate"
+                            id="bx_651765591_326"
+                            data-price="12.68"
+                            data-old-price="15.84"
+                            data-id="326"
+                            data-category-id="22"
+                            data-category-name=""
+                            data-half-enabled="no"
+                            >
+                            <div class="pic">
+                                <img
+                                    src="upload/resize_cache/iblock/650/220_172_1/mix-philadelphia-maki_20.jpg"
+                                    alt="Микс Филадельфия маки"
+                                    title="Микс Филадельфия маки"
+                                    width="220"
+                                    height="172"
+                                    />
+                                <div class="mask"></div>
+                                <div class="zoom"></div>
+                            </div>
+                            <div class="label" style="background-color: #FF4500">Новинка</div>
+
+                            <div class="about">
+                                <div class="title"><span class="title">Микс Филадельфия маки</span></div>
+                                <p>Тунец, лосось, окунь, сливочный сыр</p>
+                            </div>
+                            <div class="down">
+                                <div class="tovar_info">
+                                    <span class="old_price"><b><span>15.84</span></b> <!--<i class="rouble rouble_padding">i</i>--></span>            <span class="price"><span>12.68</span> <i class="rouble rouble_padding">руб.</i></span>
+                                    <span class="gramm">287 г | 8 шт</span>        </div>
+                                <div class="tovar_cost">
+                                    <div class="colich_tov">
+                                        <input type="button" value="-" class="minus_tov"/>
+                                        <input type="text" value="1" class="txt_col_tov"/>
+                                        <input type="button" value="+" class="plus_tov"/>
+                                    </div>
+                                    <input type="button" class="addtocart" value="">
+                                </div>
+                            </div>
+                            <div class="tovar_zoom">
+                                <div class="pic">
+                                    <img
+                                        src="upload/resize_cache/iblock/650/467_361_1/mix-philadelphia-maki_20.jpg"
+                                        alt="Микс Филадельфия маки"
+                                        title="Микс Филадельфия маки"
+                                        />
+                                    <div class="mask"></div>
+                                    <div class="zoom"></div>
+                                </div>
+                                <div class="label" style="background-color: #FF4500">Новинка</div>
+                                <div class="about">
+                                    <div class="title">Микс Филадельфия маки</div>
+                                    <p><noindex>Тунец, лосось, окунь, сливочный сыр<br />
+                                        белки 16.0г жиры 14.1г углеводы 62.9г килокалории 432.2 килоджоули 1809.4<br />
+                                        производитель: ООО &quot;Глобалпрогрупп&quot;<br />
+                                    </noindex></p>
+                                </div>
+                                <div class="down">
+                                    <div class="tovar_info">
+                                        <span class="old_price"><b><span>15.84</span></b> <!--<i class="rouble rouble_padding">i</i>--></span>                <span class="price"><span>12.68</span> <i class="rouble rouble_padding">руб.</i></span>
+                                        <span class="gramm">287 г | 8 шт</span>            </div>
+                                    <div class="tovar_cost">
+                                        <div class="colich_tov">
+                                            <input type="button" value="-" class="minus_tov" />
+                                            <input type="text" value="1" class="txt_col_tov" />
+                                            <input type="button" value="+" class="plus_tov" />
+                                        </div>
+                                        <input type="button" class="addtocart" value="">
+                                        <div class="recomend">
+                                            <p>Рекомендую</p>
+                                            <a class="like  you_not_like_bitch" href="#"><span>46</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .tovar -->
+                        <div
+                            class="tovar animate"
+                            id="bx_651765591_20249"
+                            data-price="13.09"
+                            data-old-price=""
+                            data-id="20249"
+                            data-category-id="22"
+                            data-category-name=""
+                            data-half-enabled="yes"
+                            >
+                            <div class="pic">
+                                <img
+                                    src="upload/resize_cache/iblock/a3c/220_172_1/edo%20maki.jpg"
+                                    alt="Эдо маки"
+                                    title="Эдо маки"
+                                    width="220"
+                                    height="172"
+                                    />
+                                <div class="mask"></div>
+                                <div class="zoom"></div>
+                            </div>
+                            <div class="label" style="background-color: #FF4500">Новинка</div>
+
+                            <div class="about">
+                                <div class="title"><span class="title">Эдо маки</span></div>
+                                <p>Креветка в темпуре, сливочный сыр, огурец, соус Терияки, кунжут белый</p>
+                            </div>
+                            <div class="down">
+                                <div class="tovar_info">
+                                    <span class="price"><span>13.09</span> <i class="rouble rouble_padding">руб.</i></span>
+                                    <span class="gramm">270 г | 8 шт</span>        </div>
+                                <div class="tovar_cost">
+                                    <div class="colich_tov">
+                                        <input type="button" value="-" class="minus_tov"/>
+                                        <input type="button" value="-&frac12;" class="minus_half_tov"/>
+                                        <input type="text" value="1" class="txt_col_tov"/>
+                                        <input type="button" value="+&frac12;" class="plus_half_tov"/>
+                                        <input type="button" value="+" class="plus_tov"/>
+                                    </div>
+                                    <input type="button" class="addtocart" value="">
+                                </div>
+                            </div>
+                            <div class="tovar_zoom">
+                                <div class="pic">
+                                    <img
+                                        src="upload/resize_cache/iblock/a3c/467_361_1/edo%20maki.jpg"
+                                        alt="Эдо маки"
+                                        title="Эдо маки"
+                                        />
+                                    <div class="mask"></div>
+                                    <div class="zoom"></div>
+                                </div>
+                                <div class="label" style="background-color: #FF4500">Новинка</div>
+                                <div class="about">
+                                    <div class="title">Эдо маки</div>
+                                    <p><noindex>Креветка в темпуре, сливочный сыр, огурец, соус Терияки, кунжут белый<br />
+                                        производитель: ООО &quot;Глобалпрогрупп&quot;</noindex></p>
+                                </div>
+                                <div class="down">
+                                    <div class="tovar_info">
+                                        <span class="price"><span>13.09</span> <i class="rouble rouble_padding">руб.</i></span>
+                                        <span class="gramm">270 г | 8 шт</span>            </div>
+                                    <div class="tovar_cost">
+                                        <div class="colich_tov">
+                                            <input type="button" value="-" class="minus_tov" />
+                                            <input type="button" value="-&frac12;" class="minus_half_tov"/>
+                                            <input type="text" value="1" class="txt_col_tov" />
+                                            <input type="button" value="+&frac12;" class="plus_half_tov"/>
+                                            <input type="button" value="+" class="plus_tov" />
+                                        </div>
+                                        <input type="button" class="addtocart" value="">
+                                        <div class="recomend">
+                                            <p>Рекомендую</p>
+                                            <a class="like  you_not_like_bitch" href="#"><span>3</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .tovar -->
+                        <div
+                            class="tovar animate"
+                            id="bx_651765591_20239"
+                            data-price="13.64"
+                            data-old-price=""
+                            data-id="20239"
+                            data-category-id="22"
+                            data-category-name=""
+                            data-half-enabled="yes"
+                            >
+                            <div class="pic">
+                                <img
+                                    src="upload/resize_cache/iblock/862/220_172_1/manhetten%20maki.jpg"
+                                    alt="Манхэттен маки"
+                                    title="Манхэттен маки"
+                                    width="220"
+                                    height="172"
+                                    />
+                                <div class="mask"></div>
+                                <div class="zoom"></div>
+                            </div>
+                            <div class="label" style="background-color: #a74ebd">Рекомендуем</div>
+
+                            <div class="about">
+                                <div class="title"><span class="title">Манхэттен маки</span></div>
+                                <p>Угорь, копчёный лосось, сливочный сыр, соус Спайси, огурец, икра летучей рыбы, кунжут черный</p>
+                            </div>
+                            <div class="down">
+                                <div class="tovar_info">
+                                    <span class="price"><span>13.64</span> <i class="rouble rouble_padding">руб.</i></span>
+                                    <span class="gramm">245 г | 8 шт</span>        </div>
+                                <div class="tovar_cost">
+                                    <div class="colich_tov">
+                                        <input type="button" value="-" class="minus_tov"/>
+                                        <input type="button" value="-&frac12;" class="minus_half_tov"/>
+                                        <input type="text" value="1" class="txt_col_tov"/>
+                                        <input type="button" value="+&frac12;" class="plus_half_tov"/>
+                                        <input type="button" value="+" class="plus_tov"/>
+                                    </div>
+                                    <input type="button" class="addtocart" value="">
+                                </div>
+                            </div>
+                            <div class="tovar_zoom">
+                                <div class="pic">
+                                    <img
+                                        src="upload/resize_cache/iblock/862/467_361_1/manhetten%20maki.jpg"
+                                        alt="Манхэттен маки"
+                                        title="Манхэттен маки"
+                                        />
+                                    <div class="mask"></div>
+                                    <div class="zoom"></div>
+                                </div>
+                                <div class="label" style="background-color: #a74ebd">Рекомендуем</div>
+                                <div class="about">
+                                    <div class="title">Манхэттен маки</div>
+                                    <p><noindex>Угорь, копчёный лосось, сливочный сыр, соус Спайси, огурец, икра летучей рыбы, кунжут черный<br />
+                                        производитель: ООО &quot;Глобалпрогрупп&quot;</noindex></p>
+                                </div>
+                                <div class="down">
+                                    <div class="tovar_info">
+                                        <span class="price"><span>13.64</span> <i class="rouble rouble_padding">руб.</i></span>
+                                        <span class="gramm">245 г | 8 шт</span>            </div>
+                                    <div class="tovar_cost">
+                                        <div class="colich_tov">
+                                            <input type="button" value="-" class="minus_tov" />
+                                            <input type="button" value="-&frac12;" class="minus_half_tov"/>
+                                            <input type="text" value="1" class="txt_col_tov" />
+                                            <input type="button" value="+&frac12;" class="plus_half_tov"/>
+                                            <input type="button" value="+" class="plus_tov" />
+                                        </div>
+                                        <input type="button" class="addtocart" value="">
+                                        <div class="recomend">
+                                            <p>Рекомендую</p>
+                                            <a class="like  you_not_like_bitch" href="#"><span>3</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .tovar -->
+                        <div
+                            class="tovar animate"
+                            id="bx_651765591_338"
+                            data-price="11.96"
+                            data-old-price="14.96"
+                            data-id="338"
+                            data-category-id="22"
+                            data-category-name=""
+                            data-half-enabled="no"
+                            >
+                            <div class="pic">
+                                <img
+                                    src="upload/resize_cache/iblock/e62/220_172_1/asahi-maki_20.jpg"
+                                    alt="Асахи маки "
+                                    title="Асахи маки "
+                                    width="220"
+                                    height="172"
+                                    />
+                                <div class="mask"></div>
+                                <div class="zoom"></div>
+                            </div>
+
+                            <div class="about">
+                                <div class="title"><span class="title">Асахи маки </span></div>
+                                <p>Лосось, креветка, сливочный сыр, авокадо, икра летучей рыбы</p>
+                            </div>
+                            <div class="down">
+                                <div class="tovar_info">
+                                    <span class="old_price"><b><span>14.96</span></b> <!--<i class="rouble rouble_padding">i</i>--></span>            <span class="price"><span>11.96</span> <i class="rouble rouble_padding">руб.</i></span>
+                                    <span class="gramm">225 г | 8 шт</span>        </div>
+                                <div class="tovar_cost">
+                                    <div class="colich_tov">
+                                        <input type="button" value="-" class="minus_tov"/>
+                                        <input type="text" value="1" class="txt_col_tov"/>
+                                        <input type="button" value="+" class="plus_tov"/>
+                                    </div>
+                                    <input type="button" class="addtocart" value="">
+                                </div>
+                            </div>
+                            <div class="tovar_zoom">
+                                <div class="pic">
+                                    <img
+                                        src="upload/resize_cache/iblock/e62/467_361_1/asahi-maki_20.jpg"
+                                        alt="Асахи маки "
+                                        title="Асахи маки "
+                                        />
+                                    <div class="mask"></div>
+                                    <div class="zoom"></div>
+                                </div>
+                                <div class="about">
+                                    <div class="title">Асахи маки </div>
+                                    <p><noindex>Лосось, креветка, сливочный сыр, авокадо, икра летучей рыбы<br />
+                                        белки 17.9г жиры 14.8г углеводы 58.7г килокалории 427.5 килоджоули 1790.1<br />
+                                        производитель: OOO &quot;Глобалпрогрупп&quot;<br />
+                                    </noindex></p>
+                                </div>
+                                <div class="down">
+                                    <div class="tovar_info">
+                                        <span class="old_price"><b><span>14.96</span></b> <!--<i class="rouble rouble_padding">i</i>--></span>                <span class="price"><span>11.96</span> <i class="rouble rouble_padding">руб.</i></span>
+                                        <span class="gramm">225 г | 8 шт</span>            </div>
+                                    <div class="tovar_cost">
+                                        <div class="colich_tov">
+                                            <input type="button" value="-" class="minus_tov" />
+                                            <input type="text" value="1" class="txt_col_tov" />
+                                            <input type="button" value="+" class="plus_tov" />
+                                        </div>
+                                        <input type="button" class="addtocart" value="">
+                                        <div class="recomend">
+                                            <p>Рекомендую</p>
+                                            <a class="like  you_not_like_bitch" href="#"><span>3</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .tovar -->
+                        <div
+                            class="tovar animate"
+                            id="bx_651765591_20252"
+                            data-price="13.56"
+                            data-old-price="16.94"
+                            data-id="20252"
+                            data-category-id="22"
+                            data-category-name=""
+                            data-half-enabled="no"
+                            >
+                            <div class="pic">
+                                <img
+                                    src="upload/resize_cache/iblock/23b/220_172_1/sendai-maki_20.jpg"
+                                    alt="Сендай маки"
+                                    title="Сендай маки"
+                                    width="220"
+                                    height="172"
+                                    />
+                                <div class="mask"></div>
+                                <div class="zoom"></div>
+                            </div>
+                            <div class="label" style="background-color: #FF4500">Новинка</div>
+
+                            <div class="about">
+                                <div class="title"><span class="title">Сендай маки</span></div>
+                                <p>Сливочный сыр, огурец, угорь, икра летучей рыбы, лосось копчёный, соус Спайси, лук зеленый</p>
+                            </div>
+                            <div class="down">
+                                <div class="tovar_info">
+                                    <span class="old_price"><b><span>16.94</span></b> <!--<i class="rouble rouble_padding">i</i>--></span>            <span class="price"><span>13.56</span> <i class="rouble rouble_padding">руб.</i></span>
+                                    <span class="gramm">269 г | 8 шт</span>        </div>
+                                <div class="tovar_cost">
+                                    <div class="colich_tov">
+                                        <input type="button" value="-" class="minus_tov"/>
+                                        <input type="text" value="1" class="txt_col_tov"/>
+                                        <input type="button" value="+" class="plus_tov"/>
+                                    </div>
+                                    <input type="button" class="addtocart" value="">
+                                </div>
+                            </div>
+                            <div class="tovar_zoom">
+                                <div class="pic">
+                                    <img
+                                        src="upload/resize_cache/iblock/23b/467_361_1/sendai-maki_20.jpg"
+                                        alt="Сендай маки"
+                                        title="Сендай маки"
+                                        />
+                                    <div class="mask"></div>
+                                    <div class="zoom"></div>
+                                </div>
+                                <div class="label" style="background-color: #FF4500">Новинка</div>
+                                <div class="about">
+                                    <div class="title">Сендай маки</div>
+                                    <p><noindex>Сливочный сыр, огурец, угорь, икра летучей рыбы, лосось копчёный, соус Спайси, лук зеленый<br />
+                                        производитель: ООО &quot;Глобалпрогрупп&quot;</noindex></p>
+                                </div>
+                                <div class="down">
+                                    <div class="tovar_info">
+                                        <span class="old_price"><b><span>16.94</span></b> <!--<i class="rouble rouble_padding">i</i>--></span>                <span class="price"><span>13.56</span> <i class="rouble rouble_padding">руб.</i></span>
+                                        <span class="gramm">269 г | 8 шт</span>            </div>
+                                    <div class="tovar_cost">
+                                        <div class="colich_tov">
+                                            <input type="button" value="-" class="minus_tov" />
+                                            <input type="text" value="1" class="txt_col_tov" />
+                                            <input type="button" value="+" class="plus_tov" />
+                                        </div>
+                                        <input type="button" class="addtocart" value="">
+                                        <div class="recomend">
+                                            <p>Рекомендую</p>
+                                            <a class="like  you_not_like_bitch" href="#"><span>2</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .tovar -->
+                        <div
+                            class="tovar animate"
+                            id="bx_651765591_53314"
+                            data-price="28.10"
+                            data-old-price="39.30"
+                            data-id="53314"
+                            data-category-id="33"
+                            data-category-name=""
+                            data-half-enabled="no"
+                            >
+                            <div class="pic">
+                                <img
+                                    src="upload/resize_cache/iblock/98a/220_172_1/office_sushi_set.jpg"
+                                    alt="Офис сет (по будням с 11:00 до 16:00)"
+                                    title="Офис сет (по будням с 11:00 до 16:00)"
+                                    width="220"
+                                    height="172"
+                                    />
+                                <div class="mask"></div>
+                                <div class="zoom"></div>
+                            </div>
+
+                            <div class="about">
+                                <div class="title"><span class="title">Офис сет (по будням с 11:00 до 16:00)</span></div>
+                                <p>Cендай маки, Эдо маки, Асахи маки, Хаус маки, Манхеттен маки</p>
+                            </div>
+                            <div class="down">
+                                <div class="tovar_info">
+                                    <span class="old_price"><b><span>39.30</span></b> <!--<i class="rouble rouble_padding">i</i>--></span>            <span class="price"><span>28.10</span> <i class="rouble rouble_padding">руб.</i></span>
+                                    <span class="gramm">640 г | 20 шт</span>        </div>
+                                <div class="tovar_cost">
+                                    <div class="colich_tov">
+                                        <input type="button" value="-" class="minus_tov"/>
+                                        <input type="text" value="1" class="txt_col_tov"/>
+                                        <input type="button" value="+" class="plus_tov"/>
+                                    </div>
+                                    <input type="button" class="addtocart" value="">
+                                </div>
+                            </div>
+                            <div class="tovar_zoom">
+                                <div class="pic">
+                                    <img
+                                        src="upload/resize_cache/iblock/98a/467_361_1/office_sushi_set.jpg"
+                                        alt="Офис сет (по будням с 11:00 до 16:00)"
+                                        title="Офис сет (по будням с 11:00 до 16:00)"
+                                        />
+                                    <div class="mask"></div>
+                                    <div class="zoom"></div>
+                                </div>
+                                <div class="about">
+                                    <div class="title">Офис сет (по будням с 11:00 до 16:00)</div>
+                                    <p><noindex>Cендай маки, Эдо маки, Асахи маки, Хаус маки, Манхеттен маки<br />
+                                        белки 27.9г жиры 24.8г углеводы 58.2г килокалории 552.4 килоджоули 2313.0<br />
+                                        производитель: OOO &quot;Глобалпрогрупп&quot;</noindex></p>
+                                </div>
+                                <div class="down">
+                                    <div class="tovar_info">
+                                        <span class="old_price"><b><span>39.30</span></b> <!--<i class="rouble rouble_padding">i</i>--></span>                <span class="price"><span>28.10</span> <i class="rouble rouble_padding">руб.</i></span>
+                                        <span class="gramm">640 г | 20 шт</span>            </div>
+                                    <div class="tovar_cost">
+                                        <div class="colich_tov">
+                                            <input type="button" value="-" class="minus_tov" />
+                                            <input type="text" value="1" class="txt_col_tov" />
+                                            <input type="button" value="+" class="plus_tov" />
+                                        </div>
+                                        <input type="button" class="addtocart" value="">
+                                        <div class="recomend">
+                                            <p>Рекомендую</p>
+                                            <a class="like  you_not_like_bitch" href="#"><span>1</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .tovar -->
+                        <div
+                            class="tovar animate"
+                            id="bx_651765591_51183"
+                            data-price="60.83"
+                            data-old-price=""
+                            data-id="51183"
+                            data-category-id="18"
+                            data-category-name=""
+                            data-half-enabled="no"
+                            >
+                            <div class="pic">
+                                <img
+                                    src="upload/resize_cache/iblock/16b/220_172_1/tsunami_set.jpg"
+                                    alt="Цунами сет"
+                                    title="Цунами сет"
+                                    width="220"
+                                    height="172"
+                                    />
+                                <div class="mask"></div>
+                                <div class="zoom"></div>
+                            </div>
+                            <div class="label" style="background-color: #FF4500">Новинка</div>
+
+                            <div class="about">
+                                <div class="title"><span class="title">Цунами сет</span></div>
+                                <p>Сендай маки, Эдо маки, Микс Филадельфия маки, Асахи маки</p>
+                            </div>
+                            <div class="down">
+                                <div class="tovar_info">
+                                    <span class="price"><span>60.83</span> <i class="rouble rouble_padding">руб.</i></span>
+                                    <span class="gramm">1051 г | 32 шт.</span>        </div>
+                                <div class="tovar_cost">
+                                    <div class="colich_tov">
+                                        <input type="button" value="-" class="minus_tov"/>
+                                        <input type="text" value="1" class="txt_col_tov"/>
+                                        <input type="button" value="+" class="plus_tov"/>
+                                    </div>
+                                    <input type="button" class="addtocart" value="">
+                                </div>
+                            </div>
+                            <div class="tovar_zoom">
+                                <div class="pic">
+                                    <img
+                                        src="upload/resize_cache/iblock/16b/467_361_1/tsunami_set.jpg"
+                                        alt="Цунами сет"
+                                        title="Цунами сет"
+                                        />
+                                    <div class="mask"></div>
+                                    <div class="zoom"></div>
+                                </div>
+                                <div class="label" style="background-color: #FF4500">Новинка</div>
+                                <div class="about">
+                                    <div class="title">Цунами сет</div>
+                                    <p><noindex>Сендай маки, Эдо маки, Микс Филадельфия маки, Асахи маки<br />
+                                        производитель: OOO “Глобалпрогрупп” </noindex></p>
+                                </div>
+                                <div class="down">
+                                    <div class="tovar_info">
+                                        <span class="price"><span>60.83</span> <i class="rouble rouble_padding">руб.</i></span>
+                                        <span class="gramm">1051 г | 32 шт.</span>            </div>
+                                    <div class="tovar_cost">
+                                        <div class="colich_tov">
+                                            <input type="button" value="-" class="minus_tov" />
+                                            <input type="text" value="1" class="txt_col_tov" />
+                                            <input type="button" value="+" class="plus_tov" />
+                                        </div>
+                                        <input type="button" class="addtocart" value="">
+                                        <div class="recomend">
+                                            <p>Рекомендую</p>
+                                            <a class="like  you_not_like_bitch" href="#"><span>51</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .tovar -->
+                        <div
+                            class="tovar animate"
+                            id="bx_651765591_362"
+                            data-price="38.72"
+                            data-old-price=""
+                            data-id="362"
+                            data-category-id="18"
+                            data-category-name=""
+                            data-half-enabled="no"
+                            >
+                            <div class="pic">
+                                <img
+                                    src="upload/resize_cache/iblock/609/220_172_1/maki_set.jpg"
+                                    alt="Маки сет"
+                                    title="Маки сет"
+                                    width="220"
+                                    height="172"
+                                    />
+                                <div class="mask"></div>
+                                <div class="zoom"></div>
+                            </div>
+
+                            <div class="about">
+                                <div class="title"><span class="title">Маки сет</span></div>
+                                <p>Токио маки, Михара маки, Унаги Каппа маки, Спайси Пиро маки</p>
+                            </div>
+                            <div class="down">
+                                <div class="tovar_info">
+                                    <span class="price"><span>38.72</span> <i class="rouble rouble_padding">руб.</i></span>
+                                    <span class="gramm">864 г | 32 шт</span>        </div>
+                                <div class="tovar_cost">
+                                    <div class="colich_tov">
+                                        <input type="button" value="-" class="minus_tov"/>
+                                        <input type="text" value="1" class="txt_col_tov"/>
+                                        <input type="button" value="+" class="plus_tov"/>
+                                    </div>
+                                    <input type="button" class="addtocart" value="">
+                                </div>
+                            </div>
+                            <div class="tovar_zoom">
+                                <div class="pic">
+                                    <img
+                                        src="upload/resize_cache/iblock/609/467_361_1/maki_set.jpg"
+                                        alt="Маки сет"
+                                        title="Маки сет"
+                                        />
+                                    <div class="mask"></div>
+                                    <div class="zoom"></div>
+                                </div>
+                                <div class="about">
+                                    <div class="title">Маки сет</div>
+                                    <p><noindex>Токио маки, Михара маки, Унаги Каппа маки, Спайси Пиро маки<br />
+                                        производитель: OOO “Глобалпрогрупп”</noindex></p>
+                                </div>
+                                <div class="down">
+                                    <div class="tovar_info">
+                                        <span class="price"><span>38.72</span> <i class="rouble rouble_padding">руб.</i></span>
+                                        <span class="gramm">864 г | 32 шт</span>            </div>
+                                    <div class="tovar_cost">
+                                        <div class="colich_tov">
+                                            <input type="button" value="-" class="minus_tov" />
+                                            <input type="text" value="1" class="txt_col_tov" />
+                                            <input type="button" value="+" class="plus_tov" />
+                                        </div>
+                                        <input type="button" class="addtocart" value="">
+                                        <div class="recomend">
+                                            <p>Рекомендую</p>
+                                            <a class="like  you_not_like_bitch" href="#"><span>33</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .tovar -->
+                        <div
+                            class="tovar animate"
+                            id="bx_651765591_355"
+                            data-price="14.96"
+                            data-old-price=""
+                            data-id="355"
+                            data-category-id="22"
+                            data-category-name=""
+                            data-half-enabled="yes"
+                            >
+                            <div class="pic">
+                                <img
+                                    src="upload/resize_cache/iblock/348/220_172_1/philadephia%20maki.jpg"
+                                    alt="Филадельфия маки"
+                                    title="Филадельфия маки"
+                                    width="220"
+                                    height="172"
+                                    />
+                                <div class="mask"></div>
+                                <div class="zoom"></div>
+                            </div>
+                            <div class="label" style="background-color: #a74ebd">Рекомендуем</div>
+
+                            <div class="about">
+                                <div class="title"><span class="title">Филадельфия маки</span></div>
+                                <p>Лосось, сливочный сыр </p>
+                            </div>
+                            <div class="down">
+                                <div class="tovar_info">
+                                    <span class="price"><span>14.96</span> <i class="rouble rouble_padding">руб.</i></span>
+                                    <span class="gramm">300 г | 8 шт</span>        </div>
+                                <div class="tovar_cost">
+                                    <div class="colich_tov">
+                                        <input type="button" value="-" class="minus_tov"/>
+                                        <input type="button" value="-&frac12;" class="minus_half_tov"/>
+                                        <input type="text" value="1" class="txt_col_tov"/>
+                                        <input type="button" value="+&frac12;" class="plus_half_tov"/>
+                                        <input type="button" value="+" class="plus_tov"/>
+                                    </div>
+                                    <input type="button" class="addtocart" value="">
+                                </div>
+                            </div>
+                            <div class="tovar_zoom">
+                                <div class="pic">
+                                    <img
+                                        src="upload/resize_cache/iblock/348/467_361_1/philadephia%20maki.jpg"
+                                        alt="Филадельфия маки"
+                                        title="Филадельфия маки"
+                                        />
+                                    <div class="mask"></div>
+                                    <div class="zoom"></div>
+                                </div>
+                                <div class="label" style="background-color: #a74ebd">Рекомендуем</div>
+                                <div class="about">
+                                    <div class="title">Филадельфия маки</div>
+                                    <p><noindex>Лосось, сливочный сыр <br />
+                                        белки 27.9г жиры 24.8г углеводы 58.2г килокалории 552.4 килоджоули 2313.0<br />
+                                        производитель: OOO &quot;Глобалпрогрупп&quot;<br />
+                                    </noindex></p>
+                                </div>
+                                <div class="down">
+                                    <div class="tovar_info">
+                                        <span class="price"><span>14.96</span> <i class="rouble rouble_padding">руб.</i></span>
+                                        <span class="gramm">300 г | 8 шт</span>            </div>
+                                    <div class="tovar_cost">
+                                        <div class="colich_tov">
+                                            <input type="button" value="-" class="minus_tov" />
+                                            <input type="button" value="-&frac12;" class="minus_half_tov"/>
+                                            <input type="text" value="1" class="txt_col_tov" />
+                                            <input type="button" value="+&frac12;" class="plus_half_tov"/>
+                                            <input type="button" value="+" class="plus_tov" />
+                                        </div>
+                                        <input type="button" class="addtocart" value="">
+                                        <div class="recomend">
+                                            <p>Рекомендую</p>
+                                            <a class="like  you_not_like_bitch" href="#"><span>29</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .tovar -->
+                        <div
+                            class="tovar animate"
+                            id="bx_651765591_371"
+                            data-price="31.68"
+                            data-old-price="39.60"
+                            data-id="371"
+                            data-category-id="18"
+                            data-category-name=""
+                            data-half-enabled="no"
+                            >
+                            <div class="pic">
+                                <img
+                                    src="upload/resize_cache/iblock/d1a/220_172_1/syake_set_new.jpg"
+                                    alt="Сяке сет"
+                                    title="Сяке сет"
+                                    width="220"
+                                    height="172"
+                                    />
+                                <div class="mask"></div>
+                                <div class="zoom"></div>
+                            </div>
+
+                            <div class="about">
+                                <div class="title"><span class="title">Сяке сет</span></div>
+                                <p>Сет состоит из 5 роллов с лососем в сочетании с другими классическими ингредиентами &#40;сливочным сыром, авокадо, зеленым луком, огурцом и соусом Спайси&#41;</p>
+                            </div>
+                            <div class="down">
+                                <div class="tovar_info">
+                                    <span class="old_price"><b><span>39.60</span></b> <!--<i class="rouble rouble_padding">i</i>--></span>            <span class="price"><span>31.68</span> <i class="rouble rouble_padding">руб.</i></span>
+                                    <span class="gramm">928 г | 40 шт</span>        </div>
+                                <div class="tovar_cost">
+                                    <div class="colich_tov">
+                                        <input type="button" value="-" class="minus_tov"/>
+                                        <input type="text" value="1" class="txt_col_tov"/>
+                                        <input type="button" value="+" class="plus_tov"/>
+                                    </div>
+                                    <input type="button" class="addtocart" value="">
+                                </div>
+                            </div>
+                            <div class="tovar_zoom">
+                                <div class="pic">
+                                    <img
+                                        src="upload/resize_cache/iblock/d1a/467_361_1/syake_set_new.jpg"
+                                        alt="Сяке сет"
+                                        title="Сяке сет"
+                                        />
+                                    <div class="mask"></div>
+                                    <div class="zoom"></div>
+                                </div>
+                                <div class="about">
+                                    <div class="title">Сяке сет</div>
+                                    <p><noindex>Сет состоит из 5 роллов с лососем в сочетании с другими классическими ингредиентами &#40;сливочным сыром, авокадо, зеленым луком, огурцом и соусом Спайси&#41;<br />
+                                        производитель: ООО &quot;Глобалпрогрупп&quot;</noindex></p>
+                                </div>
+                                <div class="down">
+                                    <div class="tovar_info">
+                                        <span class="old_price"><b><span>39.60</span></b> <!--<i class="rouble rouble_padding">i</i>--></span>                <span class="price"><span>31.68</span> <i class="rouble rouble_padding">руб.</i></span>
+                                        <span class="gramm">928 г | 40 шт</span>            </div>
+                                    <div class="tovar_cost">
+                                        <div class="colich_tov">
+                                            <input type="button" value="-" class="minus_tov" />
+                                            <input type="text" value="1" class="txt_col_tov" />
+                                            <input type="button" value="+" class="plus_tov" />
+                                        </div>
+                                        <input type="button" class="addtocart" value="">
+                                        <div class="recomend">
+                                            <p>Рекомендую</p>
+                                            <a class="like  you_not_like_bitch" href="#"><span>27</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .tovar -->
+
                     </div>
                     <div class="clear"></div> <div class="poplavok">
                         <div class="podarki_box podarki_close" style="display:block;">
@@ -279,86 +1106,112 @@
             </div>
         </div>
         <div class="wrap">
-            <div id="tab-container">
+            <div id='tab-container'>
                 <div class="os"></div>
 
-                <div class="tab-header" id="tab-container-header"><ul class="tab-list"><li id="tab-container-tab-0"><a class="tab-item tab-active" href="javascript://" title="null">Акционная политика</a></li><li id="tab-container-tab-1"><a class="tab-item" href="javascript://" title="null">Оплата наличными</a></li><li id="tab-container-tab-2"><a class="tab-item" href="javascript://" title="null">Оплата банковской картой</a></li><li id="tab-container-tab-3"><a class="tab-item" href="javascript://" title="null">Доставка и самовывоз</a></li><li id="tab-container-tab-4"><a class="tab-item" href="javascript://" title="null">Адреса и контакты</a></li></ul></div><div class="tab-content" style="display: block;">
+                <div class="tab-content">
                     <div class="tab">Акционная политика</div>                            
                     <div class="tabscontent">
                         <div class="pic">
-                            <img src="upload/resize_cache/iblock/1e2/147_147_1/gift.png" alt="Акционная политика" title="Акционная политика">
+                            <img
+                                src="upload/resize_cache/iblock/1e2/147_147_1/gift.png"
+                                alt="Акционная политика"
+                                title="Акционная политика"
+                                />
                         </div>
                         <div class="opis">
-                            Правила иcпользования акционных предложений и скидок:<br>
-                            1. скидки не суммируются, Гость имеет право воспользоваться максимальной скидкой<br>
-                            2. при использовании скидки на весь заказ использование бонусных рублей не возможно<br>
-                            3. бонусные рубли системы лояльности не начисляются на заказы со скидкой<br>
-                            4. в одном заказе может быть использован один промокод, скидка, акционный флаер или подарок<br>
-                            5. стоимость доставки рассчитывается исходя из суммы заказа с учетом скидки<br>
+                            Правила иcпользования акционных предложений и скидок:<br />
+                            1. скидки не суммируются, Гость имеет право воспользоваться максимальной скидкой<br />
+                            2. при использовании скидки на весь заказ использование бонусных рублей не возможно<br />
+                            3. бонусные рубли системы лояльности не начисляются на заказы со скидкой<br />
+                            4. в одном заказе может быть использован один промокод, скидка, акционный флаер или подарок<br />
+                            5. стоимость доставки рассчитывается исходя из суммы заказа с учетом скидки<br />
                         </div>
                     </div>                        
                 </div>
-                <div class="tab-content" style="display: none;">
+                <div class="tab-content">
                     <div class="tab">Оплата наличными</div>                            
                     <div class="tabscontent">
                         <div class="pic">
-                            <img src="upload/resize_cache/iblock/3d2/147_147_1/wallet-icon-512.jpg" alt="Оплата наличными" title="Оплата наличными">
+                            <img
+                                src="upload/resize_cache/iblock/3d2/147_147_1/wallet-icon-512.jpg"
+                                alt="Оплата наличными"
+                                title="Оплата наличными"
+                                />
                         </div>
                         <div class="opis">
                             Оплата за доставленный заказ производится в белорусских рублях, путем передачи наличных денежных средств курьеру при получении заказа. В подтверждение произведенной оплаты путем передачи наличных денежных средств курьер выдает квитанцию и предварительный чек, или кассовый чек и предварительный чек.<br>
                             При необходимости подготовить сдачу с определенной суммы укажите это при оформлении заказа или предупредите оператора при подтверждении заказа.<br>                        	</div>
                     </div>                        
                 </div>
-                <div class="tab-content" style="display: none;">
+                <div class="tab-content">
                     <div class="tab">Оплата банковской картой</div>                            
                     <div class="tabscontent">
                         <div class="pic">
-                            <img src="upload/resize_cache/iblock/ada/147_147_1/credit-card.jpg" alt="Оплата банковской картой" title="Оплата банковской картой">
+                            <img
+                                src="upload/resize_cache/iblock/ada/147_147_1/credit-card.jpg"
+                                alt="Оплата банковской картой"
+                                title="Оплата банковской картой"
+                                />
                         </div>
                         <div class="opis">
                             Банковской картой можно оплатить заказ на вынос или доставку по факту получения заказа. К оплате принимаются банковские карты MasterCard, Maestro,Visa.<br>
                             При желании оплатить заказ на доставку банковской кредитной картой, предупреждайте об этом операторов колл-центра при оформлении заказа.                        	</div>
                     </div>                        
                 </div>
-                <div class="tab-content" style="display: none;">
+                <div class="tab-content">
                     <div class="tab">Доставка и самовывоз</div>                            
                     <div class="tabscontent">
                         <div class="pic">
-                            <img src="upload/resize_cache/iblock/f1b/147_147_1/paket_sushi-_house.jpg" alt="Доставка и самовывоз" title="Доставка и самовывоз">
+                            <img
+                                src="upload/resize_cache/iblock/f1b/147_147_1/paket_sushi-_house.jpg"
+                                alt="Доставка и самовывоз"
+                                title="Доставка и самовывоз"
+                                />
                         </div>
                         <div class="opis">
-                            1.Самовывоз:<br>
-                            Минимальная сумма заказа отсутствует. Эта услуга бесплатна.<br>
-                            Cвой заказ можно получить по любому из адресов сети SUSHI HOUSE в соответствии с режимом работы заведения:<br>
-                            пр-т Дзержинского 91(ТЦ "Алми"), время работы: круглосуточно<br>
-                            2.Доставка курьерской службой:<br>
-                            Наш курьер доставит заказ по указанному адресу. Заказы на доставку принимаются круглосуточно без выходных.<br>
+                            1.Самовывоз:<br />
+                            Минимальная сумма заказа отсутствует. Эта услуга бесплатна.<br />
+                            Cвой заказ можно получить по любому из адресов сети SUSHI HOUSE в соответствии с режимом работы заведения:<br />
+                            пр-т Дзержинского 91&#40;ТЦ &quot;Алми&quot;&#41;, время работы: круглосуточно<br />
+                            2.Доставка курьерской службой:<br />
+                            Наш курьер доставит заказ по указанному адресу. Заказы на доставку принимаются круглосуточно без выходных.<br />
                             Стоимость доставки зависит от общей суммы заказа и зоны доставки.                        	</div>
                     </div>                        
                 </div>
-                <div class="tab-content" style="display: none;">
+                <div class="tab-content">
                     <div class="tab">Адреса и контакты</div>                            
                     <div class="tabscontent">
                         <div class="pic">
-                            <img src="upload/resize_cache/iblock/7c0/147_147_1/logo.jpg" alt="Адреса и контакты" title="Адреса и контакты">
+                            <img
+                                src="upload/resize_cache/iblock/7c0/147_147_1/logo.jpg"
+                                alt="Адреса и контакты"
+                                title="Адреса и контакты"
+                                />
                         </div>
                         <div class="opis">
-                            Служба доставки блюд японской кухни SUSHI HOUSE всегда рад предложить Вам настоящую японскую кухню с доставкой на дом или в офис.<br>
-                            Заказы на доставку принимаются КРУГЛОСУТОЧНО. Оформить заказ "на вынос" можно по адресу<br>
-                            пр-т Дзержинского 91 (ТЦ Алми). Время работы заведения - круглосуточно<br>
-                            Единый телефон call-центра: 668-11-11 (velcom, МТС)<br>
-                            по вопросам сотрудничества: <a class="txttohtmllink" href="mailto:marketing@sushihouse.by" title="Написать письмо">marketing@sushihouse.by</a> +375445040532                        	</div>
+                            Служба доставки блюд японской кухни SUSHI HOUSE всегда рад предложить Вам настоящую японскую кухню с доставкой на дом или в офис.<br />
+                            Заказы на доставку принимаются КРУГЛОСУТОЧНО. Оформить заказ &quot;на вынос&quot; можно по адресу<br />
+                            пр-т Дзержинского 91 &#40;ТЦ Алми&#41;. Время работы заведения - круглосуточно<br />
+                            Единый телефон call-центра: 668-11-11 &#40;velcom, МТС&#41;<br />
+                            по вопросам сотрудничества: <a class="txttohtmllink" href="mailto:marketing@sushihouse.by" title="Написать письмо">marketing@sushihouse.by</a> &#43;375445040532                        	</div>
                     </div>                        
                 </div>
 
+
+
+
             </div>                 
 
+
+
+
+        </div>
         <br>
         <div id="modalBox" style="display:none;" data-tovar-id="">
             <span id="modalClose">X</span>
         </div>
         <div id="overlay">
         </div>
-        <br>		<div id="overlay"></div>
-    </main>{# PAGE END! #}
+        <br>		<div id="overlay"></div>    </main>{# PAGE END! #}
 {% endblock %}
