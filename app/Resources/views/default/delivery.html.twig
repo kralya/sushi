@@ -1,0 +1,250 @@
+{% extends 'newbase.html.twig' %}
+
+    
+{% block stylesheets %}
+        <link href="/local/templates/bd_sushi_shop_default/components/bitrix/catalog.section.list/menu_maxi/style8e9c.css?14529551107305" type="text/css"  rel="stylesheet" />
+        <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/slider/style2520.css?1452955110150" type="text/css"  rel="stylesheet" />
+        <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/top_items/style2520.css?1452955110150" type="text/css"  rel="stylesheet" />
+        <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/tabs/style2520.css?1452955110150" type="text/css"  rel="stylesheet" />
+        <link href="/local/templates/bd_sushi_shop_default/css/animate6947.css?145295511068816" type="text/css"  data-template-style="true"  rel="stylesheet" />
+        <link href="/local/templates/bd_sushi_shop_default/css/autocomplete7291.css?1484386548733" type="text/css"  data-template-style="true"  rel="stylesheet" />
+        <link href="/local/templates/bd_sushi_shop_default/css/owl.carousel1392.css?14843864501476" type="text/css"  data-template-style="true"  rel="stylesheet" />
+        <link href="/local/templates/bd_sushi_shop_default/components/bitrix/menu/top_menu/style9c08.css?1452955110583" type="text/css"  data-template-style="true"  rel="stylesheet" />
+        <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/social/style2520.css?1452955110150" type="text/css"  data-template-style="true"  rel="stylesheet" />
+        <link href="/local/templates/bd_sushi_shop_default/stylesde88.css?14851748899819" type="text/css"  data-template-style="true"  rel="stylesheet" />
+        <link href="/local/templates/bd_sushi_shop_default/template_styles5ff8.css?1485880895163247" type="text/css"  data-template-style="true"  rel="stylesheet" />
+{% endblock %}
+
+{% block javascripts %}
+        <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/chosen.jquery.min8f55.js?146037302025688"></script>
+        <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/jquery.tinyscrollbar3d16.js?146037302012470"></script>
+        <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/jquery.animateNumber.min002b.js?14603730201353"></script>
+        <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/libphonenumber-utils67fb.js?1460373020237410"></script>
+        <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/jquery.maskedinput.min72ec.js?146037302010317"></script>
+        <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/jquery.autocomplete7992.js?148544009333017"></script>
+
+{#        <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/studio8769a.js?148588231219911"></script>#}
+
+        <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/basketce53.js?148637770442081"></script>
+        <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/owl.carousel.mincebe.js?148438625723890"></script>
+        <script type="text/javascript" src="/iiko/autocomplete/jquery.mockjaxbf04.js?146037296219052"></script>
+        <script type="text/javascript" src="/iiko/autocomplete/streetse4b8.js?14843878782783"></script>
+        <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/slider/scriptdb64.js?1484396037550"></script>
+
+{% endblock %}
+
+{% block body %}
+    
+{#         
+PAGE ITSELF ! #}
+            <main class="content ">
+                <div class="wrap">
+<div class="map">
+	 <script type="text/javascript">
+function BX_SetPlacemarks_MAP_jf2FwMNYG7(map)
+{
+	if(typeof window["BX_YMapAddPlacemark"] != 'function')
+	{
+		/* If component's result was cached as html,
+		 * script.js will not been loaded next time.
+		 * let's do it manualy.
+		*/
+
+		(function(d, s, id)
+		{
+			var js, bx_ym = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "http://sushihouse.by/bitrix/components/bitrix/map.yandex.view/templates/.default/script.js";
+			bx_ym.parentNode.insertBefore(js, bx_ym);
+		}(document, 'script', 'bx-ya-map-js'));
+
+		var ymWaitIntervalId = setInterval( function(){
+				if(typeof window["BX_YMapAddPlacemark"] == 'function')
+				{
+					BX_SetPlacemarks_MAP_jf2FwMNYG7(map);
+					clearInterval(ymWaitIntervalId);
+				}
+			}, 300
+		);
+
+		return;
+	}
+
+	var arObjects = {PLACEMARKS:[],POLYLINES:[]};
+	arObjects.PLACEMARKS[arObjects.PLACEMARKS.length] = BX_YMapAddPlacemark(map, {'LON':'27.4820286118','LAT':'53.8594824225','TEXT':'SUSHI HOUSE take away пр-т. Дзержинского, 91 (ТЦ Алми)'});
+	arObjects.POLYLINES[arObjects.POLYLINES.length] = BX_YMapAddPolyline(map, {'POINTS':[{'LAT':'53.835135327','LON':'27.533408185'},{'LAT':'53.8330029964','LON':'27.5540075502'},{'LAT':'53.8327999116','LON':'27.5754652223'},{'LAT':'53.8334420697','LON':'27.6462087857'},{'LAT':'53.8387218715','LON':'27.6608000028'},{'LAT':'53.8440010045','LON':'27.666808151'},{'LAT':'53.8591639345','LON':'27.681941341'},{'LAT':'53.8771057314','LON':'27.6963782175'},{'LAT':'53.885118301','LON':'27.6958632333'},{'LAT':'53.9108634781','LON':'27.6851822562'},{'LAT':'53.9406091338','LON':'27.6733667698'},{'LAT':'53.9438988628','LON':'27.6704485264'},{'LAT':'53.969006686','LON':'27.5992090549'},{'LAT':'53.9710308486','LON':'27.5878794041'},{'LAT':'53.9710308486','LON':'27.5822740417'},{'LAT':'53.9665564717','LON':'27.4769597455'},{'LAT':'53.9650533922','LON':'27.467850993'},{'LAT':'53.9616117611','LON':'27.4599545697'},{'LAT':'53.9432853315','LON':'27.4359219769'},{'LAT':'53.9337645457','LON':'27.4249356488'},{'LAT':'53.9114733222','LON':'27.4094861249'},{'LAT':'53.9047093261','LON':'27.4067647066'},{'LAT':'53.8996406466','LON':'27.4077946749'},{'LAT':'53.8577322859','LON':'27.4285951938'},{'LAT':'53.8482631636','LON':'27.4384456388'},{'LAT':'53.8454209273','LON':'27.4451404325'},{'LAT':'53.8417663387','LON':'27.4750095121'},{'LAT':'53.835561938','LON':'27.5300355882'}],'TITLE':'','STYLE':{'strokeColor':'FF00007F','strokeWidth':'3'}});
+	arObjects.POLYLINES[arObjects.POLYLINES.length] = BX_YMapAddPolyline(map, {'POINTS':[{'LAT':'53.835135327','LON':'27.533408185'},{'LAT':'53.8330029964','LON':'27.5540075502'},{'LAT':'53.8327999116','LON':'27.5754652223'},{'LAT':'53.8334420697','LON':'27.6462087857'},{'LAT':'53.8387218715','LON':'27.6608000028'},{'LAT':'53.8440010045','LON':'27.666808151'},{'LAT':'53.8591639345','LON':'27.681941341'},{'LAT':'53.8771057314','LON':'27.6963782175'},{'LAT':'53.885118301','LON':'27.6958632333'},{'LAT':'53.9108634781','LON':'27.6851822562'},{'LAT':'53.9406091338','LON':'27.6733667698'},{'LAT':'53.9438988628','LON':'27.6704485264'},{'LAT':'53.969006686','LON':'27.5992090549'},{'LAT':'53.9710308486','LON':'27.5878794041'},{'LAT':'53.9710308486','LON':'27.5822740417'},{'LAT':'53.9665564717','LON':'27.4769597455'},{'LAT':'53.9650533922','LON':'27.467850993'},{'LAT':'53.9616117611','LON':'27.4599545697'},{'LAT':'53.9432853315','LON':'27.4359219769'},{'LAT':'53.9337645457','LON':'27.4249356488'},{'LAT':'53.9114733222','LON':'27.4094861249'},{'LAT':'53.9047093261','LON':'27.4067647066'},{'LAT':'53.8996406466','LON':'27.4077946749'},{'LAT':'53.8577322859','LON':'27.4285951938'},{'LAT':'53.8482631636','LON':'27.4384456388'},{'LAT':'53.8454209273','LON':'27.4451404325'},{'LAT':'53.8417663387','LON':'27.4750095121'},{'LAT':'53.835561938','LON':'27.5300355882'}],'TITLE':'Зона А','STYLE':{'strokeColor':'81da57FF','strokeWidth':'5'}});
+	arObjects.POLYLINES[arObjects.POLYLINES.length] = BX_YMapAddPolyline(map, {'POINTS':[{'LAT':'53.8206450778','LON':'27.5270693703'},{'LAT':'53.8181262866','LON':'27.5902360831'},{'LAT':'53.8207672409','LON':'27.6383012686'},{'LAT':'53.8317093964','LON':'27.6857128491'},{'LAT':'53.8566820572','LON':'27.7148952831'},{'LAT':'53.8945688847','LON':'27.720116756'},{'LAT':'53.9247727674','LON':'27.7046672321'},{'LAT':'53.9549547097','LON':'27.6850978351'},{'LAT':'53.9773026048','LON':'27.6256847683'},{'LAT':'53.9827665241','LON':'27.6030254666'},{'LAT':'53.983778282','LON':'27.5913524929'},{'LAT':'53.9793263626','LON':'27.4667263333'},{'LAT':'53.954224785','LON':'27.422437698'},{'LAT':'53.9084360597','LON':'27.3822689358'},{'LAT':'53.8836972711','LON':'27.3881054226'},{'LAT':'53.8431100403','LON':'27.4190044705'},{'LAT':'53.8297075717','LON':'27.4571132962'},{'LAT':'53.8211117137','LON':'27.5213932702'}],'TITLE':'Зона Б','STYLE':{'strokeColor':'fcec56FF','strokeWidth':'4'}});
+}
+</script>
+<div class="bx-yandex-view-layout">
+	<div class="bx-yandex-view-map">
+		<script>
+			var script = document.createElement('script');
+			script.src = '../api-maps.yandex.ru/2.0/index1d80.html?load=package.full&amp;mode=release&amp;lang=ru-RU&amp;wizard=bitrix';
+			(document.head || document.documentElement).appendChild(script);
+			script.onload = function () {
+				this.parentNode.removeChild(script);
+			};
+		</script>
+		<script type="text/javascript">
+
+if (!window.GLOBAL_arMapObjects)
+	window.GLOBAL_arMapObjects = {};
+
+function init_MAP_jf2FwMNYG7()
+{
+	if (!window.ymaps)
+		return;
+
+	if(typeof window.GLOBAL_arMapObjects['MAP_jf2FwMNYG7'] !== "undefined")
+		return;
+
+	var node = BX("BX_YMAP_MAP_jf2FwMNYG7");
+	node.innerHTML = '';
+
+	var map = window.GLOBAL_arMapObjects['MAP_jf2FwMNYG7'] = new ymaps.Map(node, {
+		center: [53.9012154925, 27.54698209],
+		zoom: 11,
+		type: 'yandex#map'
+	});
+
+	if (map.behaviors.isEnabled("scrollZoom"))
+		map.behaviors.disable("scrollZoom");
+	if (map.behaviors.isEnabled("dblClickZoom"))
+		map.behaviors.disable("dblClickZoom");
+	map.behaviors.enable("drag");
+	if (map.behaviors.isEnabled("rightMouseButtonMagnifier"))
+		map.behaviors.disable("rightMouseButtonMagnifier");
+	map.controls.add('scaleLine');
+	if (window.BX_SetPlacemarks_MAP_jf2FwMNYG7)
+	{
+		window.BX_SetPlacemarks_MAP_jf2FwMNYG7(map);
+	}
+}
+
+(function bx_ymaps_waiter(){
+	if(typeof ymaps !== 'undefined')
+		ymaps.ready(init_MAP_jf2FwMNYG7);
+	else
+		setTimeout(bx_ymaps_waiter, 100);
+})();
+
+
+/* if map inits in hidden block (display:none)
+*  after the block showed
+*  for properly showing map this function must be called
+*/
+function BXMapYandexAfterShow(mapId)
+{
+	if(window.GLOBAL_arMapObjects[mapId] !== undefined)
+		window.GLOBAL_arMapObjects[mapId].container.fitToViewport();
+}
+
+</script>
+<div id="BX_YMAP_MAP_jf2FwMNYG7" class="bx-yandex-map" style="height: 450px; width: 100%;">загрузка карты...</div>	</div>
+</div>
+</div>
+                    
+                    
+                    
+                    <div class="zona_box">
+			<img src="/images/24_7_delivery.png">
+			
+			<div class="title">
+				 Районы доставки:			</div>
+			 	       <div class="zn" id="bx_3218110189_153">
+       <span style="background: #81da57"></span>
+       <b><i>Зона А</i>
+         
+       <br>Стоимость доставки: 1.50 .-  
+       <br>Бесплатная доставка при заказе на сумму: 30.00 .-       <br>Время доставки: в&nbsp;течение 60минут.</b>
+       </div>
+	       <div class="zn" id="bx_3218110189_154">
+       <span style="background: #fcec56"></span>
+       <b><i>Зона Б</i>
+         
+       <br>Стоимость доставки: 4.00 .-  
+              <br>Время доставки: в&nbsp;течение 60-90минут.</b>
+       </div>
+			<p>
+				<!-- <b style="font-size:17px;">ДОСТАВКА 60 МИНУТ ИЛИ ЗАКАЗ БЕСПЛАТНО!***</b><br><br>
+*условия действительны при оформлении доставки по следующим районам:
+МОСКОВСКИЙ<br>
+**отказаться от оплаты возможно на сумму не более 25.00руб.<br>
+***оператор call-центра имеет право сообщить об отсутствии возможности доставки в пределах 60 минут по техническим причинам или другой форс мажорной ситуации.<br> -->
+							</p>
+		</div>
+		<div class="zakak_oplata">
+			<div class="title">
+				 Как заказать и оплатить?			</div>
+			<div class="intr">
+				 Достаточно просто выбрать заинтересовавшие вас блюда из&nbsp;меню добавить их в корзину (нажимайте на иконку с корзинкой рядом с каждым блюдом&nbsp;— оно будет добавлено в Ваш заказ)			</div>
+			<div class="qwest">
+				 <p>
+ <b>Заказы на ДОСТАВКУ&nbsp;</b>принимаются КРУГЛОСУТОЧНО без выходных.&nbsp;
+</p>
+<p>
+ <b>Заказы на ВЫНОС принимаются по адресу</b>
+</p>
+<p>
+	пр-т Дзержинского, 91 (ТЦ АЛМИ)&nbsp;- КРУГЛОСУТОЧНО &nbsp;
+</p>
+<p>
+	 Время доставки может меняться в зависимости от загруженности ресторана.<br>
+</p>
+<p class="call_link">
+	 По всем вопросам, связанным с доставкой, обращайтесь по телефонам&nbsp;call-центра: <b><a href="tel:+375296681111">+375296681111</a></b> &nbsp;<b><a href="tel:+375336681111">+375336681111</a></b><br>
+</p>
+<p>
+ <br>
+</p>				<div class="phone">
+					 				</div>
+			</div>
+			<div class="sp_title">
+				 Способы оплаты			</div>
+			<div class="oplat_list">
+				<div class="oplata opl_1">
+					<div class="titles">
+						 Оплата картой
+					</div>
+					<p>
+						Заказы на доставку или на вынос можно оплатить банковской картой.
+					</p>
+					</div>
+				<div class="oplata opl_2">
+					<div class="titles">
+						 Оплата наличными
+					</div>
+					<p>
+						Заказы на доставку или на вынос можно оплатить наличными.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+                    
+                    
+                    
+                    
+                    
+
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                    <br/>
+                        <!-- .news_line -->
+
+                        <div class="clear"></div>         
+                        <div style="margin-bottom: 43px;"></div>  
+                    </div></div>		
+                <div id="overlay"></div>
+            </main><!-- .content -->
+        </div><!-- .wrapper -->
+{# PAGE END! #}
+{% endblock %}
