@@ -42,9 +42,9 @@ class DefaultController extends BaseController
     }
     
     /**
-     * @Route("/sample", name="sample")
+     * @Route("/news", name="news")
      */
-    public function sampleAction(Request $request)
+    public function newsAction(Request $request)
     {
         
         $params = [];
@@ -60,11 +60,14 @@ class DefaultController extends BaseController
         $params['ig'] = 'https://instagram.com/sushihouseby';
         $params['ok'] = 'http://ok.ru/group/51994461470904';
         
-        $caffees = [
+        $params['caffees'] = [
             ['id' => '31', 'en' => 'Moskovskaya273v', 'ru' => 'г. Брест, ул. Московская, 273В', ],
             ['id' => '33', 'en' => 'Dzerzhinskogo91', 'ru' => 'г. Минск, пр.Дзержинского 91', ]
             ];
         
-        return $this->render('default/my.html.twig', $params);
+        $repo = $this->getRepo('News');
+        $params['news'] = $repo->findAll();
+        
+        return $this->render('default/news.html.twig', $params);
     }
 }
