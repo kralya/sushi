@@ -75,7 +75,8 @@
             window.gift_level_1 = 30.00;
             window.gift_level_2 = 35.00;
             window.gift_level_3 = 40.00;
-            window.yaCounterId = 18420442;</script>
+            window.yaCounterId = 18420442;
+        </script>
 
         <script>
             var currentCity = 'zaporozhye';
@@ -159,7 +160,10 @@
                 </div>
             </div><!-- #cart -->
             <div class="cart_popup" id="oform" style="display:none;">
-                <!--'start_frame_cache_oform'-->    <div class="ajax-loader"><img src="local/templates/bd_sushi_shop_default/images/ajax-pink-loader.gif"></div>
+                <!--'start_frame_cache_oform'-->    
+                <div class="ajax-loader">
+                    <img src="/local/templates/bd_sushi_shop_default/images/ajax-pink-loader.gif">
+                </div>
                 <span class="close"></span>
                 <a href="#" class="back_to_cart"> </a><br>
                 <a href="#" class="back_to_cart_bottom">Вернуться в корзину</a>
@@ -241,13 +245,18 @@
                     </div>
                     <div class="ln delivery_time_wrap">
                         <span class="txt">Дата и время доставки</span>
-                        <input type="text" id="delivery_time" name="delivery_time" value="25.02.2017 13:56:00" class="rt delivery_time""/><img src="http://sushihouse.by/bitrix/js/main/core/images/calendar-icon.gif" alt="Выбрать дату в календаре" class="calendar-icon" onclick="BX.calendar({node:this, field:'delivery_time', form: '', bTime: true, currentTime: '1488025614', bHideTime: false});" onmouseover="BX.addClass(this, 'calendar-icon-hover');" onmouseout="BX.removeClass(this, 'calendar-icon-hover');" border="0"/>            </div>
+                        <input type="text" id="delivery_time" name="delivery_time" value="25.02.2017 13:56:00" class="rt delivery_time"/>
+                        <img src="http://sushihouse.by/bitrix/js/main/core/images/calendar-icon.gif" alt="Выбрать дату в календаре" class="calendar-icon" onclick="BX.calendar({node:this, field:'delivery_time', form: '', bTime: true, currentTime: '1488025614', bHideTime: false});" onmouseover="BX.addClass(this, 'calendar-icon-hover');" onmouseout="BX.removeClass(this, 'calendar-icon-hover');" border="0"/>
+                    </div>
                     <div class="ln restaurant_address">
                         <span class="txt">Адрес<i>*</i></span>
 
                         <select class="chosen-select-no-single style_hosen1 required restaurant_list">
-                            <option value="33" data-id="Moskovskaya273v">г. Брест, ул. Московская, 273В</option>
-                            <option value="31" data-id="Dzerzhinskogo91">г. Минск, пр.Дзержинского 91</option>
+                            {% for cafee in cafees %}
+                                <option value="{{cafee.id}}" data-id="{{caffee.en}}">{{cafee.ru}}</option>
+                            {% endfor %}
+{#                            <option value="33" data-id="Moskovskaya273v">г. Брест, ул. Московская, 273В</option>#}
+{#                            <option value="31" data-id="Dzerzhinskogo91">г. Минск, пр.Дзержинского 91</option>#}
                         </select>
                     </div>
                     <div class="ln receiver_name_wrap">
@@ -291,7 +300,6 @@
                     <div class="of_meta">
                         <input type="submit" class="send_order_btn" value="Заказать">
                         <div class="summa"><span></span> <i class="rouble rouble_padding">руб.</i></div>
-                        <!-- <div class="summa-order small-price">(<span></span>) бел. руб.</div> -->
                         <p class="itogo">Итого:</p>     
                     </div>         
                 </form> 
@@ -340,7 +348,9 @@
                 </div>
             </div>
         </div>
-{#menu end#}
+
+{# menu end #}
+
         <div class="wrapper">
             <header class="header ">
                 <div class="wrap top_wrap">
@@ -450,8 +460,7 @@ MAIN PAGE IS DISPLAYED HERE!!!
         <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/tabs.js"></script>
         <script type="text/javascript">
             jQuery(function($){
-
-            $(".phone").mask("+375 99 999 99 99");
+            $(".phone").mask("+380 99 999 99 99");
             });
         </script>
         
