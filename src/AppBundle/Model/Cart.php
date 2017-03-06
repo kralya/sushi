@@ -17,7 +17,7 @@ class Cart
     
     public function getTotal()
     {
-        return $this->total;
+        return $this->cart->get('basket')['total'];
     }
 
 
