@@ -12,7 +12,7 @@ class Cart
     public function __construct()
     {
         $this->cart = new Session();
-        $this->cart->set($this->cart->get('called')+1);
+        $this->cart->set('called', $this->cart->get('called')+1);
     }
     
     public function getTotal()
