@@ -370,12 +370,12 @@ $(document).ready(function(){
 		$('#cart').hide();
 		$('#oform').show();
 		$('.out_sum').val($('.cart_btn span').text().split(' ').join(''));
-		try{
-			ga('send', 'event', 'knopka',' go-to-order');
-			window.yaCounter.reachGoal('go-to-order',{});
-		} catch(e) {
-			console.log('Error: init yandex counter');
-		}  
+//		try{
+//			ga('send', 'event', 'knopka',' go-to-order');
+//			window.yaCounter.reachGoal('go-to-order',{});
+//		} catch(e) {
+//			console.log('Error: init yandex counter');
+//		}  
 		if($('.payment_type').length>0 && $('.payment_type').val()=='offline'){
 			$('.need_short_change_container').show();
 		}
