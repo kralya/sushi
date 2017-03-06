@@ -458,7 +458,7 @@ $(document).ready(function(){
 			
 		}    
     });  
-	$('.cart_btn').on('click',function(){
+	$('.cart_btn').on('click',function(){        
 		if($(this).hasClass('cart')){
 			return false;
 		}
@@ -479,12 +479,13 @@ $(document).ready(function(){
 		            $('.not_enough').hide();
 		            $('.cart_meta input[type="submit"]').show();
 	            }
-	            try {
-	            	ga('send', 'event', 'knopka',' go-to-basket');
-	            	window.yaCounter.reachGoal('go-to-basket',{});
-				} catch(e) {
-					console.log('Error: init yandex counter');
-				}
+//	            try {
+//	            	ga('send', 'event', 'knopka',' go-to-basket');
+//	            	window.yaCounter.reachGoal('go-to-basket',{});
+//				} catch(e) {
+//					console.log('Error: init yandex counter');
+//				}
+                                
 	            $.each(data.basket, function(i, item) {
 				    $('.zakaz_list').append(renderCartItem(i,data.basket[i]));
 				}); 
@@ -535,38 +536,38 @@ $(document).ready(function(){
 	
 	
 });
-function setDevliveryPrice(price,free){
-	$.ajax({
-                type: 'POST',
-                url: '/bdhandlers/basket.php?t='+new Date().getTime(),
-                dataType: 'json',
-                data: {action: 'setDeliveryPrice',price: price, free: free},
-                success: function (data) {
-                    animateNumbers($('#cart').find('.summa span'),data.total);
-					animateNumbers($('#oform').find('.summa span'),data.total);
-					if( $('.cart_btn span').length == 0 ){
-						$('.cart_btn').append($("<span></span>"));
-					}
-					if( data.total > 0 ){
-						$('.cart_btn').addClass('cart_full').removeClass('cart');
-						animateNumbers($('.cart_btn span'),data.total);
-					}
-					// animateNumbers($('#oform .summa-order.small-price span'), parseFloat(data.total) * 10000);
-					$('.delivery_price_value').text(data.delivery_price);
-					if(data.delivery_price==0){
-						$('.delivery_with_price').hide();
-						$('.delivery_free').show();
-						if( $('.variant_list').find(':selected').data('id') != 'navynos' )
-							$('.delivery_price').show();
-						else
-							$('.delivery_price').hide();
-					}else{
-						$('.delivery_with_price').show();
-						$('.delivery_free').hide();
-						$('.delivery_price').show();
-					}
-                }
-            });
+function setDevliveryPrice(price, free) {
+    $.ajax({
+        type: 'POST',
+        url: '/bdhandlers/basket.php?t=' + new Date().getTime(),
+        dataType: 'json',
+        data: {action: 'setDeliveryPrice', price: price, free: free},
+        success: function (data) {
+            animateNumbers($('#cart').find('.summa span'), data.total);
+            animateNumbers($('#oform').find('.summa span'), data.total);
+            if ($('.cart_btn span').length == 0) {
+                $('.cart_btn').append($("<span></span>"));
+            }
+            if (data.total > 0) {
+                $('.cart_btn').addClass('cart_full').removeClass('cart');
+                animateNumbers($('.cart_btn span'), data.total);
+            }
+            // animateNumbers($('#oform .summa-order.small-price span'), parseFloat(data.total) * 10000);
+            $('.delivery_price_value').text(data.delivery_price);
+            if (data.delivery_price == 0) {
+                $('.delivery_with_price').hide();
+                $('.delivery_free').show();
+                if ($('.variant_list').find(':selected').data('id') != 'navynos')
+                    $('.delivery_price').show();
+                else
+                    $('.delivery_price').hide();
+            } else {
+                $('.delivery_with_price').show();
+                $('.delivery_free').hide();
+                $('.delivery_price').show();
+            }
+        }
+    });
 }
 function checkPromo(){
 	setTimeout(function(){
@@ -973,7 +974,7 @@ function addToBasket(product) {
     		ga('send', 'event', 'knopka',' add-to-basket');
     		window.yaCounter.reachGoal('add-to-basket',{});
 		} catch(e) {
-			console.log('Error: init yandex counter');
+//			console.log('Error: init yandex counter');
 		}
         $('.cart_summa').removeClass('cart_summa_empty');
         $('.cart_summa').find('.rouble').show();
