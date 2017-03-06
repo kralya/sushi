@@ -198,5 +198,8 @@ class BasketController extends BaseController
         }
         
         $cart->set('total', $total);
+        $basket = $cart->get('basket');
+        $basket['total'] = $total;
+        $cart->set('basket', $basket);
     }
 }
