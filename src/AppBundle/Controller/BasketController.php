@@ -91,7 +91,7 @@ class BasketController extends BaseController
         $items = $cart->get('basket')['basket'];
         
         $item = $product->getForCart();
-        $item['count']   = $countt + $this->getOldCount($id); // + old item count
+        $item['count']   = $countt + $this->getOldCount($id);
         $item['half']    = null;
         $item['is_gift'] = 0;
 
