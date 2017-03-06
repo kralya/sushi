@@ -5,10 +5,15 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Session\Session;
+use AppBundle\Model\Cart;
 
 class BasketController extends BaseController
 {
+    protected $cart;
+    public function __construct()
+    {
+        $this->cart = new Cart();
+    }
     /**
      * @Route("/bdhandlers/basket.php", name="basket")
      */
@@ -47,6 +52,9 @@ class BasketController extends BaseController
     
     protected function setDeliveryPrice(Request $request)
     {
+        $price = $request->request->get('price');
+
+        /*
         // action = setDeliveryPrice
         // IN:
         // free: 30
@@ -55,9 +63,9 @@ class BasketController extends BaseController
         // OUT: 
         // total: 13.82
         // delivery_price: "1.50"
-
+*/
         
-       return ['total' => 0, 'delivery_price' => "0"];
+       return ['total' => $price, 'delivery_price' => $price];
     }
     
     protected function addToBasket(Request $request)
@@ -86,114 +94,43 @@ class BasketController extends BaseController
             return 'no product';
         }
 
-        $cart = new Session();
-        
-        $items = $cart->get('basket')['basket'];
-        
-        $item = $product->getForCart();
-        $item['count']   = $countt + $this->getOldCount($id);
-        $item['half']    = null;
-        $item['is_gift'] = 0;
-
-        $items[$product->getId()] = $item;
-        $cart->set('basket', ['basket' => $items]);
-        
-        $this->recalculateTotal();
-        
-        $cart->set('basket', [
-            'basket' => $items, 
-            'total' => $cart->get('total')
-                ]);
+        $this->cart->add($product, $countt);
 
         return [
-            'total' => $cart->get('total'),
-            $cart->get('basket'),
+            'total' => $this->cart->getTotal(),
+            $this->cart->get(),
             ];
-    }
-    
-    protected function getOldCount($id)
-    {
-        $cart = new Session();
-        $items = $cart->get('basket')['basket'];
-        
-        return isset($items[$id]) ? $items[$id]['count'] : 0;
     }
     
     protected function updateCount(Request $request)
     {
         $countt = $request->request->get('count');
         $id = $request->request->get('item_id');
+        $this->cart->updateCount($id, $countt);
         
-        $cart = new Session();
-        
-        $items = $cart->get('basket')['basket'];
-        
-        $items[$id]['count'] = $countt;
-        
-        $cart->set('basket', ['basket' => $items]);
-        
-        $this->recalculateTotal();
-        
-        return $cart->get('total');
+        return $this->cart->getTotal();
     }
     
     protected function delete(Request $request)
     {
         $id = $request->request->get('item_id');
-        $cart = new Session();
-        $items = $cart->get('basket')['basket'];
-        unset($items[$id]);
-        $cart->set('basket', ['basket' => $items]);
+        $this->cart->delete($id);
         
-        $this->recalculateTotal();
-        return $cart->get('total');
+        return $this->cart->getTotal();
     }
 
     protected function getBasket(Request $request)
     {
-        $cart = new Session();
-        return $cart->get('basket');
+        return $this->cart->get();
     }
     
     protected function initCart()
     {
-        $cart = new Session();
-        //1 === count($cart->get('basket')) or 
-        
-        if ($cart->has('calling')) {
-            $cart->set('calling', $cart->get('calling') + 1);
+        if (!$this->cart->isNew()) {
             return;
         }
 
-        $cart->set('calling', 1);
-
         $auxiliary = $this->getRepo('Product')->findByProposeInCart(true);
-
-        $items = [];
-        foreach ($auxiliary as $one) {
-            $item            = $one->getAuxiliaryForCart();
-            $item['count']   = 0;
-            $item['half']    = null;
-            $item['is_gift'] = 0;
-
-            $items['add_' . $one->getId()] = $item;
-        }
-
-        $cart->set('basket', ['basket' => $items]);
-    }
-    
-    protected function recalculateTotal()
-    {
-        $cart = new Session();
-        $items = $cart->get('basket')['basket'];
-        $total = 0;
-        foreach($items as $item) {
-            $total += $item['item_price'] * $item['count'];
-        }
-        
-        $cart->set('total', $total);
-        $basket = $cart->get('basket');
-        $basket['total'] = $total;
-        $cart->set('basket', $basket);
+        $this->cart->loadAuxiliary($auxiliary);
     }
 }
