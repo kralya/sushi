@@ -145,7 +145,14 @@ class BasketController extends BaseController
     
     protected function delete(Request $request)
     {
+        $id = $request->request->get('item_id');
+        $cart = new Session();
+        $items = $cart->get('basket')['basket'];
+        unset($items[$id]);
+        $cart->set('basket', ['basket' => $items]);
         
+        $this->recalculateTotal();
+        return $cart->get('total');
     }
 
     protected function getBasket(Request $request)
