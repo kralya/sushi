@@ -116,13 +116,7 @@ class BasketController extends BaseController
         $cart = new Session();
         $items = $cart->get('basket')['basket'];
         
-//        var_dump($items);die();
-        
-        if(!isset($items[$id])) {
-            return 0;
-        }
-        
-        return $items[$id]['count'];
+        return isset($items[$id]) ? $items[$id]['count'] : 0;
     }
     
     protected function updateCount(Request $request)
