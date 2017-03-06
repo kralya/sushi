@@ -372,4 +372,27 @@ class Product
     {
         return $this->proposeInCart;
     }
+    
+    public function getAuxiliaryForCart()
+    {
+        return [
+            'item_id' => $this->getId(),
+            'item_name' => $this->getName(),
+            'item_img' => $this->getImage(),
+            'item_price' => $this->getPrice()
+            ];
+    }
+    
+    public function getForCart()
+    {
+        return [
+            'item_id' => $this->getId(),
+//            'category_id' => $this->getCategory()->getId(),
+//            'category_name' => $this->getCategory()->getName(),
+            'item_name' => $this->getName(),
+            'item_img' => $this->getImage(),
+            'item_price' => $this->getPrice(),
+            'item_old_price' => $this->getPriceOld(),
+        ];
+    }
 }
