@@ -93,6 +93,13 @@ class Product
     private $category;
     
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="propose_in_cart", type="integer", nullable=true)
+     */
+    private $proposeInCart = null;
+
+    /**
      * Get id
      *
      * @return integer
@@ -340,5 +347,29 @@ class Product
     public function getCategory()
     {
         return $this->category;
+    }
+
+    /**
+     * Set proposeInCart
+     *
+     * @param integer $proposeInCart
+     *
+     * @return Product
+     */
+    public function setProposeInCart($proposeInCart)
+    {
+        $this->proposeInCart = $proposeInCart;
+
+        return $this;
+    }
+
+    /**
+     * Get proposeInCart
+     *
+     * @return integer
+     */
+    public function getProposeInCart()
+    {
+        return $this->proposeInCart;
     }
 }
