@@ -46,46 +46,25 @@ class BasketController extends BaseController
         }
         
         return new JsonResponse($result);
-        
-//        return $this->render('default/index.html.twig', $params);
     }
     
     protected function setDeliveryPrice(Request $request)
     {
         $price = $request->request->get('price');
-
-        /*
-        // action = setDeliveryPrice
-        // IN:
-        // free: 30
-        // price: 1.5
-        // 
-        // OUT: 
-        // total: 13.82
-        // delivery_price: "1.50"
-*/
+        $free = $request->request->get('free');
         
-       return ['total' => $price, 'delivery_price' => $price];
+        if (0 === (int)$price) {
+            return ['total' => 0, 'delivery_price' => 0];
+        }
+        
+        $total = $this->cart->getTotal();
+        $deliveryPrice = $total > $free ? 0 : $price;
+
+       return ['total' => $total, 'delivery_price' => $deliveryPrice];
     }
     
     protected function addToBasket(Request $request)
     {
-        /*
-//        for items
-//
-//        item_id
-//        count
-//        category_id
-//        category_name
-//        item_name
-//        item_img
-//        item_price
-//        item_old_price
-//        is_gift
-//        min_total
-//        half_enabled
-//        uniqueId
-         * */
         $id = $request->request->get('item')['item_id'];
         $countt = $request->request->get('item')['count'];
         $product = $this->getRepo('Product')->find($id);
