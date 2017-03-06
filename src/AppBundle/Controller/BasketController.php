@@ -157,28 +157,28 @@ class BasketController extends BaseController
     protected function initCart()
     {
         $cart = new Session();
+        //1 === count($cart->get('basket')) or 
         
-        if (
-//                1 === count($cart->get('basket')) or 
-            !$cart->has('calling')) {
-            $cart->set('calling', 1);
-            
-            $auxiliary = $this->getRepo('Product')->findByProposeInCart(true);
-            
-            $items = [];
-            foreach($auxiliary as $one) {
-                $item = $one->getAuxiliaryForCart();
-                $item['count'] = 0;
-                $item['half'] = null;
-                $item['is_gift'] = 0;
-
-                $items['add_' . $one->getId()] = $item;
-            }
-            
-            $cart->set('basket', ['basket' => $items]);
+        if ($cart->has('calling')) {
+            $cart->set('calling', $cart->get('calling') + 1);
+            return;
         }
-        
-        $cart->set('calling', $cart->get('calling')+1);
+
+        $cart->set('calling', 1);
+
+        $auxiliary = $this->getRepo('Product')->findByProposeInCart(true);
+
+        $items = [];
+        foreach ($auxiliary as $one) {
+            $item            = $one->getAuxiliaryForCart();
+            $item['count']   = 0;
+            $item['half']    = null;
+            $item['is_gift'] = 0;
+
+            $items['add_' . $one->getId()] = $item;
+        }
+
+        $cart->set('basket', ['basket' => $items]);
     }
     
     protected function recalculateTotal()
