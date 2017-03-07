@@ -110,6 +110,7 @@ class Cart
     
     public function getOrder()
     {
+        $currency = 'грн.';
         $text = '';
         $br = '
 ';        
@@ -119,7 +120,7 @@ class Cart
                 continue;
             }
             
-            $text .= sprintf('%s, %s шт * %s грн/шт = %s грн %s', 
+            $text .= sprintf("%s, %s шт * %s $currency/шт = %s $currency %s", 
                     $item['item_name'], 
                     $item['count'], 
                     $item['item_price'], 
@@ -127,8 +128,21 @@ class Cart
                     $br);
         }
         
-        $text .= 'Всего: '.$this->cart->get('basket')['total'];
+        $dp = $this->getDeliveryPrice();
+        $text .= 'Доставка: '.  ($dp ? $dp.' ' .$currency : 'бесплатно').$br;
+        
+        $text .= 'Всего: '.$this->cart->get('basket')['total'].$currency;
         
         return $text;
+    }
+    
+    public function setDeliveryPrice($price)
+    {
+        $this->cart->set('delivery_price', $price);
+    }
+    
+    public function getDeliveryPrice()
+    {
+        return $this->cart->get('delivery_price');
     }
 }
