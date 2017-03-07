@@ -98,6 +98,12 @@ class Order
      */
     private $status;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="products", type="string", nullable=false)
+     */
+    private $products;
 
 
     /**
@@ -372,5 +378,28 @@ class Order
     public function getStatus()
     {
         return $this->status;
+    }
+    /**
+     * Set products
+     *
+     * @param string $products
+     *
+     * @return Order
+     */
+    public function setProducts($products)
+    {
+        $this->products= $products;
+
+        return $this;
+    }
+
+    /**
+     * Get products
+     *
+     * @return string
+     */
+    public function getProducts()
+    {
+        return $this->products;
     }
 }
