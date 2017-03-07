@@ -324,6 +324,17 @@ class Product
     {
         return $this->recommended;
     }
+    
+    public function setLiked()
+    {
+        $this->recommended++;
+    }
+    
+    public function setDisliked()
+    {
+        $this->recommended--;
+        $this->recommended = max(0, $this->recommended);
+    }
 
     /**
      * Set category
