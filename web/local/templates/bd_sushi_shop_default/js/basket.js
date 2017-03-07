@@ -106,12 +106,13 @@ $(document).ready(function(){
 	}
 	$('.call_back_popup form .ln input[type=submit]').on('click',function(e){
 		e.preventDefault();
-		try {
-			ga('send', 'event', 'knopka',' callback-submit');
-			window.yaCounter.reachGoal('callback-submit',{});
-		} catch(e) {
-			console.log('Error: init yandex counter');
-		}
+// CALL PHONE AJAX CALLED                
+//		try {
+//			ga('send', 'event', 'knopka',' callback-submit');
+//			window.yaCounter.reachGoal('callback-submit',{});
+//		} catch(e) {
+//			console.log('Error: init yandex counter');
+//		}
 		return false;
 	});
 	$('.callback_order').on('click',function(){
