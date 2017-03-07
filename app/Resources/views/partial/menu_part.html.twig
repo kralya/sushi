@@ -1,0 +1,11 @@
+<div class="togmenu">
+    <div class="title">Меню</div>
+    <span class="close"></span>
+
+    <ul class="sec_menu">                    
+        {% for category in categories %}
+            <li id="bx_1847241719_{{category.id}}"><a href="/menu/{{category.url}}">{{category.name}}</a>
+        {% endfor %}
+    </ul>
+
+</div>

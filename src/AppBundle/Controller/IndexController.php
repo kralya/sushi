@@ -36,7 +36,8 @@ class IndexController extends BaseController
         
         $repo = $this->getRepo('Product');
         $products = $url ? $repo->findByCategory($category) : $repo->findAll();
-        $params = ['products' => $products];
+        $categories = $this->getRepo('Category')->findAll();
+        $params = ['products' => $products, 'categories' => $categories];
         
         return $this->render('default/menu.html.twig', $params);
     }
