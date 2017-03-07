@@ -129,9 +129,10 @@ class Cart
         }
         
         $dp = $this->getDeliveryPrice();
+        $total = $this->cart->get('basket')['total'] + $dp;
+
         $text .= 'Доставка: '.  ($dp ? $dp.' ' .$currency : 'бесплатно').$br;
-        
-        $text .= 'Всего: '.$this->cart->get('basket')['total'].$currency;
+        $text .= 'Всего: '.$total.' '.$currency;
         
         return $text;
     }
