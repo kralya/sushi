@@ -37,46 +37,11 @@
     <main class="content ">
         <div class="main_tovar_box">
             <div class="wrap">
-
-                <div class="togmenu">
-                    <div class="title">Меню</div>
-                    <span class="close"></span>
-
-                    <ul class="sec_menu">                    <li><a class='active'>Популярное</a></li>
-
-                        <li id="bx_1847241719_1"><a href="catalog/sushi.html">Суши</a>
-                            <ul class="sec_menu">
-                                <li id="bx_1847241719_16"><a href="catalog/sushi/nigiri.html">Нигири</a></li>
-                                <li id="bx_1847241719_19"><a href="catalog/sushi/gunkany.html">Гунканы</a></li>
-                            </ul>
-
-                        </li>
-                        <li id="bx_1847241719_2"><a href="catalog/rolls.html">Роллы</a>
-                            <ul class="sec_menu">
-                                <li id="bx_1847241719_20"><a href="catalog/rolls/hoso_maki.html">Хосо маки</a></li>
-                                <li id="bx_1847241719_21"><a href="catalog/rolls/maki.html">Маки</a></li>
-                                <li id="bx_1847241719_31"><a href="catalog/rolls/tamago-maki.html">Тамаго маки</a></li>
-                                <li id="bx_1847241719_22"><a href="catalog/rolls/ura_maki.html">Ура маки</a></li>
-                                <li id="bx_1847241719_23"><a href="catalog/rolls/light_maki.html">Лайт маки</a></li>
-                                <li id="bx_1847241719_24"><a href="catalog/rolls/hot_maki.html">Хот маки</a></li>
-                            </ul>
-
-                        </li>
-                        <li id="bx_1847241719_18"><a href="catalog/setsminsk.html">Сеты</a></li>
-                        <li id="bx_1847241719_3"><a href="catalog/salads.html">Салаты</a></li>
-                        <li id="bx_1847241719_8"><a href="catalog/sauces.html">Соусы</a></li>
-                        <li id="bx_1847241719_15"><a href="catalog/japanese_garnish.html">Японский гарнир</a></li>
-                        <li id="bx_1847241719_6"><a href="catalog/deserty.html">Десерты</a></li>
-                        <li id="bx_1847241719_7"><a href="catalog/beverage.html">Напитки</a></li>
-                    </ul>
-
-                </div>
+                {% include 'partial/menu.html.twig' %}
             </div>
             <div class="for_poplavok">
                 <div class="wrap">
-
                     <div class="tovar_box">
-                        
                         {% for product in products %}
 
                         <div
@@ -123,26 +88,27 @@
                                     <input type="button" class="addtocart" value="">
                                 </div>
                             </div>
+                                
                             <div class="tovar_zoom">
                                 <div class="pic">
                                     <img
-                                        src="/upload/resize_cache/iblock/6b7/467_361_1/mocny_set.jpg"
-                                        alt="Моцный сет"
-                                        title="Моцный сет"
+                                        src="{{product.image}}"
+                                        alt="{{product.name}}"
+                                        title="{{product.name}}"
                                         />
                                     <div class="mask"></div>
                                     <div class="zoom"></div>
                                 </div>
                                 <div class="label" style="background-color: #FF0000">Хит сезона</div>
                                 <div class="about">
-                                    <div class="title">Моцный сет</div>
-                                    <p><noindex>Манхэттен маки, Ямагути маки, Чили Изумитай маки, Хаус Маки<br />
-                                        производитель: OOO “Глобалпрогрупп” </noindex></p>
+                                    <div class="title">{{product.name}}</div>
+                                    <p><noindex>{{product.contains}} </noindex></p>
                                 </div>
                                 <div class="down">
                                     <div class="tovar_info">
-                                        <span class="price"><span>56.49</span> <i class="rouble rouble_padding">руб.</i></span>
-                                        <span class="gramm">1035 г | 32 шт.</span>            </div>
+                                        <span class="price"><span>{{product.price}}</span> 
+                                            <i class="rouble rouble_padding">руб.</i></span>
+                                        <span class="gramm">{{product.weight}}</span>            </div>
                                     <div class="tovar_cost">
                                         <div class="colich_tov">
                                             <input type="button" value="-" class="minus_tov" />
