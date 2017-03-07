@@ -107,4 +107,28 @@ class Cart
         
         return isset($items[$id]) ? $items[$id]['count'] : 0;
     }
+    
+    public function getOrder()
+    {
+        $text = '';
+        $br = '
+';        
+        $items = $this->cart->get('basket')['basket'];
+        foreach($items as $item) {
+            if (0 == $item['count']) {
+                continue;
+            }
+            
+            $text .= sprintf('%s, %s шт * %s грн/шт = %s грн %s', 
+                    $item['item_name'], 
+                    $item['count'], 
+                    $item['item_price'], 
+                    $item['count'] * $item['item_price'], 
+                    $br);
+        }
+        
+        $text .= 'Всего: '.$this->cart->get('basket')['total'];
+        
+        return $text;
+    }
 }
