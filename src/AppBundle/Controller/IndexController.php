@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class IndexController extends BaseController
 {
@@ -89,5 +90,9 @@ class IndexController extends BaseController
         $em = $this->getDoctrine()->getEntityManager();
         $em->persist($product);
         $em->flush();
+        
+        $params = ['total' => $product->getRecommended(), 'user_like' => (int)$likes[$id]];
+        
+        return new JsonResponse($params);
     }
 }
