@@ -7,7 +7,6 @@ use Symfony\Component\HttpFoundation\Session\Session;
 class Cart
 {
     private $cart;
-    private $total = 0;
 
     public function __construct()
     {
@@ -98,7 +97,6 @@ class Cart
         $basket = $this->cart->get('basket');
         $basket['total'] = $total;
         $this->cart->set('basket', $basket);
-        $this->total = $total;
     }
     
     protected function getOldCount($id)
@@ -168,5 +166,6 @@ class Cart
     {
         $this->cart->set('basket', NULL);
         $this->cart->set('total', NULL);
+        $this->cart->set('delivery_price', NULL);
     }
 }
