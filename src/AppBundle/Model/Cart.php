@@ -129,6 +129,11 @@ class Cart
     {
         $currency = 'грн.';
         $items = $this->cart->get('basket')['basket'];
+        
+        if(!$items) {
+            return '';
+        }
+        
         $text = '';
         $br = '
 ';        
@@ -145,6 +150,7 @@ class Cart
                     $item['count'] * $item['item_price'], 
                     $br);
         }
+        
         return $text;
     }
     
