@@ -48,6 +48,78 @@ class BasketController extends BaseController
         return new JsonResponse($result);
     }
     
+    /**
+     * 
+     * @Route("/bdhandlers/order.php", name="order")
+     */
+    public function orderAction(Request $request)
+    {
+        // no validation (?!)
+        $indices = [
+            'ADDRESS_DOM',
+            'ADDRESS_ETAZ',
+            'ADDRESS_KORPUS',
+            'ADDRESS_KVARTIRA',
+            'ADDRESS_PODEZD',
+            'ADDRESS_ULICA',
+            'CHANGE',
+            'CITY',
+            'COMMENT',
+            'DELIVERY_NAME',
+            'DELIVERY_PRICE',
+            'DELIVERY_TIME',
+            'DISTRICT',
+            'NAME',
+            'ORDER_EMAIL',
+            'ORDER_STATUS_ID',
+            'ORDER_VARIANT',
+            'PAY_SYS',
+            'PAY_SYS_TEXT',
+            'PERSONS',
+            'PHONE',
+            'PROMOCODE',
+            'RECEIVER_NAME',
+            'RECEIVER_PHONE',
+            'RESTAURANT_ADDRESS',
+        ];
+        
+        $text = '';
+        foreach ($indices as $index) {
+            $value = $request->request->get($index);
+            if(!$value) {
+                continue;
+            }
+            $template = '%s: %s
+';
+            $text.= sprintf($template, $index, $value);
+        }
+        
+        $br = '
+';
+        
+        $order = (new Cart())->getOrder();
+        
+        $message = \Swift_Message::newInstance()
+            ->setSubject('test')
+            ->setFrom('admin@eheh.com')
+            ->setTo('hrumos@yahoo.com')
+            ->setBody($text.$br.$order);
+# I removed this line: $this->get('mailer')->send($message);
+
+        $mailer = $this->get('mailer');
+
+        $mailer->send($message);
+
+        
+//        mail('hrumos@gmail.com', 'new order', $text);
+//        
+        // email order AND cart details 
+        // store order and cart in DB
+        // clean cart
+        
+        return new JsonResponse('1');
+    }
+    
     protected function setDeliveryPrice(Request $request)
     {
         $price = $request->request->get('price');
@@ -59,6 +131,7 @@ class BasketController extends BaseController
         
         $total = $this->cart->getTotal();
         $deliveryPrice = $total > $free ? 0 : $price;
+        $this->cart->setDeliveryPrice($deliveryPrice);
 
        return ['total' => $total, 'delivery_price' => $deliveryPrice];
     }
