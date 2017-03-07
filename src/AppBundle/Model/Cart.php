@@ -163,4 +163,10 @@ class Cart
     {
         return $this->cart->get('delivery_price');
     }
+    
+    public function clean()
+    {
+        $this->cart->set('basket', NULL);
+        $this->cart->set('total', NULL);
+    }
 }
