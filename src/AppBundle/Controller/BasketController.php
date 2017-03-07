@@ -100,40 +100,93 @@ class BasketController extends BaseController
         $order = (new Cart())->getOrder();
         
         $message = \Swift_Message::newInstance()
-            ->setSubject('test')
+            ->setSubject('New order')
             ->setFrom('admin@eheh.com')
             ->setTo('hrumos@yahoo.com')
             ->setBody($text.$br.$order);
-# I removed this line: $this->get('mailer')->send($message);
 
         $mailer = $this->get('mailer');
 
         $mailer->send($message);
-
         
-//        mail('hrumos@gmail.com', 'new order', $text);
+//        $dt = $request->request->get('DELIVERY_TIME');
+//        $dd = '25.02.2017 13:56:00';
+//        $xx = new \DateTime($dd);
+//        die('here');
+//        $xx = $dt ? new \DateTime($dt) : new \DateTime();
 //        
-        // email order AND cart details 
-        // store order and cart in DB
+//        
+//        $o = new \AppBundle\Entity\Order;
+//        $o->setAddress($this->formAddress($request));
+//
+//        $o->setDeliveryTime($xx);
+//        $o->setDeliveryType('1'); //FIXME CHANGE
+//        $o->setPaymentType('1'); //FIXME CHANGE
+//        $o->setStatus('1');
+//
+////        $o->setDeliveryType($request->request->get('DELIVERY_TYPE'));
+//        $o->setFirstName($request->request->get('RECEIVER_NAME'));
+//
+//        $o->setNote($request->request->get('COMMENT'));
+////        $o->setPaymentType($paymentType)
+//        $o->setPhone($request->request->get('RECEIVER_PHONE'));
+////        $o->setTotal($this->cart->getTotal());
+//        $o->setTotal('100');
+////        $o->setProducts($this->cart->getProducts());
+//        $o->setProducts('smth');
+//        
+//        $em = $this->getDoctrine()->getEntityManager();
+//        $em->persist($o);
+//        $em->flush();
+
         // clean cart
+        
+        $this->cart->clean();
         
         return new JsonResponse('1');
     }
     
+    protected function formAddress(Request $request)
+    {
+        $indices = [
+            'CITY',
+            'ADDRESS_ULICA',
+            'ADDRESS_DOM',
+            'ADDRESS_KORPUS',
+            'ADDRESS_PODEZD',
+            'ADDRESS_ETAZ',
+            'ADDRESS_KVARTIRA',
+        ];
+
+        $text = '';
+        foreach ($indices as $index) {
+            $value = $request->request->get($index);
+            if(!$value) {
+                continue;
+            }
+            $template = '%s: %s
+';
+            $text.= sprintf($template, $index, $value);
+        }
+        
+        return $text;
+    }
+
+
     protected function setDeliveryPrice(Request $request)
     {
         $price = $request->request->get('price');
         $free = $request->request->get('free');
+        $total = $this->cart->getTotal();
         
         if (0 === (int)$price) {
-            return ['total' => 0, 'delivery_price' => 0];
+            return ['total' => $total, 'delivery_price' => 0];
         }
         
-        $total = $this->cart->getTotal();
         $deliveryPrice = $total > $free ? 0 : $price;
         $this->cart->setDeliveryPrice($deliveryPrice);
 
-       return ['total' => $total, 'delivery_price' => $deliveryPrice];
+       return ['total' => $total + $deliveryPrice, 'delivery_price' => $deliveryPrice];
     }
     
     protected function addToBasket(Request $request)
