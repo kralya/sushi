@@ -111,10 +111,28 @@ class Cart
     public function getOrder()
     {
         $currency = 'грн.';
+        $br = '
+';        
+
+        $text = $this->getProducts();
+        
+        $dp = $this->getDeliveryPrice();
+        $total = $this->cart->get('basket')['total'] + $dp;
+
+        $text .= 'Доставка: '.  ($dp ? $dp.' ' .$currency : 'бесплатно').$br;
+        $text .= 'Всего: '.$total.' '.$currency;
+        
+        return $text;
+    }
+    
+    public function getProducts()
+    {
+        $currency = 'грн.';
+        $items = $this->cart->get('basket')['basket'];
         $text = '';
         $br = '
 ';        
-        $items = $this->cart->get('basket')['basket'];
+        
         foreach($items as $item) {
             if (0 == $item['count']) {
                 continue;
@@ -127,13 +145,6 @@ class Cart
                     $item['count'] * $item['item_price'], 
                     $br);
         }
-        
-        $dp = $this->getDeliveryPrice();
-        $total = $this->cart->get('basket')['total'] + $dp;
-
-        $text .= 'Доставка: '.  ($dp ? $dp.' ' .$currency : 'бесплатно').$br;
-        $text .= 'Всего: '.$total.' '.$currency;
-        
         return $text;
     }
     
