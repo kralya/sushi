@@ -61,4 +61,33 @@ class IndexController extends BaseController
     {
         return $this->render('default/delivery.html.twig', []);
     }
+    
+    /**
+     * @Route("/bdhandlers/likes_bd.php", name="likes")
+     */
+    public function likeAction(Request $request)
+    {
+        $id = $request->request->get('item_id');
+        
+        $product = $this->getRepo('Product')->find($id);
+        if(!$id || !$product){
+            return '';
+        }
+        
+        $sess = new \Symfony\Component\HttpFoundation\Session\Session();
+        $likes = $sess->get('likes');
+        if(in_array($id, $likes)) {
+            unset($likes[$id]);
+            $product->setDisliked();
+        } else {
+            $likes[$id] = true;
+            $product->setLiked();
+        }
+        
+        $sess->set('likes', $likes);
+        
+        $em = $this->getDoctrine()->getEntityManager();
+        $em->persist($product);
+        $em->flush();
+    }
 }
