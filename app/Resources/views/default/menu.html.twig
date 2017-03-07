@@ -1,0 +1,313 @@
+{% extends 'newbase.html.twig' %}
+
+{% block stylesheets %}
+{#    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/slider/style.css?1452955110150" type="text/css"  rel="stylesheet" />#}
+    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/catalog.section.list/menu_maxi/style.css?14529551107305" type="text/css"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/top_items/style.css?1452955110150" type="text/css"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/tabs/style.css?1452955110150" type="text/css"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/css/animate.css?145295511068816" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/css/autocomplete.css?1484386548733" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/css/owl.carousel.css?14843864501476" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/menu/top_menu/style.css?1452955110583" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/social/style.css?1452955110150" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/styles.css?14851748899819" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/bd_sushi_shop_default/template_styles.css?1485880895163247" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/chosen.jquery.min.js?146037302025688"></script>
+    <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/jquery.tinyscrollbar.js?146037302012470"></script>
+    <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/jquery.animateNumber.min.js?14603730201353"></script>
+    <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/libphonenumber-utils.js?1460373020237410"></script>
+    <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/jquery.maskedinput.min.js?146037302010317"></script>
+    <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/jquery.autocomplete.js?148544009333017"></script>
+
+    <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/studio8769a.js?148588231219911"></script>
+
+    <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/basket.js?148637770442081"></script>
+    <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/js/owl.carousel.min.js?148438625723890"></script>
+    <script type="text/javascript" src="/iiko/autocomplete/jquery.mockjaxbf04.js?146037296219052"></script>
+    <script type="text/javascript" src="/iiko/autocomplete/streetse4b8.js?14843878782783"></script>
+{#    <script type="text/javascript" src="/local/templates/bd_sushi_shop_default/components/bitrix/news.list/slider/scriptdb64.js?1484396037550"></script>#}
+
+{% endblock %}
+
+{% block body %}
+    <main class="content ">
+        <div class="main_tovar_box">
+            <div class="wrap">
+
+                <div class="togmenu">
+                    <div class="title">Меню</div>
+                    <span class="close"></span>
+
+                    <ul class="sec_menu">                    <li><a class='active'>Популярное</a></li>
+
+                        <li id="bx_1847241719_1"><a href="catalog/sushi.html">Суши</a>
+                            <ul class="sec_menu">
+                                <li id="bx_1847241719_16"><a href="catalog/sushi/nigiri.html">Нигири</a></li>
+                                <li id="bx_1847241719_19"><a href="catalog/sushi/gunkany.html">Гунканы</a></li>
+                            </ul>
+
+                        </li>
+                        <li id="bx_1847241719_2"><a href="catalog/rolls.html">Роллы</a>
+                            <ul class="sec_menu">
+                                <li id="bx_1847241719_20"><a href="catalog/rolls/hoso_maki.html">Хосо маки</a></li>
+                                <li id="bx_1847241719_21"><a href="catalog/rolls/maki.html">Маки</a></li>
+                                <li id="bx_1847241719_31"><a href="catalog/rolls/tamago-maki.html">Тамаго маки</a></li>
+                                <li id="bx_1847241719_22"><a href="catalog/rolls/ura_maki.html">Ура маки</a></li>
+                                <li id="bx_1847241719_23"><a href="catalog/rolls/light_maki.html">Лайт маки</a></li>
+                                <li id="bx_1847241719_24"><a href="catalog/rolls/hot_maki.html">Хот маки</a></li>
+                            </ul>
+
+                        </li>
+                        <li id="bx_1847241719_18"><a href="catalog/setsminsk.html">Сеты</a></li>
+                        <li id="bx_1847241719_3"><a href="catalog/salads.html">Салаты</a></li>
+                        <li id="bx_1847241719_8"><a href="catalog/sauces.html">Соусы</a></li>
+                        <li id="bx_1847241719_15"><a href="catalog/japanese_garnish.html">Японский гарнир</a></li>
+                        <li id="bx_1847241719_6"><a href="catalog/deserty.html">Десерты</a></li>
+                        <li id="bx_1847241719_7"><a href="catalog/beverage.html">Напитки</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="for_poplavok">
+                <div class="wrap">
+
+                    <div class="tovar_box">
+                        
+                        {% for product in products %}
+
+                        <div
+                            class="tovar animate"
+                            id="bx_651765591_{{product.id}}"
+                            data-price="{{product.price}}"
+                            data-old-price="{{product.priceOld}}"
+                            data-id="{{product.id}}"
+                            data-category-id="{{product.category.id}}"
+                            data-category-name="{{product.category.name}}"
+                            data-half-enabled="no"
+                            >
+                            
+                            <div class="pic">
+                                <img
+                                    src="{{product.image}}"
+                                    alt="{{product.name}}"
+                                    title="{{product.name}}"
+                                    width="220"
+                                    height="172"
+                                    />
+                                
+                                <div class="mask"></div>
+                                <div class="zoom"></div>
+                            </div>
+                            <div class="label" style="background-color: #FF0000">Хит сезона</div>
+
+                            <div class="about">
+                                <div class="title"><span class="title">{{product.name}}</span></div>
+                                <p>{{product.contains}}</p>
+                            </div>
+                            <div class="down">
+                                <div class="tovar_info">
+                                    <span class="price"><span>{{product.price}}</span> 
+                                        <i class="rouble rouble_padding">руб.</i></span>
+                                    <span class="gramm">{{product.weight}}</span>        
+                                </div>
+                                <div class="tovar_cost">
+                                    <div class="colich_tov">
+                                        <input type="button" value="-" class="minus_tov"/>
+                                        <input type="text" value="1" class="txt_col_tov"/>
+                                        <input type="button" value="+" class="plus_tov"/>
+                                    </div>
+                                    <input type="button" class="addtocart" value="">
+                                </div>
+                            </div>
+                            <div class="tovar_zoom">
+                                <div class="pic">
+                                    <img
+                                        src="/upload/resize_cache/iblock/6b7/467_361_1/mocny_set.jpg"
+                                        alt="Моцный сет"
+                                        title="Моцный сет"
+                                        />
+                                    <div class="mask"></div>
+                                    <div class="zoom"></div>
+                                </div>
+                                <div class="label" style="background-color: #FF0000">Хит сезона</div>
+                                <div class="about">
+                                    <div class="title">Моцный сет</div>
+                                    <p><noindex>Манхэттен маки, Ямагути маки, Чили Изумитай маки, Хаус Маки<br />
+                                        производитель: OOO “Глобалпрогрупп” </noindex></p>
+                                </div>
+                                <div class="down">
+                                    <div class="tovar_info">
+                                        <span class="price"><span>56.49</span> <i class="rouble rouble_padding">руб.</i></span>
+                                        <span class="gramm">1035 г | 32 шт.</span>            </div>
+                                    <div class="tovar_cost">
+                                        <div class="colich_tov">
+                                            <input type="button" value="-" class="minus_tov" />
+                                            <input type="text" value="1" class="txt_col_tov" />
+                                            <input type="button" value="+" class="plus_tov" />
+                                        </div>
+                                        <input type="button" class="addtocart" value="">
+                                        <div class="recomend">
+                                            <p>Рекомендую</p>
+                                            <a class="like  you_not_like_bitch" href="#"><span>64</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- .tovar -->
+                        
+                        {% endfor %}
+                        
+
+                    </div>
+                    <div class="clear"></div> <div class="poplavok">
+                        <div class="podarki_box podarki_close" style="display:block;">
+                            <span class="open"><i>Подарки</i></span>
+                            <div class="shkala">
+                                <div class="obertka"><div class="delenija"></div></div>
+                            </div>
+                        </div><!-- .podarki_close -->
+                        <div class="podarki_box podarki_open" style="display:none;">
+                            <span class="close"></span>
+                            <div class="bd">
+                                <div class="title">Получи подарок!</div>
+                                <p class="opis">При заказе на суммы выше 30.00 <!--<i class="rouble">i</i>--> <br>вы получаете возможность выбрать вкусный подарок</p>
+                                <div class="intr">
+                                    <div class="shkala">
+                                        <div class="obertka"><div class="delenija"></div></div>
+                                    </div>
+
+                                    <div class="pandochki" id="pandochki-cs">
+                                        <!--'start_frame_cache_pandochki-cs'-->                                        <div class="free_panda hot">
+                                            <div class="for_pod"> 40.00 <!--<i class="rouble">i</i>--></div>
+                                            <a href="catalog/gifts/index.html" class="zabr">Забрать</a>
+                                        </div>
+                                        <div class="free_panda mid">
+                                            <div class="for_pod"> 35.00 <!--<i class="rouble">i</i>--></div>
+                                            <a href="catalog/gifts/index.html" class="zabr">Забрать</a>
+                                        </div>
+                                        <div class="free_panda lit">
+                                            <div class="for_pod"> 30.00 <!--<i class="rouble">i</i>--></div>
+                                            <a href="catalog/gifts/index.html" class="zabr">Забрать</a>
+                                        </div>
+                                        <!--'end_frame_cache_pandochki-cs'-->                </div> 
+                                </div> 
+                            </div>  
+                        </div><!-- .podarki_open -->        
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div id='tab-container'>
+                <div class="os"></div>
+
+                <div class="tab-content">
+                    <div class="tab">Акционная политика</div>                            
+                    <div class="tabscontent">
+                        <div class="pic">
+                            <img
+                                src="/upload/resize_cache/iblock/1e2/147_147_1/gift.png"
+                                alt="Акционная политика"
+                                title="Акционная политика"
+                                />
+                        </div>
+                        <div class="opis">
+                            Правила иcпользования акционных предложений и скидок:<br />
+                            1. скидки не суммируются, Гость имеет право воспользоваться максимальной скидкой<br />
+                            2. при использовании скидки на весь заказ использование бонусных рублей не возможно<br />
+                            3. бонусные рубли системы лояльности не начисляются на заказы со скидкой<br />
+                            4. в одном заказе может быть использован один промокод, скидка, акционный флаер или подарок<br />
+                            5. стоимость доставки рассчитывается исходя из суммы заказа с учетом скидки<br />
+                        </div>
+                    </div>                        
+                </div>
+                <div class="tab-content">
+                    <div class="tab">Оплата наличными</div>                            
+                    <div class="tabscontent">
+                        <div class="pic">
+                            <img
+                                src="/upload/resize_cache/iblock/3d2/147_147_1/wallet-icon-512.jpg"
+                                alt="Оплата наличными"
+                                title="Оплата наличными"
+                                />
+                        </div>
+                        <div class="opis">
+                            Оплата за доставленный заказ производится в белорусских рублях, путем передачи наличных денежных средств курьеру при получении заказа. В подтверждение произведенной оплаты путем передачи наличных денежных средств курьер выдает квитанцию и предварительный чек, или кассовый чек и предварительный чек.<br>
+                            При необходимости подготовить сдачу с определенной суммы укажите это при оформлении заказа или предупредите оператора при подтверждении заказа.<br>                        	</div>
+                    </div>                        
+                </div>
+                <div class="tab-content">
+                    <div class="tab">Оплата банковской картой</div>                            
+                    <div class="tabscontent">
+                        <div class="pic">
+                            <img
+                                src="/upload/resize_cache/iblock/ada/147_147_1/credit-card.jpg"
+                                alt="Оплата банковской картой"
+                                title="Оплата банковской картой"
+                                />
+                        </div>
+                        <div class="opis">
+                            Банковской картой можно оплатить заказ на вынос или доставку по факту получения заказа. К оплате принимаются банковские карты MasterCard, Maestro,Visa.<br>
+                            При желании оплатить заказ на доставку банковской кредитной картой, предупреждайте об этом операторов колл-центра при оформлении заказа.                        	</div>
+                    </div>                        
+                </div>
+                <div class="tab-content">
+                    <div class="tab">Доставка и самовывоз</div>                            
+                    <div class="tabscontent">
+                        <div class="pic">
+                            <img
+                                src="/upload/resize_cache/iblock/f1b/147_147_1/paket_sushi-_house.jpg"
+                                alt="Доставка и самовывоз"
+                                title="Доставка и самовывоз"
+                                />
+                        </div>
+                        <div class="opis">
+                            1.Самовывоз:<br />
+                            Минимальная сумма заказа отсутствует. Эта услуга бесплатна.<br />
+                            Cвой заказ можно получить по любому из адресов сети SUSHI HOUSE в соответствии с режимом работы заведения:<br />
+                            пр-т Дзержинского 91&#40;ТЦ &quot;Алми&quot;&#41;, время работы: круглосуточно<br />
+                            2.Доставка курьерской службой:<br />
+                            Наш курьер доставит заказ по указанному адресу. Заказы на доставку принимаются круглосуточно без выходных.<br />
+                            Стоимость доставки зависит от общей суммы заказа и зоны доставки.                        	</div>
+                    </div>                        
+                </div>
+                <div class="tab-content">
+                    <div class="tab">Адреса и контакты</div>                            
+                    <div class="tabscontent">
+                        <div class="pic">
+                            <img
+                                src="/upload/resize_cache/iblock/7c0/147_147_1/logo.jpg"
+                                alt="Адреса и контакты"
+                                title="Адреса и контакты"
+                                />
+                        </div>
+                        <div class="opis">
+                            Служба доставки блюд японской кухни SUSHI HOUSE всегда рад предложить Вам настоящую японскую кухню с доставкой на дом или в офис.<br />
+                            Заказы на доставку принимаются КРУГЛОСУТОЧНО. Оформить заказ &quot;на вынос&quot; можно по адресу<br />
+                            пр-т Дзержинского 91 &#40;ТЦ Алми&#41;. Время работы заведения - круглосуточно<br />
+                            Единый телефон call-центра: 668-11-11 &#40;velcom, МТС&#41;<br />
+                            по вопросам сотрудничества: <a class="txttohtmllink" href="mailto:marketing@sushihouse.by" title="Написать письмо">marketing@sushihouse.by</a> &#43;375445040532                        	</div>
+                    </div>                        
+                </div>
+
+
+
+
+            </div>                 
+
+
+
+
+        </div>
+        <br>
+        <div id="modalBox" style="display:none;" data-tovar-id="">
+            <span id="modalClose">X</span>
+        </div>
+        <div id="overlay">
+        </div>
+        <br>		<div id="overlay"></div>    </main>{# PAGE END! #}
+{% endblock %}

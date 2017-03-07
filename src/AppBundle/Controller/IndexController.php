@@ -9,7 +9,6 @@ class IndexController extends BaseController
 {
     /**
      * @Route("/", name="homepage")
-     * @Route("/hello")
      */
     public function indexAction(Request $request)
     {
@@ -39,7 +38,7 @@ class IndexController extends BaseController
         $products = $url ? $repo->findByCategory($category) : $repo->findAll();
         $params = ['products' => $products];
         
-        return $this->render('default/test.html.twig', $params);
+        return $this->render('default/menu.html.twig', $params);
     }
     
     /**
