@@ -54,6 +54,12 @@ class BasketController extends BaseController
      */
     public function orderAction(Request $request)
     {
+        if($request->request->get('CB_NAME')) {
+            $this->callMe($request);
+            
+            return new JsonResponse([]);
+        }
+        
         // no validation (?!)
         $indices = [
             'ADDRESS_DOM',
@@ -146,6 +152,29 @@ class BasketController extends BaseController
         return new JsonResponse('1');
     }
     
+    protected function callMe(Request $request)
+    {
+        $template = "Hello!
+                
+                Please call %s: phone # is %s
+                
+Sincerely your site.";
+        
+        $name = $request->request->get('CB_NAME');
+        $phone = $request->request->get('CB_PHONE');
+        $text = sprintf($template, $name, $phone);
+        
+        $message = \Swift_Message::newInstance()
+            ->setSubject('New request to call')
+            ->setFrom('admin@eheh.com')
+            ->setTo('hrumos@yahoo.com')
+            ->setBody($text);
+
+        $mailer = $this->get('mailer');
+
+        $mailer->send($message);
+    }
+
     protected function formAddress(Request $request)
     {
         $indices = [
