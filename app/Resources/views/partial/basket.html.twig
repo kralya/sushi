@@ -80,14 +80,18 @@
                         <select class="chosen-select-no-single style_hosen1 required variant_list">
                             <option value="24" data-id="dostavka">Доставка</option>
                             <option value="25" data-id="navynos">На вынос</option>
-                            <option value="27" data-id="vpodarok">В подарок</option>
+{#                            <option value="27" data-id="vpodarok">В подарок</option>#}
                         </select>
                     </div>
-                    <div class="ln">
+                    <div class="ln discount_field">
+                        <span class="txt ">Номер дисконта:</span>
+                        <input type="text" class="rt required discount" value="" placeholder="">
+                    </div>
+                    <div class="ln user_name_field">
                         <span class="txt">Имя<i>*</i></span>
                         <input type="text" class="rt required user_name" value="" placeholder="">
                     </div>
-                    <div class="ln">
+                    <div class="ln phone_field">
                         <span class="txt">Телефон<i>*</i></span>
                         <input type="text"  class="rt phone required" value="">
                     </div> 
@@ -164,7 +168,7 @@
                         <span class="txt">Телефон получателя<i>*</i></span>
                         <input type="text" class="rt receiver_phone required" value="" placeholder="">
                     </div>
-                    <div class="ln">
+                    <div class="ln colich_tov_field">
                         <span class="txt">Количество персон</span>
                         <div class="colich_tov">
                             <input type="button" value="-" class="minus_tov" />
@@ -172,7 +176,7 @@
                             <input type="button" value="+" class="plus_tov" />
                         </div>
                     </div>    
-                    <div class="ln">
+                    <div class="ln payment_type_field">
                         <span class="txt">Способ оплаты<i>*</i></span>
                         <select class="chosen-select-no-single style_hosen1 payment_type">
                             <option value="offline">При получении наличными</option>
@@ -189,12 +193,12 @@
                         <textarea type="text" class="rt comment"></textarea>
                     </div>
                     <div class="delivery_price">
-                        <div class="delivery_with_price">Стоимость доставки: 
+                        {#<div class="delivery_with_price">Стоимость доставки: 
                             <span>
                                 <span class="delivery_price_value" data-delivery-price="1.50">1.50</span> 
                                 <!--<i class="rouble rouble_padding">i</i>-->
                             </span>
-                        </div>
+                        </div>#}
                         <div class="delivery_free" style="display: none;">Бесплатная доставка</div>
 
                     </div>
