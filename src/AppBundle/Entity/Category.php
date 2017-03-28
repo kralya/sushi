@@ -166,4 +166,9 @@ class Category
     {
         return $this->parentId;
     }
+    
+    public function __toString()
+    {
+        return $this->getName();
+    }
 }
