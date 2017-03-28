@@ -63,54 +63,20 @@
                     <p>
                         Мы готовим только из свежих продуктов
                     </p>		</div>
-                {#<div class="inf_box if_3">
+                <div class="inf_box if_3">
                     <div class="title">
-                        Бесплатная доставка
+                        Необходимая сумма для доставки
                     </div>
                     <p>
-                        При заказе от 30 рублей
+                        200 грн. Доставка бесплатна.
                     </p>		
-                </div>#}
+                </div>
             </div>
         </div>
         <!-- .info_line -->
         <div class="main_tovar_box">
             <div class="wrap">
-
-                <div class="togmenu">
-                    <div class="title">Меню</div>
-                    <span class="close"></span>
-
-                    <ul class="sec_menu">                    
-                        <li><a class='active'>Популярное</a></li>
-
-                        <li id="bx_1847241719_1"><a href="catalog/sushi.html">Суши</a>
-                            <ul class="sec_menu">
-                                <li id="bx_1847241719_16"><a href="catalog/sushi/nigiri.html">Нигири</a></li>
-                                <li id="bx_1847241719_19"><a href="catalog/sushi/gunkany.html">Гунканы</a></li>
-                            </ul>
-
-                        </li>
-                        <li id="bx_1847241719_2"><a href="catalog/rolls.html">Роллы</a>
-                            <ul class="sec_menu">
-                                <li id="bx_1847241719_20"><a href="catalog/rolls/hoso_maki.html">Хосо маки</a></li>
-                                <li id="bx_1847241719_21"><a href="catalog/rolls/maki.html">Маки</a></li>
-                                <li id="bx_1847241719_31"><a href="catalog/rolls/tamago-maki.html">Тамаго маки</a></li>
-                                <li id="bx_1847241719_22"><a href="catalog/rolls/ura_maki.html">Ура маки</a></li>
-                                <li id="bx_1847241719_23"><a href="catalog/rolls/light_maki.html">Лайт маки</a></li>
-                                <li id="bx_1847241719_24"><a href="catalog/rolls/hot_maki.html">Хот маки</a></li>
-                            </ul>
-
-                        </li>
-                        <li id="bx_1847241719_18"><a href="catalog/setsminsk.html">Сеты</a></li>
-                        <li id="bx_1847241719_3"><a href="catalog/salads.html">Салаты</a></li>
-                        <li id="bx_1847241719_8"><a href="catalog/sauces.html">Соусы</a></li>
-                        <li id="bx_1847241719_15"><a href="catalog/japanese_garnish.html">Японский гарнир</a></li>
-                        <li id="bx_1847241719_6"><a href="catalog/deserty.html">Десерты</a></li>
-                        <li id="bx_1847241719_7"><a href="catalog/beverage.html">Напитки</a></li>
-                    </ul>
-
-                </div>
+                {% include 'partial/menu_part.html.twig' with {'categories': categories} %}
             </div>
             <div class="for_poplavok">
                 <div class="wrap">

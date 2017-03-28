@@ -14,7 +14,8 @@ class IndexController extends BaseController
     public function indexAction(Request $request)
     {
         $products = $this->getRepo('Product')->findPopular(1);
-        $params = ['products' => $products];
+        $categories = $this->getRepo('Category')->findAll();
+        $params = ['products' => $products, 'categories' => $categories];
         
         return $this->render('default/index.html.twig', $params);
     }
