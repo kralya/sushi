@@ -7,65 +7,38 @@
 function showFieldsByVariant(variant){
     switch (variant) {
         case "navynos":
-        case "vzavedenii":
-            $(".address_delivery, .destrict_delivery").hide();
+            $(".delivery_time_wrap, .address_delivery, .destrict_delivery, .user_address").hide();
+            $(".order_address_ulica, .order_address_dom, .order_address_kvartira").hide();
+            $(".phone_field, .order_email, .user_name_field").hide();
+            $(".colich_tov_field, .payment_type_field, .need_short_change_container, .comment_wrap").hide();
+            
             $(".user_address, .order_address_ulica, .order_address_dom, .order_address_kvartira").removeClass("required");
-            $(".restaurant_address").show();
-            $(".delivery_time_wrap").hide();
-            $(".restaurant_list").addClass("required");
+            $(".discount, .user_name, .phone, .delivery_list, .receiver_name, .receiver_phone, .rt").removeClass("required");
+            
             var form = $("#oform .order_form_fields");
-            if(form.find('.city').val() == "Минск"){
-            	form.find('.restaurant_list').val(31);
-            } else {
-               	form.find('.restaurant_list').val(33);
-            }
             form.find('.restaurant_list').trigger("chosen:updated");
             setDevliveryPrice(0,0);
             break;
         case "dostavka":
-        case "vpodarok":
-        default:
-            $(".address_delivery, .destrict_delivery").show();
-            $(".user_address, .order_address_ulica, .order_address_dom, .order_address_kvartira").addClass("required");
-            $(".restaurant_address").hide();
-            $(".delivery_time_wrap").show();
-            $(".delivery_time_wrap .txt").text('Дата и время доставки');
-            $(".restaurant_list").removeClass("required");
-            setDevliveryPrice($('.delivery_list option:selected').data('delivery-price'),$('.delivery_list option:selected').data('free-delivery'));
-            break;
+            $(".discount, .user_name, .phone, .delivery_list").addClass("required");
+//            $(".discount").addClass("required");
+            
+            $(".delivery_time_wrap, .address_delivery, .destrict_delivery, .user_address").show();
+            $(".order_address_ulica, .order_address_dom, .order_address_kvartira").show();
+            $(".phone_field, .user_name_field, .colich_tov_field, .payment_type_field").show();
+            $(".payment_type_field, .need_short_change_container, .comment_wrap").show();
     }
-    if(variant == "vpodarok") {
-        $(".receiver_name_wrap, .receiver_phone_wrap").show();
-        $(".receiver_name, .receiver_phone").addClass("required");
-    }
-    else {
+    
         $(".receiver_name_wrap, .receiver_phone_wrap").hide();
         $(".receiver_name, .receiver_phone").removeClass("required");
-    }
-    if( variant == 'navynos' ){
-   		var t = $('#delivery_time').attr('time-delivery');
-		var pattern = /(\d{2})\.(\d{2})\.(\d{4}) (\d{2})\:(\d{2})\:(\d{2})/;
-			t = t.match(pattern);
-		var d = new Date(Date.UTC(t[3], t[2], t[1], t[4], t[5], t[6]));
-		d.setTime(d.getTime() - 60*60*1000);
-		var dformat = [
-               d.getUTCDate().padLeft(),
-               (d.getUTCMonth()+1).padLeft(),
-               d.getUTCFullYear()].join('.') +' ' +
-              [d.getUTCHours().padLeft(),
-               d.getUTCMinutes().padLeft(),
-               d.getUTCSeconds().padLeft()].join(':');
-        $('#delivery_time').val(dformat);
-        $(".delivery_time_wrap").show();
-        $(".delivery_time_wrap .txt").text('Дата и время визита');
-    }
-    if( variant == 'vpodarok' || variant == 'dostavka' ){
+
+    if( variant == 'dostavka' ){
     	$('#delivery_time').val($('#delivery_time').attr('time-delivery'));
     }
 }
 
 function showFieldsByDostavka(){
-	$(".address_delivery, .destrict_delivery").show();
+    $(".address_delivery, .destrict_delivery").show();
     $(".user_address, .order_address_ulica, .order_address_dom, .order_address_kvartira").addClass("required");
     $(".restaurant_address").hide();
     $(".delivery_time_wrap").show();
@@ -194,19 +167,6 @@ $(document).ready(function(){
 		});
 			var filter = /^[0-9-+ ]+$/;
 
-		if(!filter.test($('.order_form_fields .phone').val().trim()))
-		{
-			$('.order_form_fields .phone').addClass('error');
-			$('.order_form_fields .phone').removeClass('success');
-			is_ok = 0;		
-		}
-		else
-		{
-			$('.order_form_fields .phone').removeClass('error');
-			$('.order_form_fields .phone').addClass('success');
-		}	
-
-		//console.log(jQuery.inArray($('.order_form_fields .order_address_ulica').val(),streets));
 		if(jQuery.inArray($('.order_form_fields .order_address_ulica').val(),arStreets) <= 0 && $('.address_delivery').is(':visible'))
 		{
 			$('.order_form_fields .order_address_ulica').addClass('error');
@@ -219,11 +179,6 @@ $(document).ready(function(){
 			$('.order_form_fields .order_address_ulica').addClass('success');
 		}
 		
-		
-		
-		//;
-		
-		
 		if(is_ok==0){
 			return false;
 		}else{
@@ -234,9 +189,10 @@ $(document).ready(function(){
 
 			$.ajax({
                 type: 'POST',
-                url: '/bdhandlers/order.php?t='+new Date().getTime(),
+                url: '/bdhandlers/order.php?t=' + new Date().getTime(),
                 dataType: 'json',
                 data: {
+                    DISCOUNT: $('.discount').val(),
                     PHONE: $('.order_form_fields .phone').val(),
                     NAME: $('.user_name').val(),
                     CITY: $('.order_form_fields .city').val(),
