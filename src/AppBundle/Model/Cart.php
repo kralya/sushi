@@ -16,9 +16,8 @@ class Cart
     
     public function getTotal()
     {
-        return $this->cart->get('basket')['total'];
+        return isset($this->cart->get('basket')['total']) ? : '0';
     }
-
 
     public function isNew()
     {
