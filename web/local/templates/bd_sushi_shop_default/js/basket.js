@@ -23,7 +23,7 @@ function showFieldsByVariant(variant){
             break;
         case "dostavka":
             $(".user_address, .order_address_ulica, .order_address_dom, .order_address_kvartira").addClass("required");
-            $(".discount, .user_name, .phone, .delivery_list, .receiver_name, .receiver_phone, .rt").addClass("required");
+            $(".discount, .user_name, .phone, .delivery_list, .receiver_name, .receiver_phone").addClass("required");
             $(".discount").removeClass("required");
             
             $(".delivery_time_wrap, .address_delivery, .destrict_delivery, .user_address").show();
