@@ -88,7 +88,7 @@ class Product
      * @var Category $category
      *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Category", inversedBy="products")
-     * @ORM\Column(name="category_id", type="object", nullable=false)
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id", nullable=false)
      */
     private $category = null;
     
