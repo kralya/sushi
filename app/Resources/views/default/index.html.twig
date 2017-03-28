@@ -46,7 +46,8 @@
                     </div>
                     <div class="dostavka">
                         <img alt="Телефоны: {{mob_phone_1}} и {{mob_phone_2}}" src="/images/phone.png"><br>
-                        время работы:&nbsp;круглосуточно<br>			</div>
+                        время работы:&nbsp;круглосуточно<br>			
+                    </div>
                 </div>
                 <div class="inf_box if_1">
                     <div class="title">
@@ -79,7 +80,8 @@
                     <div class="title">Меню</div>
                     <span class="close"></span>
 
-                    <ul class="sec_menu">                    <li><a class='active'>Популярное</a></li>
+                    <ul class="sec_menu">                    
+                        <li><a class='active'>Популярное</a></li>
 
                         <li id="bx_1847241719_1"><a href="catalog/sushi.html">Суши</a>
                             <ul class="sec_menu">
@@ -145,10 +147,11 @@
                                 <div class="title"><span class="title">{{product.name}}</span></div>
                                 <p>{{product.contains}}</p>
                             </div>
+                            
                             <div class="down">
                                 <div class="tovar_info">
                                     <span class="price"><span>{{product.price}}</span> 
-                                        <i class="rouble rouble_padding">руб.</i></span>
+                                        <i class="rouble rouble_padding">грн.</i></span>
                                     <span class="gramm">{{product.weight}}</span>        
                                 </div>
                                 <div class="tovar_cost">
@@ -163,23 +166,24 @@
                             <div class="tovar_zoom">
                                 <div class="pic">
                                     <img
-                                        src="upload/resize_cache/iblock/6b7/467_361_1/mocny_set.jpg"
-                                        alt="Моцный сет"
-                                        title="Моцный сет"
+                                        src="{{product.image}}"
+                                        alt="{{product.name}}"
+                                        title="{{product.name}}"
                                         />
                                     <div class="mask"></div>
                                     <div class="zoom"></div>
                                 </div>
                                 <div class="label" style="background-color: #FF0000">Хит сезона</div>
                                 <div class="about">
-                                    <div class="title">Моцный сет</div>
-                                    <p><noindex>Манхэттен маки, Ямагути маки, Чили Изумитай маки, Хаус Маки<br />
-                                        производитель: OOO “Глобалпрогрупп” </noindex></p>
+                                    <div class="title">{{product.name}}</div>
+                                    <p><noindex>{{product.contains}}</noindex></p>
                                 </div>
                                 <div class="down">
                                     <div class="tovar_info">
-                                        <span class="price"><span>56.49</span> <i class="rouble rouble_padding">руб.</i></span>
-                                        <span class="gramm">1035 г | 32 шт.</span>            </div>
+                                        <span class="price"><span>{{product.price}}</span> 
+                                            <i class="rouble rouble_padding">грн.</i></span>
+                                        <span class="gramm">{{product.contains}}</span>            
+                                    </div>
                                     <div class="tovar_cost">
                                         <div class="colich_tov">
                                             <input type="button" value="-" class="minus_tov" />
@@ -189,7 +193,7 @@
                                         <input type="button" class="addtocart" value="">
                                         <div class="recomend">
                                             <p>Рекомендую</p>
-                                            <a class="like  you_not_like_bitch" href="#"><span>64</span></a>
+                                            <a class="like  you_not_like_bitch" href="#"><span>{{product.recommended}}</span></a>
                                         </div>
                                     </div>
                                 </div>
