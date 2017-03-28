@@ -168,44 +168,10 @@
                         </div><!-- .tovar -->
                         
                         {% endfor %}
-                        
 
                     </div>
-                    <div class="clear"></div> <div class="poplavok">
-                        <div class="podarki_box podarki_close" style="display:block;">
-                            <span class="open"><i>Подарки</i></span>
-                            <div class="shkala">
-                                <div class="obertka"><div class="delenija"></div></div>
-                            </div>
-                        </div><!-- .podarki_close -->
-                        <div class="podarki_box podarki_open" style="display:none;">
-                            <span class="close"></span>
-                            <div class="bd">
-                                <div class="title">Получи подарок!</div>
-                                <p class="opis">При заказе на суммы выше 30.00 <!--<i class="rouble">i</i>--> <br>вы получаете возможность выбрать вкусный подарок</p>
-                                <div class="intr">
-                                    <div class="shkala">
-                                        <div class="obertka"><div class="delenija"></div></div>
-                                    </div>
-
-                                    <div class="pandochki" id="pandochki-cs">
-                                        <!--'start_frame_cache_pandochki-cs'-->                                        <div class="free_panda hot">
-                                            <div class="for_pod"> 40.00 <!--<i class="rouble">i</i>--></div>
-                                            <a href="catalog/gifts/index.html" class="zabr">Забрать</a>
-                                        </div>
-                                        <div class="free_panda mid">
-                                            <div class="for_pod"> 35.00 <!--<i class="rouble">i</i>--></div>
-                                            <a href="catalog/gifts/index.html" class="zabr">Забрать</a>
-                                        </div>
-                                        <div class="free_panda lit">
-                                            <div class="for_pod"> 30.00 <!--<i class="rouble">i</i>--></div>
-                                            <a href="catalog/gifts/index.html" class="zabr">Забрать</a>
-                                        </div>
-                                        <!--'end_frame_cache_pandochki-cs'-->                </div> 
-                                </div> 
-                            </div>  
-                        </div><!-- .podarki_open -->        
-                    </div>    
+                    <div class="clear"></div> 
+                    {% include 'default/gift.html.twig' %} 
                 </div>
             </div>
         </div>
