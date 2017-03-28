@@ -22,7 +22,7 @@ class BaseController extends Controller
         $params['info_seller2'] = 'Интернет-магазин www.sushihouse.by зарегистрирован в Торговом реестре Республики Беларусь №331264 от 18.05.2016';
         $params['phone'] = '668-11-12';
         $params['mob_phone_1'] = '+380(99)668-11-11';
-        $params['mob_phone_1'] = '+380(50)668-11-11';
+        $params['mob_phone_2'] = '+380(50)668-11-11';
         
         $params['vk'] = 'https://vk.com/sushihouseby';
         $params['fb'] = 'https://www.facebook.com/sushihouseby';
