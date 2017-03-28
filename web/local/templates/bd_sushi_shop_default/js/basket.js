@@ -13,15 +13,18 @@ function showFieldsByVariant(variant){
             $(".colich_tov_field, .payment_type_field, .need_short_change_container, .comment_wrap").hide();
             
             $(".user_address, .order_address_ulica, .order_address_dom, .order_address_kvartira").removeClass("required");
-            $(".discount, .user_name, .phone, .delivery_list, .receiver_name, .receiver_phone, .rt").removeClass("required");
+            $(".user_name, .phone, .delivery_list, .receiver_name, .receiver_phone, .rt").removeClass("required");
+            
+            $(".discount").addClass("required");
             
             var form = $("#oform .order_form_fields");
             form.find('.restaurant_list').trigger("chosen:updated");
             setDevliveryPrice(0,0);
             break;
         case "dostavka":
-            $(".discount, .user_name, .phone, .delivery_list").addClass("required");
-//            $(".discount").addClass("required");
+            $(".user_address, .order_address_ulica, .order_address_dom, .order_address_kvartira").addClass("required");
+            $(".discount, .user_name, .phone, .delivery_list, .receiver_name, .receiver_phone, .rt").addClass("required");
+            $(".discount").removeClass("required");
             
             $(".delivery_time_wrap, .address_delivery, .destrict_delivery, .user_address").show();
             $(".order_address_ulica, .order_address_dom, .order_address_kvartira").show();
