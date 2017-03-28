@@ -83,6 +83,7 @@ Studio8.Widget('main', {
     // Gift menu + and mobile adaptive menu
     stickyRelocate: function() {
         var window_top = $(window).scrollTop();
+        if (!$('.togmenu').length) return;
         var div_top = $('.togmenu').offset().top;
         if (window_top > div_top) {
             $('.poplavok').addClass('stick');
