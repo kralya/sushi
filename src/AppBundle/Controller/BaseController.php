@@ -33,10 +33,8 @@ class BaseController extends Controller
         $params['mob_phone_1'] = '+380(99)668-11-11';
         $params['mob_phone_2'] = '+380(50)668-11-11';
         
-        $params['vk'] = 'https://vk.com/sushihouseby';
         $params['fb'] = 'https://www.facebook.com/sushihouseby';
         $params['ig'] = 'https://instagram.com/sushihouseby';
-        $params['ok'] = 'http://ok.ru/group/51994461470904';
         
         $params['caffees'] = [
             ['id' => '31', 'en' => 'Moskovskaya273v', 'ru' => 'г. Брест, ул. Московская, 273В', ],
