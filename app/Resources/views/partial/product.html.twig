@@ -1,0 +1,84 @@
+<div
+    class="tovar animate"
+    id="bx_651765591_{{product.id}}"
+    data-price="{{product.price}}"
+    data-old-price="{{product.priceOld}}"
+    data-id="{{product.id}}"
+    data-category-id="{{product.category.id}}"
+    data-category-name="{{product.category.name}}"
+    data-half-enabled="no"
+    >
+
+    <div class="pic">
+        <img
+            src="{{product.image}}"
+            alt="{{product.name}}"
+            title="{{product.name}}"
+            width="220"
+            height="172"
+            />
+
+        <div class="mask"></div>
+        <div class="zoom"></div>
+    </div>
+
+    {% if product.sticker%}
+        <div class="label" style="background-color: {{product.sticker.color}}">{{product.sticker.name}}</div>
+    {% endif %}
+
+    <div class="about">
+        <div class="title"><span class="title">{{product.name}}</span></div>
+        <p>{{product.contains}}</p>
+    </div>
+    <div class="down">
+        <div class="tovar_info">
+            <span class="price"><span>{{product.price}}</span> 
+                <i class="rouble rouble_padding">грн.</i></span>
+            <span class="gramm">{{product.weight}}</span>        
+        </div>
+        <div class="tovar_cost">
+            <div class="colich_tov">
+                <input type="button" value="-" class="minus_tov"/>
+                <input type="text" value="1" class="txt_col_tov"/>
+                <input type="button" value="+" class="plus_tov"/>
+            </div>
+            <input type="button" class="addtocart" value="">
+        </div>
+    </div>
+
+    <div class="tovar_zoom">
+        <div class="pic">
+            <img
+                src="{{product.image}}"
+                alt="{{product.name}}"
+                title="{{product.name}}"
+                />
+            <div class="mask"></div>
+            <div class="zoom"></div>
+        </div>
+        <div class="label" style="background-color: #FF0000">Хит сезона</div>
+        <div class="about">
+            <div class="title">{{product.name}}</div>
+            <p><noindex>{{product.contains}} </noindex></p>
+        </div>
+        <div class="down">
+            <div class="tovar_info">
+                <span class="price"><span>{{product.price}}</span> 
+                    <i class="rouble rouble_padding">грн.</i></span>
+                <span class="gramm">{{product.weight}}</span>            </div>
+            <div class="tovar_cost">
+                <div class="colich_tov">
+                    <input type="button" value="-" class="minus_tov" />
+                    <input type="text" value="1" class="txt_col_tov" />
+                    <input type="button" value="+" class="plus_tov" />
+                </div>
+                <input type="button" class="addtocart" value="">
+                <div class="recomend">
+                    <p>Рекомендую</p>
+                    <a class="like  you_not_like_bitch" href="#"><span>64</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- .tovar -->
+
