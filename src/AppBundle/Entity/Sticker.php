@@ -7,8 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Product
  *
- * @ORM\Table(name="product")
- * @ORM\Entity(repositoryClass="AppBundle\Repo\ProductRepo")
+ * @ORM\Table(name="sticker")
+ * @ORM\Entity
  */
 class Sticker
 {
@@ -38,7 +38,7 @@ class Sticker
     /**
      * @var Product[]|ArrayCollection $products
      *
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Product", mappedBy="category", cascade={"remove"})
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Product", mappedBy="sticker", cascade={"remove"})
      */
     private $products;
 
@@ -46,6 +46,7 @@ class Sticker
     {
         $this->products = new ArrayCollection();
     }
+
     /**
      * Get id
      *
