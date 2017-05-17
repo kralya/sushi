@@ -66,8 +66,10 @@
                                 <div class="mask"></div>
                                 <div class="zoom"></div>
                             </div>
-{#// ACHTUNG! Place stickers here! HIDDEN NOW!                                    #}
-{#                            <div class="label" style="background-color: #FF0000">Хит сезона</div>#}
+
+                            {% if product.sticker%}
+                                <div class="label" style="background-color: {{product.sticker.color}}">{{product.sticker.name}}</div>
+                            {% endif %}
 
                             <div class="about">
                                 <div class="title"><span class="title">{{product.name}}</span></div>
