@@ -20,7 +20,7 @@ class BaseController extends Controller
         $params['title'] = 'Доставка суши в Минске. Sushi House Ресторан Японской кухни (Суши Хаус)';
         $params['info_seller1'] = 'OOO "Глобалпрогрупп" г.Минск, ул. Казинца, 123, оф.6 УНП 192610415';
         $params['info_seller2'] = 'Интернет-магазин www.sushihouse.by зарегистрирован в Торговом реестре Республики Беларусь №331264 от 18.05.2016';
-        $params['phone'] = '668-11-12';
+        $params['phone'] = '(099)668-11-11';
         $params['mob_phone_1'] = '+380(99)668-11-11';
         $params['mob_phone_2'] = '+380(50)668-11-11';
         
