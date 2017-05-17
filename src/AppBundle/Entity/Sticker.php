@@ -34,6 +34,18 @@ class Sticker
      * @ORM\Column(name="color", type="string", length=1024, nullable=false)
      */
     private $color;
+
+    /**
+     * @var Product[]|ArrayCollection $products
+     *
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Product", mappedBy="category", cascade={"remove"})
+     */
+    private $products;
+
+    public function __construct()
+    {
+        $this->products = new ArrayCollection();
+    }
     /**
      * Get id
      *

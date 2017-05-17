@@ -100,6 +100,14 @@ class Product
     private $proposeInCart = null;
 
     /**
+     * @var Sticker $sticker
+     *
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Sticker", inversedBy="products")
+     * @ORM\JoinColumn(name="sticker_id", referencedColumnName="id", nullable=true)
+     */
+    private $sticker= null;
+    
+    /**
      * Get id
      *
      * @return integer
@@ -360,6 +368,29 @@ class Product
         return $this->category;
     }
 
+    /**
+     * Set sticker
+     *
+     * @param Sticker $sticker
+     *
+     * @return Product
+     */
+    public function setSticker(Sticker $sticker)
+    {
+        $this->category = $sticker;
+
+        return $this;
+    }
+
+    /**
+     * Get sticker
+     *
+     * @return Sticker
+     */
+    public function getSticker()
+    {
+        return $this->sticker;
+    }
     /**
      * Set proposeInCart
      *
