@@ -16,3 +16,4 @@
 composer.phar
 /vendor/
 /app/spool
+web/basket-screenshot
