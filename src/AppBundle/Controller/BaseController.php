@@ -29,12 +29,17 @@ class BaseController extends Controller
         $params['info_seller1'] = 'Два пирата';
         $params['info_seller2'] = 'Интернет-магазин www.dvapirata.zp.ua '
                 . 'зарегистрирован в Пиратской республике';
-        $params['phone'] = '(099)668-11-11';
-        $params['mob_phone_1'] = '+380(99)668-11-11';
-        $params['mob_phone_2'] = '+380(50)668-11-11';
+        $params['phone'] = '(050)229-19-00';
+        $params['mob_phone_1'] = '+380(50)229-19-00';
+        $params['mob_phone_2'] = '+380(50)339-19-00';
         
         $params['fb'] = 'https://www.facebook.com/sushihouseby';
         $params['ig'] = 'https://instagram.com/sushihouseby';
+        
+        $params['adres1'] = 'б. Фестивальный, 12';
+        $params['adres2'] = 'у. Центральная, 13';
+        $params['email_mark'] = 'marketing@dvapirata.zp.ua';
+        $params['name'] = 'Два Пирата';
         
         $params['caffees'] = [
             ['id' => '31', 'en' => 'Moskovskaya273v', 'ru' => 'г. Брест, ул. Московская, 273В', ],
