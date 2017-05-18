@@ -10,6 +10,7 @@ class IndexController extends BaseController
 {
     /**
      * @Route("/", name="homepage")
+     * @Route("/home", name="homepage")
      */
     public function indexAction(Request $request)
     {
@@ -46,9 +47,12 @@ class IndexController extends BaseController
      */
     public function newsAction(Request $request)
     {
-        
+        $repo = $this->getRepo('Product');
+        $products = $repo->findAll();
+        $categories = $this->getRepo('Category')->findAll();
+
         $repo = $this->getRepo('News');
-        $params['news'] = $repo->findAll();
+        $params = ['products' => $products, 'categories' => $categories, 'news' => $repo->findAll()];
         
         return $this->render('default/news.html.twig', $params);
     }
@@ -58,7 +62,12 @@ class IndexController extends BaseController
      */
     public function deliveryAction(Request $request)
     {
-        return $this->render('default/delivery.html.twig', []);
+        $repo = $this->getRepo('Product');
+        $products = $repo->findAll();
+        $categories = $this->getRepo('Category')->findAll();
+        $params = ['products' => $products, 'categories' => $categories];
+        
+        return $this->render('default/delivery.html.twig', $params);
     }
     
     /**
