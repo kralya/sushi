@@ -4053,8 +4053,8 @@ div.window_popup {
         background-size: 190px auto;
         font-size: 31px;
         padding: 9px 0 15px 63px;
-        margin: 62px 0 0 20px !important;
-        min-height: 70px;
+        margin: 0px 0 0 20px !important;
+        min-height: 160px;
     }
 
 
