@@ -10,7 +10,6 @@ class IndexController extends BaseController
 {
     /**
      * @Route("/", name="homepage")
-     * @Route("/home", name="homepage")
      */
     public function indexAction(Request $request)
     {
