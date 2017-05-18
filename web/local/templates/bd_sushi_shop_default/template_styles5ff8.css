@@ -185,7 +185,7 @@ body {
 /* Header
 -----------------------------------------------------------------------------*/
 .header {
-    height: 74px;
+    height: 84px;
     background: #fff;
     position: fixed;
     width: 100%;
@@ -205,12 +205,12 @@ body {
     font-family: 'roboto_condensedregular';
     background: url(images/logo_comp.png) no-repeat scroll left top;
     padding-left: 153px;
-    padding-top: 42px;
+    padding-top: 62px;
     float: left;
     font-size: 24px;
     text-decoration: none;
     color: #000;
-    margin: 9px 0 0 0;
+    margin: 2px 0 0 0;
 }
 
 .logo span {
