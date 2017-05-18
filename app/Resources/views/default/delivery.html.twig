@@ -37,6 +37,10 @@
     {# PAGE ITSELF ! #}
     <main class="content ">
         <div class="wrap">
+            {% include 'partial/menu_part.html.twig' with {'categories': categories} %}
+        </div>
+
+        <div class="wrap">
 {#// ACHTUNG! HIDDEN!            #}
             <div class="map" style="display:none">
                 <script type="text/javascript">
