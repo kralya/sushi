@@ -22,25 +22,33 @@ class IndexController extends BaseController
 
     /**
      * @Route("/menu", name="menu")
+     * @Route("/menu/", name="menu")
      * @Route("/menu/{category}")
      */
     public function menuAction(Request $request)
     {
-        $url = $request->get('category');
-        $category = $this->getRepo('Category')->findOneByUrl($url);
-        
-        if( $url && !$category) {
-            throw $this->createNotFoundException('The product does not exist');
-        }
-        
-        $repo = $this->getRepo('Product');
-        $products = $url ? $repo->findByCategory($category) : $repo->findAll();
+        $url        = $request->get('category');
+        $category   = $this->getRepo('Category')->findOneByUrl($url);
+        $repo       = $this->getRepo('Product');
         $categories = $this->getRepo('Category')->findAll();
+
+        if ($url && !$category && 'popular' !== $url) {
+            throw $this->createNotFoundException('The category ' . $url . ' does not exist');
+        }
+
+        if ($url === 'popular') {
+            $products = $repo->findByPopular(true);
+        } elseif ($url) {
+            $products = findByCategory($category);
+        } else {
+            $products = $repo->findAll();
+        }
+
         $params = ['products' => $products, 'categories' => $categories];
-        
+
         return $this->render('default/menu.html.twig', $params);
     }
-    
+
     /**
      * @Route("/news", name="news")
      */
