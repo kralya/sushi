@@ -78,6 +78,19 @@ class IndexController extends BaseController
     }
     
     /**
+     * @Route("/contacts", name="contacts")
+     */
+    public function contactsAction(Request $request)
+    {
+        $repo = $this->getRepo('Product');
+        $products = $repo->findAll();
+        $categories = $this->getRepo('Category')->findAll();
+        $params = ['products' => $products, 'categories' => $categories];
+        
+        return $this->render('default/contacts.html.twig', $params);
+    }
+    
+    /**
      * @Route("/bdhandlers/likes_bd.php", name="likes")
      */
     public function likeAction(Request $request)
