@@ -95,9 +95,9 @@ class Product
     /**
      * @var integer
      *
-     * @ORM\Column(name="propose_in_cart", type="integer", nullable=true)
+     * @ORM\Column(name="popular", type="integer", nullable=true)
      */
-    private $proposeInCart = null;
+    private $popular = null;
 
     /**
      * @var Sticker $sticker
@@ -392,27 +392,27 @@ class Product
         return $this->sticker;
     }
     /**
-     * Set proposeInCart
+     * Set Popular
      *
-     * @param integer $proposeInCart
+     * @param integer $popular
      *
      * @return Product
      */
-    public function setProposeInCart($proposeInCart)
+    public function setPopular($popular)
     {
-        $this->proposeInCart = $proposeInCart;
+        $this->popular = $popular;
 
         return $this;
     }
 
     /**
-     * Get proposeInCart
+     * Get popular
      *
      * @return integer
      */
-    public function getProposeInCart()
+    public function getPopular()
     {
-        return $this->proposeInCart;
+        return $this->popular;
     }
     
     public function getAuxiliaryForCart()
