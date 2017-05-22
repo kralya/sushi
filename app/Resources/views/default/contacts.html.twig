@@ -37,6 +37,62 @@
     <main class="content">
         <div class="wrap">
             Two maps are here.
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      #map1 {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+	width: 400px;
+        height: 400px;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <div id="map"></div>
+    <br/>
+    <div id="map1"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 47.836880, lng: 35.134461};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: uluru,
+          zoom: 16
+        });
+	var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+	  label: 'B'
+        });
+      }
+
+      function initMap1() {
+        var uluru1 = {lat: 47.820749, lng: 35.052308};
+        var map1 = new google.maps.Map(document.getElementById('map1'), {
+          center: uluru1,
+          zoom: 16
+        });
+	var marker1 = new google.maps.Marker({
+          position: uluru1,
+          map: map1,
+	  label: 'A'
+        });
+	}
+
+	function init() {
+		initMap1();
+		initMap();
+	}
+    </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpG6s6He22TT-W7inZG_A2vrTLeDBTLFo&callback=init">
+    </script>
             
         </div>
         <!-- .news_line -->
