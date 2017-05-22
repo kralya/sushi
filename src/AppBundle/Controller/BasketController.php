@@ -107,13 +107,16 @@ class BasketController extends BaseController
         
         $message = \Swift_Message::newInstance()
             ->setSubject('New order')
-            ->setFrom('admin@eheh.com')
+            ->setFrom('admin@dvapirata.zp.ua')
             ->setTo('hrumos@yahoo.com')
             ->setBody($text.$br.$order);
 
         $mailer = $this->get('mailer');
 
         $mailer->send($message);
+        
+        $headers = 'From: sales@dvapirata.zp.ua' . "\r\n";
+        mail('hrumos@gmail.com', 'New order', $text.$br.$order, $headers);
         
 //        $dt = $request->request->get('DELIVERY_TIME');
 //        $dd = '25.02.2017 13:56:00';
