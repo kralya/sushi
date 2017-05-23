@@ -390,7 +390,7 @@ body {
 /* Middle
 -----------------------------------------------------------------------------*/
 .content {
-    padding: 74px 0 140px;
+    padding: 130px 0 140px;
 }
 
 .content_admin {
@@ -1637,7 +1637,7 @@ body {
     padding: 17px 0 0 0;
     background: #fff;
     left: 50%;
-    top: 99px;
+    top: 259px;
     margin: 0 0 0 -179px;
     z-index: 1001;
     -webkit-border-radius: 5px;
@@ -6201,18 +6201,45 @@ a.title {
     behavior: url(PIE.html);
 }
 
-.tovar_box .detail_tovar .down .tovar_cost .addtocart:hover {
-    background: url(images/cartbt.png) no-repeat scroll center center #ff6277;
-    background: url(images/cartbt.png) no-repeat scroll center center, -webkit-gradient(linear, 0 0, 0 bottom, from(#ff6277), to(#ff2d5f));
-    background: url(images/cartbt.png) no-repeat scroll center center, -webkit-linear-gradient(#ff6277, #ff2d5f);
-    background: url(images/cartbt.png) no-repeat scroll center center, -moz-linear-gradient(#ff6277, #ff2d5f);
-    background: url(images/cartbt.png) no-repeat scroll center center, -ms-linear-gradient(#ff6277, #ff2d5f);
-    background: url(images/cartbt.png) no-repeat scroll center center, -o-linear-gradient(#ff6277, #ff2d5f);
-    background: url(images/cartbt.png) no-repeat scroll center center, linear-gradient(#ff6277, #ff2d5f);
-    -pie-background: url(images/cartbt.png) no-repeat scroll center center, linear-gradient(#ff6277, #ff2d5f);
+.phone {
+    float: left;
+    cursor: pointer;
+    width: 49px;
+    height: 35px;
+    border: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: url(images/trubka_m.png) no-repeat scroll center center;
+    /*#BB2C28;*/
+/*    background: url(images/trubka.png) no-repeat scroll center center, -webkit-gradient(linear, 0 0, 0 bottom, from(#BB2C28), to(#e22238));
+    background: url(images/trubka.png) no-repeat scroll center center, -webkit-linear-gradient(#BB2C28, #e22238);
+    background: url(images/trubka.png) no-repeat scroll center center, -moz-linear-gradient(#BB2C28, #e22238);
+    background: url(images/trubka.png) no-repeat scroll center center, -ms-linear-gradient(#BB2C28, #e22238);
+    background: url(images/trubka.png) no-repeat scroll center center, -o-linear-gradient(#BB2C28, #e22238);
+    background: url(images/trubka.png) no-repeat scroll center center, linear-gradient(#BB2C28, #e22238);
+    -pie-background: url(images/trubka.png) no-repeat scroll center center, linear-gradient(#BB2C28, #e22238);*/
+    behavior: url(PIE.html);
+}
+
+.phone:hover {
+    background: url(images/trubka_m.png) no-repeat scroll center center #ff6277;
+    background: url(images/trubka_m.png) no-repeat scroll center center, -webkit-gradient(linear, 0 0, 0 bottom, from(#ff6277), to(#ff2d5f));
+    background: url(images/trubka_m.png) no-repeat scroll center center, -webkit-linear-gradient(#ff6277, #ff2d5f);
+    background: url(images/trubka_m.png) no-repeat scroll center center, -moz-linear-gradient(#ff6277, #ff2d5f);
+    background: url(images/trubka_m.png) no-repeat scroll center center, -ms-linear-gradient(#ff6277, #ff2d5f);
+    background: url(images/trubka_m.png) no-repeat scroll center center, -o-linear-gradient(#ff6277, #ff2d5f);
+    background: url(images/trubka_m.png) no-repeat scroll center center, linear-gradient(#ff6277, #ff2d5f);
+    -pie-background: url(images/trubka_m.png) no-repeat scroll center center, linear-gradient(#ff6277, #ff2d5f);
 }
 
 .tovar_box .detail_tovar .down .tovar_cost .addtocart:active {
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.50);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.50);
+}
+
+.phone:active {
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.50);
     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.50);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.50);
