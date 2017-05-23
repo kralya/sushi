@@ -1112,6 +1112,7 @@ body {
 #tab-container {
     margin: 69px 4px 35px 0;
     position: relative;
+    max-width: 877px;
 }
 
 #tab-container .os {
