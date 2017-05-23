@@ -484,8 +484,9 @@ $(document).ready(function(){
             }
         });
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        $('.cart_popup').css('top', ((scrollTop)) +89 + 'px');
-        $('.panda_popup').css('top', ((scrollTop)) +89 + 'px');
+        var topMarginBasket = '240px';
+        $('.cart_popup').css('top', ((scrollTop)) + topMarginBasket);
+        $('.panda_popup').css('top', ((scrollTop)) + topMarginBasket);
 		$('#cart').show();
 		
 		$('#cart').removeClass('animate_out').addClass('animate_in');
