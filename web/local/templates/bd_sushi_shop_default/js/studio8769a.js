@@ -128,7 +128,7 @@ Studio8.Widget('main', {
         }
 
         if($(e.target).closest('.phone').length === 0 && $(e.target).closest(".call_back_popup").length === 0 && $('.call_back_popup').is(':visible')){
-            $('.call_back_popup').addClass('animate_out');
+//            $('.call_back_popup').addClass('animate_out');
         }
     },
     // tooltip for price in value before denomination
@@ -245,7 +245,8 @@ Studio8.Widget('modalWindows', {
         // заказать звонок
         $('#headphone').click(function(e){
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            $('.call_back_popup').css('top', ((scrollTop)) +89 + 'px');
+            var topMarginBasket = '260px';            
+            $('.call_back_popup').css('top', ((scrollTop)) + topMarginBasket);
             $('.cb_start').show();
             $('.cb_start').removeClass('animate_out').addClass('animate_in');
             e.preventDefault();
