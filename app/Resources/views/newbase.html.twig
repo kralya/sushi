@@ -66,43 +66,20 @@
         
         {% include 'partial/basket.html.twig' %}
         
-        <style>
-            .header-pir {
-                background: url(/images/header-resized.png); 
-                background-size:cover;
-                padding-top: 160px;
-            }
-        </style>
-        
         {#menu end#}
         <div class="wrapper">
             <header class="header header-pir">
                 <div class=" top_wrap">
 
-<style>
-    .phone-near-cart{
-        border-radius: 5px;
-        color: #000;
-        cursor: pointer;
-        display: inline-block;
-        font-family: "roboto_condensedlight";
-        font-size: 24px;
-        height: 37px;
-        line-height: 35px;
-        margin: 1px 0 0;
-        padding: 0 13px;
-        padding-top: 15px;
-        text-decoration: none;
-        vertical-align: top;
-        
-    }
-</style>
-
                     <div class="div_cart" style="width: 270px">
                             <div class="phone-near-cart" id="headphone">
-                                <u>{{phone}}</u>    
+                                <a href="#" >
+                                    Перезвоним вам!
+                                </a>
+                                <a class="phone"></a>
+{#                                <a href="#"> <u>Позвоним вам!</u></a>#}
+{#                                test!#}
                             </div>                            
-
                         <a href="#" class="cart_btn cart"></a>
                     </div>
                             
@@ -113,7 +90,7 @@
                                 <li class="mobile"><a id="mobmenu" href="/">Меню</a></li>
                                 <li><a href="/menu/sushi">Меню</a></li>
                                 <li><a href="/delivery">Доставка</a></li>
-                                <li><a href="/news">Новости</a></li>
+{#                                <li><a href="/news">Новости</a></li>#}
                                 <li><a href="/contacts">Контакты</a></li>
                             </ul>
                             <div class="tel_mobile">

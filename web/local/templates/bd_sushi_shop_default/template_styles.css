@@ -6888,3 +6888,24 @@ footer {
     border-color: #eea236;
     color: #fff;
  }
+
+ .phone-near-cart{
+     border-radius: 5px;
+     color: #000;
+     cursor: pointer;
+     display: inline-block;
+     font-family: "roboto_condensedlight";
+     font-size: 24px;
+     height: 37px;
+     width: 150px;
+     line-height: 25px;
+     margin: 1px 0 0;
+     text-decoration: none;
+     vertical-align: top;
+ }
+
+ .header-pir {
+     background: url(/images/header-resized.png); 
+     background-size:cover;
+     padding-top: 180px;
+ }
