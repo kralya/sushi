@@ -244,8 +244,8 @@ Studio8.Widget('modalWindows', {
         // заказать звонок
         $('#headphone').click(function(e){
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            var topMarginBasket = '240px';
-            $('.call_back_popup').css('top', ((scrollTop)) + topMarginBasket);
+            var topMarginBasket = 240;
+            $('.call_back_popup').css('top', (scrollTop + topMarginBasket)+'px');
             $('.cb_start').show();
             $('.cb_start').removeClass('animate_out').addClass('animate_in');
             e.preventDefault();
