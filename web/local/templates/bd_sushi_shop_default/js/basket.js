@@ -54,11 +54,10 @@ function showFieldsByDostavka(){
 
 $(document).ready(function(){
 
-	/*
-    корзина, выбор варианта
-     */
-    $('.variant_list').on('change',function(){
-        showFieldsByVariant($(this).find(':selected').data('id'));
+/*    корзина, выбор варианта     */
+    $('.variant_list button').on('click',function(){
+        showFieldsByVariant($(this).data('id'));
+        return false;
     });
 	
 	setDevliveryPrice(0,0);
