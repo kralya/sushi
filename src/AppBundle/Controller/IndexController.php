@@ -39,7 +39,7 @@ class IndexController extends BaseController
         if ($url === 'popular') {
             $products = $repo->findByPopular(true);
         } elseif ($url) {
-            $products = findByCategory($category);
+            $products = $repo->findByCategory($category);
         } else {
             $products = $repo->findAll();
         }
