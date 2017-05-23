@@ -6232,7 +6232,7 @@ a.title {
 
 .cart_popup {
     right: 13px;
-    top: 89px;
+    top: 209px;
 }
 
 .bx-context-toolbar-empty-area {
@@ -6829,6 +6829,28 @@ footer {
      display: none;
  }
 
-
+.btn{
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+ } 
+ 
+ .btn-warning {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    color: #fff;
+ }
 
 
