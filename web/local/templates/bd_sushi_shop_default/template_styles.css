@@ -390,7 +390,7 @@ body {
 /* Middle
 -----------------------------------------------------------------------------*/
 .content {
-    padding: 130px 0 140px;
+    padding: 130px 0 40px;
 }
 
 .content_admin {
@@ -6222,7 +6222,7 @@ a.title {
     behavior: url(PIE.html);
 }
 
-.phone:hover {
+/*.phone:hover {
     background: url(images/trubka_m.png) no-repeat scroll center center #ff6277;
     background: url(images/trubka_m.png) no-repeat scroll center center, -webkit-gradient(linear, 0 0, 0 bottom, from(#ff6277), to(#ff2d5f));
     background: url(images/trubka_m.png) no-repeat scroll center center, -webkit-linear-gradient(#ff6277, #ff2d5f);
@@ -6231,7 +6231,7 @@ a.title {
     background: url(images/trubka_m.png) no-repeat scroll center center, -o-linear-gradient(#ff6277, #ff2d5f);
     background: url(images/trubka_m.png) no-repeat scroll center center, linear-gradient(#ff6277, #ff2d5f);
     -pie-background: url(images/trubka_m.png) no-repeat scroll center center, linear-gradient(#ff6277, #ff2d5f);
-}
+}*/
 
 .tovar_box .detail_tovar .down .tovar_cost .addtocart:active {
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.50);
