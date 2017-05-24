@@ -33,6 +33,7 @@ class BaseController extends Controller
         $params['phone'] = '(050)229-19-00';
         $params['mob_phone_1'] = '+380(50)229-19-00';
         $params['mob_phone_2'] = '+380(50)339-19-00';
+        $params['phone_other'] = '+380(67)614-29-69';
         
         $params['fb'] = 'https://www.facebook.com/';
         $params['ig'] = 'https://instagram.com/';
