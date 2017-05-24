@@ -62,39 +62,41 @@ class BasketController extends BaseController
         
         // no validation (?!)
         $indices = [
-            'ADDRESS_DOM',
-            'ADDRESS_ETAZ',
-            'ADDRESS_KORPUS',
-            'ADDRESS_KVARTIRA',
-            'ADDRESS_PODEZD',
-            'ADDRESS_ULICA',
-            'CHANGE',
-            'CITY',
-            'COMMENT',
-            'DELIVERY_NAME',
-            'DELIVERY_PRICE',
-            'DELIVERY_TIME',
-            'DISTRICT',
-            'NAME',
-            'ORDER_EMAIL',
-            'ORDER_STATUS_ID',
-            'ORDER_VARIANT',
-            'PAY_SYS',
-            'PAY_SYS_TEXT',
-            'PERSONS',
-            'PHONE',
-            'PROMOCODE',
-            'RECEIVER_NAME',
-            'RECEIVER_PHONE',
-            'RESTAURANT_ADDRESS',
+            'DISCOUNT' => 'Номер дисконта',
+            'CITY' => 'Город',
+            'ADDRESS_ULICA' => 'Улица',
+            'ADDRESS_DOM' => 'Дом',
+            'ADDRESS_ETAZ' => 'Этаж',
+            'ADDRESS_KORPUS' => 'Корпус',
+            'ADDRESS_PODEZD' => 'Подъезд',
+            'ADDRESS_KVARTIRA' => 'Квартира',
+            'CHANGE' => 'Сдача с ',
+            'COMMENT' => 'Комментарий',
+            'DELIVERY_NAME' => 'Наименование',
+            'DELIVERY_PRICE' => 'Цена',
+            'DELIVERY_TIME' => 'Время доставки',
+            'DISTRICT' => 'Район',
+            'NAME' => 'Имя',
+            'ORDER_EMAIL' => 'Email',
+            'ORDER_VARIANT' => 'Вариант',
+            'PAY_SYS' => 'Дом',
+            'PAY_SYS_TEXT' => 'Дом',
+            'PERSONS' => 'Персоны',
+            'PHONE' => 'Телефон',
+            'PROMOCODE' => 'Промокод',
+            'RECEIVER_NAME' => 'Имя получателя',
+            'RECEIVER_PHONE' => 'Телефон получателя',
+            'RESTAURANT_ADDRESS' => 'Адрес торговой точки',
         ];
         
         $text = '';
-        foreach ($indices as $index) {
-            $value = $request->request->get($index);
-            if(!$value) {
+        foreach ($indices as $key=>$index) {
+            $value = $request->request->get($key);
+
+            if (!$value) {
                 continue;
             }
+
             $template = '%s: %s
 ';
             $text.= sprintf($template, $index, $value);
@@ -109,7 +111,7 @@ class BasketController extends BaseController
             ->setSubject('New order')
             ->setFrom('admin@dvapirata.zp.ua')
             ->setTo('hrumos@yahoo.com')
-            ->setBody($text.$br.$order);
+            ->setBody($text.$br.'Состав заказа:'.$br.$order);
 
         $mailer = $this->get('mailer');
 
