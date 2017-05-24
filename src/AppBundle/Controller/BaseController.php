@@ -37,8 +37,8 @@ class BaseController extends Controller
         $params['fb'] = 'https://www.facebook.com/';
         $params['ig'] = 'https://instagram.com/';
         
-        $params['adres1'] = 'б. Фестивальный, 12';
-        $params['adres2'] = 'у. Центральная, 13';
+        $params['adres1'] = 'пр-т Юбилейный, 20-а';
+        $params['adres2'] = 'ул. Патриотическая, 68-а';
         $params['email_mark'] = 'marketing@dvapirata.zp.ua';
         $params['name'] = 'Два Пирата';
         
