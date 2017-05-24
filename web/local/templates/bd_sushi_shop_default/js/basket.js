@@ -169,17 +169,19 @@ $(document).ready(function(){
 		});
 			var filter = /^[0-9-+ ]+$/;
 
-		if(jQuery.inArray($('.order_form_fields .order_address_ulica').val(),arStreets) <= 0 && $('.address_delivery').is(':visible'))
-		{
-			$('.order_form_fields .order_address_ulica').addClass('error');
-			$('.order_form_fields .order_address_ulica').removeClass('success');
-			is_ok = 0;		
-		}
-		else
-		{
+//		if(jQuery.inArray($('.order_form_fields .order_address_ulica').val(),arStreets) <= 0 && 
+//                        $('.address_delivery').is(':visible')
+//                        )
+//		{
+//			$('.order_form_fields .order_address_ulica').addClass('error');
+//			$('.order_form_fields .order_address_ulica').removeClass('success');
+//			is_ok = 0;		
+//		}
+//		else
+//		{
 			$('.order_form_fields .order_address_ulica').removeClass('error');
 			$('.order_form_fields .order_address_ulica').addClass('success');
-		}
+//		}
 		
 		if(is_ok==0){
 			return false;
