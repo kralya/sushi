@@ -1760,7 +1760,7 @@ div.window_popup {
     position: absolute;
     top: 84px;
     right: 0;
-    z-index: 1001;
+    z-index: 1011;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
