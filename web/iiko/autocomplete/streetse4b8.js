@@ -9,7 +9,7 @@ $(function () {
 
 	var streetsArray, arStreets, streets;
 
-	$.getJSON( "/local/templates/bd_sushi_shop_default/js/street.json", function( streetsByCities ) {	  
+	$.getJSON( "/local/templates/bd_sushi_shop_default/js/street.json.empty", function( streetsByCities ) {	  
 	  allStreetsRegion = streetsByCities;
 
       if( typeof currentCity != 'undefined' && typeof streetsByCities[currentCity] != 'undefined' )	
