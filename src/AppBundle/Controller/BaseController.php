@@ -15,17 +15,18 @@ class BaseController extends Controller
     public function render($template, array $parameters = [], Response $response = NULL)
     {
         $params = [];
+        $params['min_summa'] = '300';
+        $params['dostavka_time'] = 'c 10 утра до 9 вечера';
         $params['description'] = 'Доставка суши в Запорожье. Самый изысканный '
                 . 'выбор. Всегда только свежие продукты и отменное качество '
-                . 'блюд. Бесплатная доставка от 200 гривен. Закажите прямо '
-                . 'сейчас';
+                . 'блюд. Бесплатная доставка от '.$params['min_summa'].' гривен. '
+                . 'Закажите прямо сейчас';
         $params['keywords'] = 'доставка суши в запорожье, суши на дом, '
                 . 'бесплатная доставка, суши круглосуточно доставка, доставка '
                 . 'еды, службы доставки еды, лучшие суши в Запорожье, заказ '
                 . 'суши на дом, суши, нигири, маки, ура маки, роллы, лапша, '
                 . 'сашими, салаты, закуски, рис, десерты, васаби';
-        $params['title'] = 'Доставка суши в Запорожье. Sushi House Ресторан '
-                . 'Японской кухни (Суши Хаус)';
+        $params['title'] = 'Доставка суши в Запорожье. Два Пирата Ресторан.';
         $params['info_seller1'] = 'Два пирата';
         $params['info_seller2'] = 'Интернет-магазин www.dvapirata.zp.ua '
                 . 'зарегистрирован в Пиратской республике';
@@ -33,8 +34,8 @@ class BaseController extends Controller
         $params['mob_phone_1'] = '+380(50)229-19-00';
         $params['mob_phone_2'] = '+380(50)339-19-00';
         
-        $params['fb'] = 'https://www.facebook.com/sushihouseby';
-        $params['ig'] = 'https://instagram.com/sushihouseby';
+        $params['fb'] = 'https://www.facebook.com/';
+        $params['ig'] = 'https://instagram.com/';
         
         $params['adres1'] = 'б. Фестивальный, 12';
         $params['adres2'] = 'у. Центральная, 13';
