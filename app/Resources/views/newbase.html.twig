@@ -71,16 +71,33 @@
             <header class="header header-pir">
                 <div class=" top_wrap">
 
-                    <div class="div_cart" style="width: 270px">
-                            <div class="phone-near-cart" id="headphone">
+                    
+                    
+                    <div class="div_cart" style="width: 470px">
+
+                        <div class="head_center" style="text-align: right">
+                            
+                            <ul style="padding-left: 0px; margin-top: -30px; display: inline-block; background: none">
+                                <li><a href="/delivery">Доставка</a></li>
+                                <li><a href="/contacts">Контакты</a></li>
+                                <li>
+                                    <a href="#"  style="color: black">Перезвоним вам!</a>
+                                </li>
+                                <li style="margin-top: 10px; overflow: auto">
+                                    <a href="#" class="cart_btn cart"></a>
+                                </li>
+                            </ul>                        
+                        </div>
+                        
+{#                            <div class="phone-near-cart" id="headphone">
                                 <a href="#"  style="color: black">
                                     Перезвоним вам!
                                 </a>
                                 <a class="phone"></a>
 {#                                <a href="#"> <u>Позвоним вам!</u></a>#}
 {#                                test!#}
-                            </div>                            
-                        <a href="#" class="cart_btn cart"></a>
+{#                            </div>                            #}
+{#                        <a href="#" class="cart_btn cart"></a>#}
                     </div>
                             
                     <div class="head_centert">
@@ -89,9 +106,13 @@
                             <ul style="padding-left: 20px">
                                 <li class="mobile"><a id="mobmenu" href="/">Меню</a></li>
                                 <li><a href="/menu/popular">Меню</a></li>
-                                <li><a href="/delivery">Доставка</a></li>
+                                <li><a href="/menu/sushi">Суши</a></li>
+                                <li><a href="/menu/gunkans">Гунканы</a></li>
+                                <li><a href="/menu/rolls">Роллы</a></li>
+                                <li><a href="/menu/beer">Пиво</a></li>
+{#                                <li><a href="/delivery">Доставка</a></li>#}
 {#                                <li><a href="/news">Новости</a></li>#}
-                                <li><a href="/contacts">Контакты</a></li>
+{#                                <li><a href="/contacts">Контакты</a></li>#}
                             </ul>
                             <div class="tel_mobile">
                                 <a  href="tel:{{phone|replace({'-': ''})}}">{{phone}}</a>
