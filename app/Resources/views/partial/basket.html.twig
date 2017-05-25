@@ -35,9 +35,13 @@
                     <span class="close"></span>
                     <div class="title">Корзина</div>        
                     <div id="scrollbar1">
-                        <!--'start_frame_cache_scrollbar1'-->        	
-                        <div class="scrollbar"><div class="track"><div class="thumb"></div></div></div>
-                        <div class="viewport">
+                        <!--'start_frame_cache_scrollbar1'-->
+                        
+{#                        <div class="scrollbar">
+                            <div class="track"><div class="thumb"></div></div>
+                        </div>
+#}                        
+                        <div class="viewport" style="overflow-y: auto">
                             <div class="overview"> 
                                 <div class="cart_spinner spinner"></div>
                                 <ul class="zakaz_list">        
@@ -73,7 +77,7 @@
                 <div class="surely">Поля обязательные для заполнения<i>*</i></div>
                 <form class="order_form_fields">  
                     <input type="hidden" class="basket_total" value=""/>
-                    <input type="hidden" class="city" value="Запорожье"/>
+                    <input type="hidden" name="variant" id="variant" value="Доставка"/>
                     <div class="ln">
                         <span class="txt"></span>
                         <span class="variant_list">
@@ -87,7 +91,7 @@
                     </div>
                     <div class="ln phone_field">
                         <span class="txt">Телефон<i>*</i></span>
-                        <input type="text"  class="rt required" value="">
+                        <input type="text"  class="rt required myphone" value="">
                     </div> 
                     <div class="ln email-field">
                         <span class="txt">E-mail</span>
@@ -98,7 +102,7 @@
 
                         <div class="ln">
                             <span class="txt">Улица<i>*</i></span>
-                            <input type="text" id="autocomplete-ajax" name="country" class="rt order_address_ulica required" value="" placeholder="" autocomplete="off">
+                            <input type="text" id="autocomplete-ajax" name="country" class="rt order_address_ulica" value="" placeholder="" autocomplete="off">
                         </div>
                         <div class="rt_small">
                             <div class="ln ln_small">
@@ -125,51 +129,28 @@
 
                         <div class="clear"></div>
                     </div>
-{#                    <div class="ln delivery_time_wrap">
-                        <span class="txt">Дата и время доставки</span>
-                        <input type="text" id="delivery_time" name="delivery_time" value="25.02.2017 13:56:00" class="rt delivery_time"/><img src="/local/templates/bd_sushi_shop_default/images/calendar-icon.gif" alt="Выбрать дату в календаре" class="calendar-icon" onclick="BX.calendar({node:this, field:'delivery_time', form: '', bTime: true, currentTime: '1488025614', bHideTime: false});" onmouseover="BX.addClass(this, 'calendar-icon-hover');" onmouseout="BX.removeClass(this, 'calendar-icon-hover');" border="0"/>            </div>
-#}                    <div class="ln restaurant_address">
+
+                    <br/>
+                    <div class="ln restaurant_address">
                         <span class="txt">Адрес<i>*</i></span>
 {#FIXME use caffees parameter instead#}
                         <select class="chosen-select-no-single style_hosen1 required restaurant_list">
-                            <option value="33" data-id="Moskovskaya273v">{{adres1}}</option>
-                            <option value="31" data-id="Dzerzhinskogo91">{{adres2}}</option>
+                            <option value="{{adres1}}">{{adres1}}</option>
+                            <option value="{{adres2}}">{{adres2}}</option>
                         </select>
                     </div>
-                    <div class="ln receiver_name_wrap">
-                        <span class="txt">Имя получателя<i>*</i></span>
-                        <input type="text" class="rt receiver_name required" value="">
+                     <br/>   
+                     
+                    <div class="ln delivery_time_wrap" style="display: none">
+                        <span class="txt">Дата и время доставки</span>
+                        <input type="text" id="delivery_time" name="delivery_time" value="25.02.2017 13:56:00" class="rt delivery_time"/><img src="/local/templates/bd_sushi_shop_default/images/calendar-icon.gif" alt="Выбрать дату в календаре" class="calendar-icon" onclick="BX.calendar({node:this, field:'delivery_time', form: '', bTime: true, currentTime: '1488025614', bHideTime: false});" onmouseover="BX.addClass(this, 'calendar-icon-hover');" onmouseout="BX.removeClass(this, 'calendar-icon-hover');" border="0"/>
                     </div>
-                    <div class="ln receiver_phone_wrap">
-                        <span class="txt">Телефон получателя<i>*</i></span>
-                        <input type="text" class="rt receiver_phone required" value="" placeholder="">
-                    </div>
-{#                    <div class="ln payment_type_field">
-                        <span class="txt">Способ оплаты<i>*</i></span>
-                        <select class="chosen-select-no-single style_hosen1 payment_type">
-                            <option value="offline">При получении наличными</option>
-                            <option value="offline">Visa/Master card</option>
-
-                        </select>                
-                    </div>            
-#}                    <div class="ln need_short_change_container" style="display: none;">
-                        <span class="txt">Нужна сдача с</span>
-                        <input type="text" class="rt  need_short_change" value="" placeholder="">
-                    </div>
+                     
                     <div class="ln comment_wrap">
                         <span class="txt">Примечание к заказу</span>
                         <textarea type="text" class="rt comment"></textarea>
                     </div>
-                    <div class="delivery_price">
-                        {#<div class="delivery_with_price">Стоимость доставки: 
-                            <span>
-                                <span class="delivery_price_value" data-delivery-price="1.50">1.50</span> 
-                                <!--<i class="rouble rouble_padding">i</i>-->
-                            </span>
-                        </div>#}
-{#                        <div class="delivery_free" style="display: none;">Бесплатная доставка</div>#}
-
-                    </div>
+                    <div class="delivery_price"></div>
                     <div class="clear"></div>
                     <div class="of_meta">
                         <input type="submit" class="send_order_btn" value="Заказать">

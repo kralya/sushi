@@ -5,28 +5,36 @@
  показывает или скрывает определённые поля в зависимости от варианта
  */
 function showFieldsByVariant(variant){
+    $(".delivery_time_wrap").hide();
+    $("#variant").val("Доставка");
     switch (variant) {
         case "navynos":
-            $(".delivery_time_wrap, .address_delivery, .destrict_delivery, .user_address").hide();
+            $(".address_delivery, .destrict_delivery, .user_address").hide();
             $(".order_address_ulica, .order_address_dom, .order_address_kvartira").hide();
             $(".phone_field, .order_email, .user_name_field").hide();
             $(".colich_tov_field, .payment_type_field, .need_short_change_container, .comment_wrap").hide();
             
             $(".user_address, .order_address_ulica, .order_address_dom, .order_address_kvartira").removeClass("required");
-            $(".user_name, .phone, .delivery_list, .receiver_name, .receiver_phone, .rt").removeClass("required");
+            $(".user_name, .myphone, .delivery_list, .receiver_name, .receiver_phone, .rt").removeClass("required");
+            $(".restaurant_address, .delivery_time_wrap").show();
+            // display restaraunts list
+            // display time
             
             $(".discount").addClass("required");
-            
+
+            $("#variant").val("На вынос");
             var form = $("#oform .order_form_fields");
             form.find('.restaurant_list').trigger("chosen:updated");
             setDevliveryPrice(0,0);
             break;
         case "dostavka":
             $(".user_address, .order_address_ulica, .order_address_dom, .order_address_kvartira").addClass("required");
-            $(".discount, .user_name, .phone, .delivery_list, .receiver_name, .receiver_phone").addClass("required");
+            $(".discount, .user_name, .myphone, .delivery_list, .receiver_name, .receiver_phone").addClass("required");
             $(".discount").removeClass("required");
             
-            $(".delivery_time_wrap, .address_delivery, .destrict_delivery, .user_address").show();
+            $(".restaurant_address").hide();
+            
+            $(".address_delivery, .destrict_delivery, .user_address").show();
             $(".order_address_ulica, .order_address_dom, .order_address_kvartira").show();
             $(".phone_field, .user_name_field, .colich_tov_field, .payment_type_field").show();
             $(".payment_type_field, .need_short_change_container, .comment_wrap").show();
@@ -196,8 +204,9 @@ $(document).ready(function(){
                 url: '/bdhandlers/order.php?t=' + new Date().getTime(),
                 dataType: 'json',
                 data: {
+                    VARIANT: $('#variant').val(),
                     DISCOUNT: $('.discount').val(),
-                    PHONE: $('.order_form_fields .phone').val(),
+                    PHONE: $('.order_form_fields .myphone').val(),
                     NAME: $('.user_name').val(),
                     CITY: $('.order_form_fields .city').val(),
                     DELIVERY_NAME: $('.delivery_list option:selected').text(),
@@ -460,18 +469,22 @@ $(document).ready(function(){
 				$scrollbar.tinyscrollbar();	
 				var scrollbar__ = $scrollbar.data("plugin_tinyscrollbar")
 				scrollbar__.update();
-				$('.promo_value').val(data.code);
+//				scrollbar__.tinyscrollbar_update();
+                                
+//                                alert(typeof(scrollbar__));
+                                
+//				$('.promo_value').val(data.code);
 				
-				if(data.code!=''){
-					$('.promo_value').removeClass('error');
-					$('.promo_value').addClass('success');
-					$('.discount_value').text(data.discount);
-					$('.discount_notice').show();
-				}else{
-					$('.promo_value').removeClass('error').removeClass('success');
-					$('.discount_value').text('');
-					$('.discount_notice').hide();
-				}
+//				if(data.code!=''){
+//					$('.promo_value').removeClass('error');
+//					$('.promo_value').addClass('success');
+//					$('.discount_value').text(data.discount);
+//					$('.discount_notice').show();
+//				}else{
+//					$('.promo_value').removeClass('error').removeClass('success');
+//					$('.discount_value').text('');
+//					$('.discount_notice').hide();
+//				}
 				
 				registerCartListeners();
 				
