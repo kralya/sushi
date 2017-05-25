@@ -431,7 +431,7 @@ class Product
             'item_id' => $this->getId(),
 //            'category_id' => $this->getCategory()->getId(),
 //            'category_name' => $this->getCategory()->getName(),
-            'item_name' => $this->getName(),
+            'item_name' => $this->getName().'('.$this->getCategory()->getName().')',
             'item_img' => $this->getImage(),
             'item_price' => $this->getPrice(),
             'item_old_price' => $this->getPriceOld(),
