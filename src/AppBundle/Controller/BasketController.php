@@ -60,11 +60,13 @@ class BasketController extends BaseController
             return new JsonResponse([]);
         }
         
+        $variant = $request->request->get('VARIANT');
+        
         // no validation (?!)
+        if ('Доставка' === $variant) {
         $indices = [
             'VARIANT'  => 'Тип заказа',
             'DISCOUNT' => 'Номер дисконта',
-//            'CITY' => 'Город',
             'ADDRESS_ULICA' => 'Улица',
             'ADDRESS_DOM' => 'Дом',
             'ADDRESS_ETAZ' => 'Этаж',
@@ -75,7 +77,6 @@ class BasketController extends BaseController
             'COMMENT' => 'Комментарий',
             'DELIVERY_NAME' => 'Наименование',
             'DELIVERY_PRICE' => 'Цена',
-            'DELIVERY_TIME' => 'Время доставки',
             'DISTRICT' => 'Район',
             'NAME' => 'Имя',
             'ORDER_EMAIL' => 'Email',
@@ -89,6 +90,16 @@ class BasketController extends BaseController
             'RECEIVER_PHONE' => 'Телефон получателя',
             'RESTAURANT_ADDRESS' => 'Адрес торговой точки',
         ];
+        } else {
+        $indices = [
+            'VARIANT'  => 'Тип заказа',
+            'DISCOUNT' => 'Номер дисконта',
+            'COMMENT' => 'Комментарий',
+            'DELIVERY_PRICE' => 'Цена',
+            'DELIVERY_TIME' => 'Время доставки',
+            'RESTAURANT_ADDRESS' => 'Адрес торговой точки'
+            ];
+        }
         
         $text = '';
         foreach ($indices as $key=>$index) {
@@ -107,7 +118,7 @@ class BasketController extends BaseController
         $br = '
 ';
         
-        $order = (new Cart())->getOrder();
+        $order = (new Cart())->getOrder($variant);
         
         $message = \Swift_Message::newInstance()
             ->setSubject('New order')
