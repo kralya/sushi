@@ -62,8 +62,9 @@ class BasketController extends BaseController
         
         // no validation (?!)
         $indices = [
+            'VARIANT'  => 'Тип заказа',
             'DISCOUNT' => 'Номер дисконта',
-            'CITY' => 'Город',
+//            'CITY' => 'Город',
             'ADDRESS_ULICA' => 'Улица',
             'ADDRESS_DOM' => 'Дом',
             'ADDRESS_ETAZ' => 'Этаж',
@@ -101,7 +102,8 @@ class BasketController extends BaseController
 ';
             $text.= sprintf($template, $index, $value);
         }
-        
+
+        $email = $this->getParams()['receiver_email'];        
         $br = '
 ';
         
@@ -110,7 +112,7 @@ class BasketController extends BaseController
         $message = \Swift_Message::newInstance()
             ->setSubject('New order')
             ->setFrom('admin@dvapirata.zp.ua')
-            ->setTo('hrumos@yahoo.com')
+            ->setTo($email)
             ->setBody($text.$br.'Состав заказа:'.$br.$order);
 
         $mailer = $this->get('mailer');
@@ -118,7 +120,7 @@ class BasketController extends BaseController
         $mailer->send($message);
         
         $headers = 'From: sales@dvapirata.zp.ua' . "\r\n";
-        mail('hrumos@gmail.com', 'New order', $text.$br.$order, $headers);
+        mail($email, 'New order', $text.$br.$order, $headers);
         
 //        $dt = $request->request->get('DELIVERY_TIME');
 //        $dd = '25.02.2017 13:56:00';
@@ -168,16 +170,19 @@ Sincerely your site.";
         $name = $request->request->get('CB_NAME');
         $phone = $request->request->get('CB_PHONE');
         $text = sprintf($template, $name, $phone);
-        
+        $email = $this->getParams()['receiver_email'];
+
         $message = \Swift_Message::newInstance()
             ->setSubject('New request to call')
             ->setFrom('admin@eheh.com')
-            ->setTo('hrumos@yahoo.com')
+            ->setTo($email)
             ->setBody($text);
 
         $mailer = $this->get('mailer');
-
         $mailer->send($message);
+        
+        $headers = 'From: sales@dvapirata.zp.ua' . "\r\n";
+        mail($email, 'Call me request', $text, $headers);        
     }
 
     protected function formAddress(Request $request)
