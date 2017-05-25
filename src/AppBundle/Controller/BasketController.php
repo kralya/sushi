@@ -88,7 +88,7 @@ class BasketController extends BaseController
             'PROMOCODE' => 'Промокод',
             'RECEIVER_NAME' => 'Имя получателя',
             'RECEIVER_PHONE' => 'Телефон получателя',
-            'RESTAURANT_ADDRESS' => 'Адрес торговой точки',
+//            'RESTAURANT_ADDRESS' => 'Адрес торговой точки',
         ];
         } else {
         $indices = [
