@@ -12,9 +12,10 @@ class BaseController extends Controller
         return $this->container->get('doctrine')->getRepository('AppBundle:'.$repo);
     }
     
-    public function render($template, array $parameters = [], Response $response = NULL)
+    public function getParams()
     {
         $params = [];
+        $params['receiver_email'] = 'hrumos@gmail.com';
         $params['min_summa'] = '300';
         $params['dostavka_time'] = 'c 10 утра до 9 вечера';
         $params['description'] = 'Доставка суши в Запорожье. Самый изысканный '
@@ -47,8 +48,13 @@ class BaseController extends Controller
             ['id' => '31', 'en' => 'Moskovskaya273v', 'ru' => 'г. Брест, ул. Московская, 273В', ],
             ['id' => '33', 'en' => 'Dzerzhinskogo91', 'ru' => 'г. Минск, пр.Дзержинского 91', ]
             ];
-        
-        $params += $parameters;
+
+        return $params;
+    }
+    
+    public function render($template, array $parameters = [], Response $response = NULL)
+    {
+        $params = $this->getParams() + $parameters;
         
         return parent::render($template, $params, $response);
     }
