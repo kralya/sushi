@@ -105,7 +105,7 @@ class Cart
         return isset($items[$id]) ? $items[$id]['count'] : 0;
     }
     
-    public function getOrder()
+    public function getOrder($variant)
     {
         $currency = 'грн.';
         $br = '
@@ -116,7 +116,9 @@ class Cart
         $dp = $this->getDeliveryPrice();
         $total = $this->cart->get('basket')['total'] + $dp;
 
-        $text .= 'Доставка: '.  ($dp ? $dp.' ' .$currency : 'бесплатно').$br;
+        if($variant === 'Доставка'){
+            $text .= 'Доставка: '.  ($dp ? $dp.' ' .$currency : 'бесплатно').$br;
+        }
         $text .= 'Всего: '.$total.' '.$currency;
         
         return $text;
